@@ -4,21 +4,19 @@ Asset Type Sample
 ::
 
 	{
-		"id": "OverRange",
+		"id": "Tank",
 		"version": "1.0.0.0",
 		"type": "object",
-		"classification": "span"
+		"classification": "asset"
 		"properties": {
-			"ID": {
+			"Name": {
 				"type": "string",
 				"index": true
 			},
-			"StartTime": {
-				"format": "date-time",
+			"Serial": {
 				"type": "string"
 			},
-			"EndTime": {
-				"format": "date-time",
+			"Model": {
 				"type": "string"
 			}
 		}
