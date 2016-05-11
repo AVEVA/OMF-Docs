@@ -30,5 +30,5 @@ One of: ``create``, ``update``, or ``delete``. Describes the action to be perfor
 
 ``compression``
 
-The compression algorithm used to compress the message body. Currently limited to ``gzip``. If not specified, message body is assumed to be uncompressed.
+The compression algorithm used to compress the message body. Currently limited to ``gzip``. If not specified, the message body is assumed to be uncompressed.
 
