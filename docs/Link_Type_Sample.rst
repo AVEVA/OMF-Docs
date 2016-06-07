@@ -7,7 +7,7 @@ Link Type Sample
 		"id": "TankLink",
 		"version": "1.0.0.0",
 		"type": "object",
-		"classification": "asset"
+		"classification": "asset",
 		"properties": {
 			"ID": {
 				"type": "string",
