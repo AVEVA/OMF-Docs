@@ -7,7 +7,7 @@ Value Type Sample
 		"id": "TankMeasurement",
 		"version": "1.0.0.0",
 		"type": "object",
-		"classification": "value"
+		"classification": "value",
 		"properties": {
 			"Time": {            
 				"format": "date-time",

@@ -7,7 +7,7 @@ Span Type Sample
 		"id": "OverRange",
 		"version": "1.0.0.0",
 		"type": "object",
-		"classification": "span"
+		"classification": "span",
 		"properties": {
 			"ID": {
 				"type": "string",
