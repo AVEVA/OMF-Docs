@@ -18,7 +18,7 @@ Sample
 	{
 		"id": "TankMeasurement",
 		"version": "1.0.0.0",
-		"type": "object"
+		"type": "object",
 		"properties": {
 			"Time": {
 				"format": "date-time",
@@ -36,7 +36,7 @@ Sample
 	{
 		"id": "Tank",
 		"version": "1.0.0.0",
-		"type": "object"
+		"type": "object",
 		"properties": {
 			"Name": {
 				"type": "string",
