@@ -15,6 +15,13 @@
 import sys
 import os
 
+
+html_context = {
+    "display_github": False, # Add 'Edit on Github' link instead of 'View page source'
+    "last_updated": True,
+    "commit": False,
+}
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -96,11 +103,6 @@ pygments_style = 'sphinx'
 
 # -- Options for HTML output ----------------------------------------------
 
-html_context = {
-    "display_github": False, # Add 'Edit on Github' link instead of 'View page source'
-    "last_updated": True,
-    "commit": False,
-}
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
