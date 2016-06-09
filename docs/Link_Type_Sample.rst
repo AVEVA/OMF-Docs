@@ -14,13 +14,16 @@ Link Type Sample
 				"index": true
 			},
 			"Source": {
-				"type": "string"
+				"type": "string",
+                        	"LinkSchema": "Tank"
 			},
 			"Target0": {
-				"type": "string"
+				"type": "string",
+                        	"LinkSchema": "Tank"
 			},
 			"Target1": {
-				"type": "string"
+				"type": "string",
+                        	"LinkSchema": "Tank"
 			}
 		}
 	}
