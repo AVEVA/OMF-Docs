@@ -200,7 +200,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   ('index', 'OMF.tex', u'OMF Documentation',
-   u'Ted Johnson', 'manual'),
+   u'OSIsoft, LLC', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -230,7 +230,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'omf', u'OMF Documentation',
-     [u'Ted Johnson'], 1)
+     [u'OSIsoft, LLC'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -244,7 +244,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'OMF', u'OMF Documentation',
-   u'Ted Johnson', 'OMF', 'One line description of project.',
+   u'OSIsoft, LLC', 'OMF', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -265,9 +265,9 @@ texinfo_documents = [
 
 # Bibliographic Dublin Core info.
 epub_title = u'OMF'
-epub_author = u'Ted Johnson'
-epub_publisher = u'Ted Johnson'
-epub_copyright = u'2016, Ted Johnson'
+epub_author = u'OSIsoft, LLC'
+epub_publisher = u'OSIsoft, LLC'
+epub_copyright = u'2016, OSIsoft, LLC'
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = u'OMF'
