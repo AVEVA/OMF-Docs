@@ -96,10 +96,6 @@ pygments_style = 'sphinx'
 
 # -- Options for HTML output ----------------------------------------------
 
-html_context = {
-  "display_github": False, # Add 'Edit on Github' link instead of 'View page source'
-}
-
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = 'default'
