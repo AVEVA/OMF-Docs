@@ -23,7 +23,8 @@ Link Type Sample
 			},
 			"Target1": {
 				"type": "string",
-                        	"linkTypeId": "Tank",
+                        	"linkTypeId": "Pump",
+                        	"linkTypeVersion": "2.0.0.0"
 			}
 		}
 	}
