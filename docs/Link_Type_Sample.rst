@@ -15,15 +15,16 @@ Link Type Sample
 			},
 			"Source": {
 				"type": "string",
-                        	"LinkSchema": "Tank"
+                        	"linkTypeId": "Tank"
 			},
 			"Target0": {
 				"type": "string",
-                        	"LinkSchema": "Tank"
+                        	"linkTypeId": "Tank"
 			},
 			"Target1": {
 				"type": "string",
-                        	"LinkSchema": "Tank"
+                        	"linkTypeId": "Pump",
+                        	"linkTypeVersion": "2.0.0.0"
 			}
 		}
 	}
