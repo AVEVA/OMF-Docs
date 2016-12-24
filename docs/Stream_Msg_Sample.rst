@@ -6,8 +6,8 @@ Sample
 ::
 
 	producertoken = b7CNvN36cq
-	version = 0.9.0.0
-	messagetype = streams
+	version = 0.11.0.0
+	messagetype = stream
 	action = create
 	messageformat = json
 
@@ -16,9 +16,8 @@ Sample
 ::
 
 	[
-	{"streamId": "Building1TankMeasurements", "typeId": "TankMeasurement", "typeVersion": "1.0.0.0"},
-	{"streamId": "Tanks", "typeId": "Tank", "typeVersion": "1.0.0.0"},
-	{"streamId": "TankLinks", "typeId": "TankLink"}
+	{"id": "Building1TankMeasurements", "type": "TankMeasurement", "typeVersion": "1.0.0.0"},
+	{"id": "Building2TankMeasurements", "type": "TankMeasurement", "typeVersion": "1.0.0.0"}
 	]
 
 

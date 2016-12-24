@@ -3,13 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-The OSIsoft Message Format v0.9
-===============================
+The OSIsoft Message Format v0.11
+================================
 
 .. toctree::
 
    Overview
-   Key_Concepts
    Message_Types
    Headers
    Samples
