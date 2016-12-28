@@ -6,7 +6,7 @@ Sample
 ::
 
 	producertoken = b7CNvN36cq
-	version = 0.11.0.0
+	version = 0.12
 	messagetype = stream
 	action = create
 	messageformat = json
