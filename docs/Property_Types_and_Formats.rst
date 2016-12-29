@@ -18,7 +18,8 @@ number     float (default)   Single-precision 32-bit floating point.
 number     half              Half-precision 16-bit floating point.
 object     dictionary        A dictionary of objects, indexed by a string key. The ``additionalProperties``
 \                            keyword defines the dictionary's value type.
-string     date-time         A string representation of a timestamp, formatted as YYYY-MM-DDThh:mm:ss.fffZ.
+string     date-time         A string representation of a timestamp, formatted as
+\                            YYYY-MM-DDThh:mm:ss.fffZ.
 ========   ================  ===========
 
 
