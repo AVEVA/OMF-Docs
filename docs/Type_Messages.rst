@@ -1,7 +1,7 @@
 ===============
  Type Messages
 ===============
-Each Stream, Span, Asset, and Link must be associated with a Type. Types are defined using the JSON Schema specification (http://json-schema.org/).
+Each Stream, Span, Asset, and Link must be associated with a Type. Types are defined using the JSON Schema specification (http://json-schema.org/). For details on supported property data types and formats, see :doc:`Property_Types_and_Formats`.
 
 Any type used by a stream must be registered before the stream can be created. Types can be created, updated, or deleted. Updating a type without updating the type's version will result in failure. Once a type is deleted, any operations on streams or objects using that type will fail.
 
@@ -28,4 +28,5 @@ Link                * ``Source``
 
 .. toctree::
 
+   Property_Types_and_Formats
    Type_Msg_Sample
