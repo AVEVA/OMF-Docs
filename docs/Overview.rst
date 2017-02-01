@@ -1,6 +1,6 @@
 Overview
 ========
-The OSIsoft Message Format (OMF) defines a set of message headers and bodies that can be used to generate compliant messages for ingestion into an on-premises PI System or a cloud-hosted Qi archive.
+The OSIsoft Message Format (OMF) defines a set of message headers and bodies that can be used to generate messages for ingestion into a compliant system.
 
 OMF can be used to develop data acquisition applications on platforms and in languages for which there are no supported OSIsoft libraries.
 

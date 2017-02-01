@@ -9,8 +9,8 @@ The OSIsoft Message Format v0.12
 .. toctree::
 
    Overview
-   Message_Types
    Headers
+   Message_Types   
    Samples
 
 

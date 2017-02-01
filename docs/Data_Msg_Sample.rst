@@ -6,7 +6,7 @@ Sample
 ::
 
 	producertoken = b7CNvN36cq
-	version = 0.12
+	omfversion = 1.0
 	messagetype = data
 	action = create
 	messageformat = json
@@ -15,23 +15,44 @@ Sample
 
 ::
 
-	[
-	{
-	    "stream": "Building1TankMeasurements",
-	    "values": [
-	    { "Time": "2015-12-31T22:33:39.069083Z", "Pressure": 25.4, "Temperature": 120.542 },
-	    { "Time": "2015-12-31T22:34:39.069083Z", "Pressure": 25.6, "Temperature": 120.784 },
-	    { "Time": "2015-12-31T22:35:39.069083Z", "Pressure": 25.7, "Temperature": 122.242 },
-	    { "Time": "2015-12-31T22:36:39.069083Z", "Pressure": 25.9, "Temperature": 123.423 }
-	    ]
-	},
-	{
-	    "stream": "Building2TankMeasurements",
-	    "values": [
-	    { "Time": "2015-12-31T22:33:39.069083Z", "Pressure": 29.4, "Temperature": 129.542 },
-	    { "Time": "2015-12-31T22:34:39.069083Z", "Pressure": 30.1, "Temperature": 130.223 },
-	    { "Time": "2015-12-31T22:35:39.069083Z", "Pressure": 30.8, "Temperature": 130.852 }
-	    ]
-	}
-	]
+	[{
+		"type": "Tank",
+		"values": [{
+			"Name": "Building1",
+			"Serial": "5236-3523-KKF4",
+			"Model": "FN-2187"
+		}, {
+			"Name": "Building2",
+			"Serial": "2364-4243-FS12",
+			"Model": "TK-421"
+		}]
+	}, {
+		"group": " Building1TankMeasurements",
+		"values": [{
+			"Time": "2017-01-11T22:23:23.430Z",
+			"Pressure": "12.0",
+			"Temperature": "100.1"
+		}, {
+			"Time": "2017-01-11T22:24:23.430Z",
+			"Pressure": "11.5",
+			"Temperature": "101.2"
+		}]
+	}, {
+		"type": "TankLink",
+		"values": [{
+			"source": "Building1",
+			"target0": "Building2",
+			"target1": "Pump1"
+		}]
+	}, {
+		"type": "OverRange",
+		"values": [{
+			"starttime": "2017-01-12T00:00:00.000Z",
+			"endtime": "2017-01-11T00:00:00.000Z"
+		}]
+	}]
+
+
+
+
 
