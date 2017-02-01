@@ -11,7 +11,7 @@ The following keywords are used to define a type:
 Name                Value
 =================== =============================
 ``id``   	        Unique identifier of the Type.
-``classification``  One of ``value``, ``link``, or ``span``. Specifies the Data this Type can define. Optional: defaults to ``values``.
+``classification``  One of ``value``, ``link``, or ``span``. Specifies the Data this Type can define. Optional: defaults to ``value``.
 ``version``         Optional version of the Type used by the Group. If omitted version 1.0.0.0 is assumed.
 ``name``            Optional friendly name for the Type.
 ``description``     Optional description for the Type.

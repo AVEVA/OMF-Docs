@@ -10,7 +10,7 @@ Name                Value
 ``target0-N``       An object describing the targets of the link
 =================== =============================
 
-The number of targets may vary and marked target0, target1, ..., targetN. The objects in the source and targets consist of the following properties:  
+The number of targets may vary and must be marked target0, target1, ..., targetN. The objects in the source and targets consist of the following properties:  
 
 =================== =============================
 Name                Value
