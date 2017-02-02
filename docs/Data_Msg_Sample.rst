@@ -40,6 +40,7 @@ Sample
 	}, {
 		"type": "TankLink",
 		"values": [{
+			"ID": "MyLink1",
 			"source": "Building1",
 			"target0": "Building2",
 			"target1": "Pump1"
@@ -47,6 +48,7 @@ Sample
 	}, {
 		"type": "OverRange",
 		"values": [{
+			"ID": "MySpan1"
 			"starttime": "2017-01-12T00:00:00.000Z",
 			"endtime": "2017-01-11T00:00:00.000Z"
 		}]
