@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 The OSIsoft Message Format v1.0RC0
-================================
+==================================
 
 .. toctree::
 
