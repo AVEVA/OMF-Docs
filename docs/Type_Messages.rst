@@ -5,7 +5,7 @@ Types are defined using the JSON Schema specification (http://json-schema.org/).
 
 Types can be created, updated, or deleted. Updating a Type without updating the Type’s version will result in failure. Once a Type is deleted, any operations on Groups or Data using that Type will fail.
 
-The following keywords are used to define a type:
+The body of a Group message consists of an array of objects. The following keywords are used to define a Type:
 
 =================== =============================
 Name                Value
