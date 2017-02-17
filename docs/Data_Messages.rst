@@ -16,7 +16,7 @@ For each object, either Type or Group must be specified. If a Group is specified
 
 .. toctree::
 
-   Asset_Data
+   Structure_Data
    Link_Data
    Span_Data
    Data_Msg_Sample

@@ -36,7 +36,7 @@ Sample
 		"id": "Tank",
 		"version": "1.0.0.0",
 		"type": "object",
-		"classification": "asset",
+		"classification": "structure",
 		"properties": {
 			"Name": {
 				"type": "string",

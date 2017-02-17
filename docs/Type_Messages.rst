@@ -11,7 +11,7 @@ The body of a Group message consists of an array of objects. The following keywo
 Name                Value
 =================== =============================
 ``id``   	        Unique identifier of the Type.
-``classification``  Optional, one of ``asset``, ``link``, or ``span``. Additional properties are required.
+``classification``  Optional, one of ``structure``, ``link``, or ``span``. Additional properties are required.
 ``version``         Optional version of the Type used by the Group. If omitted version 1.0.0.0 is assumed.
 ``name``            Optional friendly name for the Type.
 ``description``     Optional description for the Type.
@@ -26,7 +26,7 @@ Depending on the Type’s classification, additional properties are required.
 
 .. toctree::
 
-   Asset_Types
+   Structure_Types
    Link_Types
    Span_Types  
    Property_Types_and_Formats

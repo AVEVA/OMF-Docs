@@ -1,10 +1,10 @@
-Asset
-^^^^^
+Structure
+^^^^^^^^^
 
-A Type with Asset classification must declare the following additional property:
+A Type with Structure classification must declare the following additional property:
 
 =================== =============================
 Name                Value
 =================== =============================
-``name``   	        Name of the asset.
+``name``   	        Name of the structure.
 =================== =============================
