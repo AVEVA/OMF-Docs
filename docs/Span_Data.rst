@@ -1,3 +1,3 @@
 Spans
 ^^^^^
-Spans are used to send data representing a time frame. Span Types must contain ``starttime`` and ``endtime`` attributes with timestamp values.
+Spans are used to send data representing an interval. Span Types must contain ``startindex`` and ``endindex`` attributes.

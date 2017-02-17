@@ -19,7 +19,6 @@ Sample
 		"id": "TankMeasurement",
 		"version": "1.0.0.0",
 		"type": "object",
-		"classification": "value",
 		"properties": {
 			"Time": {
 				"format": "date-time",
@@ -37,7 +36,7 @@ Sample
 		"id": "Tank",
 		"version": "1.0.0.0",
 		"type": "object",
-		"classification": "value",
+		"classification": "asset",
 		"properties": {
 			"Name": {
 				"type": "string",
@@ -60,11 +59,11 @@ Sample
 				"type": "string",
 				"index": true
 			},
-			"StartTime": {
+			"StartIndex": {
 				"format": "date-time",
 				"type": "string"
 			},
-			"EndTime": {
+			"EndIndex": {
 				"format": "date-time",
 				"type": "string"
 			}
@@ -79,7 +78,7 @@ Sample
 				"type": "string",
 				"index": true
 			},
-			"source": {
+			"source0": {
 				"type": "string",
 				"linktype": "Tank"
 			},
