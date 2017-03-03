@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-The OSIsoft Message Format v1.0RC1
+The OSIsoft Message Format v1.0RC2
 ==================================
 
 .. toctree::

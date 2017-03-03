@@ -1,5 +1,5 @@
-Sample
-^^^^^^
+Type Example
+^^^^^^^^^^^^^^
 
 **Headers**
 
@@ -16,27 +16,31 @@ Sample
 ::
 
 	[{
-		"id": "TankMeasurement",
+		"id": "Plant",
 		"version": "1.0.0.0",
 		"type": "object",
+		"classification": "static",
 		"properties": {
-			"Time": {
-				"format": "date-time",
+			"PlantId": {
 				"type": "string",
 				"index": true
 			},
-			"Pressure": {
-				"type": "number"
+			"PlantName": {
+				"type": "string",
+				"name": true
 			},
-			"Temperature": {
-				"type": "number"
+			"Address": {
+				"type": "string"
+			},
+			"Contact": {
+				"type": "string"
 			}
 		}
 	}, {
 		"id": "Tank",
 		"version": "1.0.0.0",
 		"type": "object",
-		"classification": "structure",
+		"classification": "static",
 		"properties": {
 			"Name": {
 				"type": "string",
@@ -50,48 +54,22 @@ Sample
 			}
 		}
 	}, {
-		"id": "OverRange",
+		"id": "TankMeasurement",
 		"version": "1.0.0.0",
 		"type": "object",
-		"classification": "span",
+		"classification": "dynamic",
 		"properties": {
-			"ID": {
+			"Time": {
+				"format": "date-time",
 				"type": "string",
 				"index": true
 			},
-			"StartIndex": {
-				"format": "date-time",
-				"type": "string"
+			"Pressure": {
+				"type": "number"
 			},
-			"EndIndex": {
-				"format": "date-time",
-				"type": "string"
+			"Temperature": {
+				"type": "number"
 			}
-		}
-	}, {
-		"id": "TankLink",
-		"version": "1.0.0.0",
-		"type": "object",
-		"classification": "link",
-		"properties": {
-			"ID": {
-				"type": "string",
-				"index": true
-			},
-			"source0": {
-				"type": "string",
-				"linktype": "Tank"
-			},
-			"target0": {
-				"type": "string",
-				"linktype": "Tank"
-			},
-			"target1": {
-				"type": "string",
-				"linktype": "Pump",
-				"linktypeversion": "2.0.0.0"
-			}
-
 		}
 	}]
 

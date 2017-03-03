@@ -1,5 +1,5 @@
-Sample
-^^^^^^
+Container Example
+^^^^^^^^^^^^^^^^^^
 
 **Headers**
 
@@ -7,7 +7,7 @@ Sample
 
 	producertoken = b7CNvN36cq
 	omfversion = 1.0
-	messagetype = group
+	messagetype = container
 	action = create
 	messageformat = json
 
@@ -17,14 +17,11 @@ Sample
 ::
 
 	[{
-		"id": "Building1TankMeasurements",
-		"type": "TankMeasurement",
+		"id": "Tank1Measurements",
+		"typeid": "TankMeasurement",
 		"typeVersion": "1.0.0.0"
 	}, {
-		"id": "Building2TankMeasurements",
-		"type": "TankMeasurement",
+		"id": "Tank2Measurements",
+		"typeid": "TankMeasurement",
 		"typeVersion": "1.0.0.0"
 	}]
-
-
-

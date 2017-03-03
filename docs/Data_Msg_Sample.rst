@@ -1,5 +1,5 @@
-Sample
-^^^^^^
+Data Example
+^^^^^^^^^^^^^
 
 **Headers**
 
@@ -16,18 +16,66 @@ Sample
 ::
 
 	[{
-		"type": "Tank",
+		"typeid": "Plant",
 		"values": [{
-			"Name": "Building1",
+			"PlantId": "PlantId1",
+			"PlantName": "Plant1",
+			"Address": "123 Meridian Ave",
+			"Contact": "Bob Ross"
+		}]
+	}, {
+		"typeid": "Tank",
+		"values": [{
+			"Name": "Tank1",
 			"Serial": "5236-3523-KKF4",
 			"Model": "FN-2187"
 		}, {
-			"Name": "Building2",
+			"Name": "Tank2",
 			"Serial": "2364-4243-FS12",
 			"Model": "TK-421"
 		}]
 	}, {
-		"group": " Building1TankMeasurements",
+		"typeid": "__Link",
+		"values": [{
+			"source": {
+				"typeid": "Plant",
+				"index": "PlantId1"
+			},
+			"target": {
+				"typeid": "Tank",
+				"index": "Tank1"
+			}
+		}, {
+
+			"source": {
+				"typeid": "Plant",
+				"index": "PlantId1"
+			},
+			"target": {
+				"typeid": "Tank",
+				"index": "Tank2"
+			}
+		}, {
+
+			"source": {
+				"typeid": "Tank",
+				"index": "Tank1"
+			},
+			"target": {
+				"containerid": "Tank1Measurements"
+			}
+		}, {
+
+			"source": {
+				"typeid": "Tank",
+				"index": "Tank2"
+			},
+			"target": {
+				"containerid": "Tank2Measurements"
+			}
+		}]
+	}, {
+		"containerid": "Tank1Measurements",
 		"values": [{
 			"Time": "2017-01-11T22:23:23.430Z",
 			"Pressure": "12.0",
@@ -38,23 +86,22 @@ Sample
 			"Temperature": "101.2"
 		}]
 	}, {
-		"type": "TankLink",
+		"containerid": "Tank2Measurements",
 		"values": [{
-			"ID": "MyLink1",
-			"source0": "Building1",
-			"target0": "Building2",
-			"target1": "Pump1"
+			"Time": "2017-01-11T22:23:23.430Z",
+			"Pressure": "14.0",
+			"Temperature": "90.1"
+		}, {
+			"Time": "2017-01-11T22:24:23.430Z",
+			"Pressure": "15.1",
+			"Temperature": "91.2"
 		}]
 	}, {
-		"type": "OverRange",
+		"typeid": "__Span",
 		"values": [{
-			"ID": "MySpan1"
-			"startindex": "2017-01-12T00:00:00.000Z",
-			"endindex": "2017-01-11T00:00:00.000Z"
+			"id": "Tank1Wednesday",
+			"containerid": "Tank1Measurements",
+			"startindex": "2017-01-11T00:00:00.000Z",
+			"endindex": "2017-01-12T00:00:00.000Z"
 		}]
 	}]
-
-
-
-
-
