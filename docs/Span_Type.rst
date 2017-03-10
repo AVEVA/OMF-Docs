@@ -1,7 +1,7 @@
 Span Type
 ^^^^^^^^^
 
-A Span is a pre-defined type with the typeid __Span. It has the following properties.
+A Span is a pre-defined type with the typeid __Span. It has the following keywords:
 
 =================== =============================
 Name                Value

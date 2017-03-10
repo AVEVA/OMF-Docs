@@ -5,7 +5,7 @@ A Container is defined as a collection of Data events of identical Type and vers
 
 Once a Type has been registered with a Type message, Containers can begin using that Type. Containers can be created, updated, or deleted.
 
-The body of a Container message consists of an array of objects made up of the following properties:
+The body of a Container message consists of an array of objects with the following keywords:
 
 =============== =================================================================================================
 Name            Value

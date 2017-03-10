@@ -23,11 +23,11 @@ Type Example
 		"properties": {
 			"PlantId": {
 				"type": "string",
-				"index": true
+				"isindex": true
 			},
 			"PlantName": {
 				"type": "string",
-				"name": true
+				"isname": true
 			},
 			"Address": {
 				"type": "string"
@@ -44,7 +44,7 @@ Type Example
 		"properties": {
 			"Name": {
 				"type": "string",
-				"index": true
+				"isindex": true
 			},
 			"Serial": {
 				"type": "string"
@@ -62,13 +62,17 @@ Type Example
 			"Time": {
 				"format": "date-time",
 				"type": "string",
-				"index": true
+				"isindex": true
 			},
 			"Pressure": {
-				"type": "number"
+				"type": "number",
+				"name": "Tank Pressure",
+				"description": "Tank Pressure in Pa"
 			},
 			"Temperature": {
-				"type": "number"
+				"type": "number",
+				"name": "Tank Temperature",
+				"description": "Tank Temperature in K"
 			}
 		}
 	}]

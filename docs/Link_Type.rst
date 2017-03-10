@@ -10,7 +10,7 @@ Name                Value
 ``target``          An object representing the target of the link
 =================== =============================
 
-Each ``source`` and ``target`` object has the following form:
+Each ``source`` and ``target`` object has the following keywords:
 
 =================== =============================
 Name                Value

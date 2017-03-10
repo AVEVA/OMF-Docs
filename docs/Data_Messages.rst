@@ -1,13 +1,13 @@
 Data Messages
 -------------
 
-Data messages can span multiple Types and Containers. The body of a Data message is composed of an array of objects with the following properties: 
+Data messages can span multiple Types and Containers. The body of a Data message is composed of an array of objects with the following keywords: 
 
 =============== =================================================================================================
 Name            Value
 =============== =================================================================================================
-``typeid``        Optional ID of the type. If omitted, container is expected.
-``containerid``       Optional ID of the container. If omitted, type is expected.
+``typeid``      Optional ID of the type. If omitted, container is expected.
+``containerid`` Optional ID of the container. If omitted, type is expected.
 ``typeversion`` Optional version of the Type, if one is specified. If omitted, version 1.0.0.0 is assumed.
 ``values`` 	    An array of objects conforming to the type.
 =============== =================================================================================================
