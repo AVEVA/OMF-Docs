@@ -24,9 +24,9 @@ The ``id`` cannot begin with the character sequence __. This is reserved for pre
 
 A ``static`` classification represents metadata describing a device being observed and should be used to capture data that is descriptive and relatively unchanging. A ``dynamic`` classification represents observed or calculated measurements taken from a device.
 
-At least one property must be designated as the index by supplying the ``isindex`` keyword with a value of ``true``. The designated ``isindex`` property is used to uniquely identify discrete Data objects so that they can be updated or deleted after their initial creation. For a clustered index, the ``indexorder`` keyword with an integer value can be used to specify the order within an index. 
+At least one property must be designated as the index by supplying the ``isindex`` keyword with a value of ``true``. The designated ``isindex`` property is used to uniquely identify discrete Data objects so that they can be updated or deleted after their initial creation. For a clustered index, the ``indexorder`` keyword with an integer value can be used to specify a property's order within an index. 
 
-One property may be optionally designated as the name by supplying the ``isname`` keyword with a value of ``true``. If no property is declared to be the ``isname``, the property marked as the ``isindex`` will be used as the name. Because the ``isindex`` must be unique across all assets, the name keyword allows for multiple distinct Data objects to share a common name.
+One property may be optionally designated as the name by supplying the ``isname`` keyword with a value of ``true``. Because the ``isindex`` must be unique across all assets, the name keyword allows for multiple distinct Data objects to share a common name.
 
 Each property may have an optional friendly name and description specified by the ``name`` and ``description`` keywords respectively with a string value.
 
