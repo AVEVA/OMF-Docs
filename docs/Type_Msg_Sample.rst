@@ -6,7 +6,7 @@ Type Example
 ::
 
 	producertoken = b7CNvN36cq
-	version = 1.0
+	omfversion = 1.0
 	messagetype = type
 	messageformat = json
 	action = create
