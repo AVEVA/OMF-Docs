@@ -7,8 +7,4 @@ Each message bulks individual JSON objects into a JSON array. Within a given arr
 
 To achieve optimal throughput, bulking and compression of messages is recommended.
 
-.. toctree::
 
-   Type_Messages
-   Container_Messages
-   Data_Messages
