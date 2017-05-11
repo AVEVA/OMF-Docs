@@ -6,7 +6,7 @@ A Link is a pre-defined type with the typeid __Link. It has the following proper
 =================== =============================
 Name                Value
 =================== =============================
-``source``   	    An object representing the source of the link
+``source``   	      An object representing the source of the link
 ``target``          An object representing the target of the link
 =================== =============================
 
@@ -15,7 +15,7 @@ Each ``source`` and ``target`` object has the following keywords:
 =================== ======================================
 Name                Value
 =================== ======================================
-``typeid``   	      Optional id of the type. If omitted, 
+``typeid``          Optional id of the type. If omitted, 
                     group is expected.
 ``containerid``     Optional id of the container. If 
                     omitted, type is expected.
