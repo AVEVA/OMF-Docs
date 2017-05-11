@@ -23,6 +23,9 @@ protocol that defines headers and bodies. For up-to-date information about the s
 binary protocols currently supported by OSIsoft systems, consult the Qi and PI 
 Connector Relay documentation.
 
+Contents
+--------
+
 .. toctree::
 
    Headers
