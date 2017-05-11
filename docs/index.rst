@@ -25,8 +25,12 @@ Connector Relay documentation.
 
 .. toctree::
 
-   Message_Types
    Headers
+   Message_Types
+   Type_Messages
+   Container_Messages
+   Data_Messages
    Samples
+   
 
 
