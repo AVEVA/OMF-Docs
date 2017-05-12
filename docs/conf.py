@@ -133,7 +133,7 @@ def setup(app):
 html_static_path = ['_static']
 
 # Added the following to fix tables but it didn't work; Bill Belisle
- html_context = {
+html_context = {
     'css_files': [
         '_static/theme_overrides.css',  # override wide tables in RTD theme
         ],
