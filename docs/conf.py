@@ -132,11 +132,12 @@ def setup(app):
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_context = {
-    'css_files': [
-        '_static/theme_overrides.css',  # override wide tables in RTD theme
-        ],
-     }
+# Added the following to fix tables but it didn't work; Bill Belisle
+# html_context = {
+#    'css_files': [
+#        '_static/theme_overrides.css',  # override wide tables in RTD theme
+#        ],
+#     }
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
