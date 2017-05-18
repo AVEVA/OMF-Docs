@@ -1,6 +1,11 @@
 .fa-github {
  display: none !important;
 }
+
+.wy-table-responsive table td, .wy-table-responsive table th {
+	    white-space: normal;
+}
+
 .rst-content tt.literal, .rst-content tt.literal, .rst-content code.literal {
  color: #000000;
 } 

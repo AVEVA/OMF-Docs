@@ -1,32 +1,38 @@
 ===============
  Type Messages
 ===============
-Each Stream, Span, Asset, and Link must be associated with a Type. Types are defined using the JSON Schema specification (http://json-schema.org/). For details on supported property data types and formats, see :doc:`Property_Types_and_Formats`.
+Types are defined using the JSON Schema specification (http://json-schema.org/). For details on supported property data types and formats, see :doc:`Property_Types_and_Formats`.
 
-Any type used by a stream must be registered before the stream can be created. Types can be created, updated, or deleted. Updating a type without updating the type's version will result in failure. Once a type is deleted, any operations on streams or objects using that type will fail.
+Types can be created, updated, or deleted. Updating a Type without updating the Type’s version will result in failure. Once a Type is deleted, any operations on Containers or Data using that Type will fail.
 
-The ``id`` keyword is required, and is used to associate a Stream, Span, Asset, or Link with a given data type.
-
-The ``classification`` keyword must be set to one of ``stream``, ``asset``, ``link``, or ``span``, and is used to denote whether the type is to be used to define Streams, Assets, Links, or Spans. If omitted, the type is assumed to be used to define Streams.
-
-An optional version keyword allows for multiple versions of the same type. If the version keyword is omitted, the version is assumed to be 1.0.0.0. Once a type has been defined, the type’s ``id`` cannot be reused unless a new version is specified.
-
-One property must be designated as the index by supplying the ``index`` keyword with a value of ``true``. The designated index property is used to uniquely identify discrete Events, Spans, Assets and Links so that they can be updated or deleted after their initial creation.
-
-When declaring an Asset type, one property may be optionally designated as the name of an asset by supplying the ``name`` keyword with a value of ``true``. If no property is declared to be the ``name``, the property marked as the ``index`` will be used as the name. Because the ``index`` must be unique across all assets, the ``name`` keyword allows for multiple distinct assets to share a common name.
-
-Depending on the type's classification, additional properties are required:
+The body of a Type message consists of an array of objects. The following keywords are used to define a Type:
 
 =================== =============================
-Type Classification       Required Properties
+Name                Value
 =================== =============================
-Span                * ``StartTime``           
-                    * ``EndTime``
-Link                * ``Source``
-                    * ``Target0`` ... ``TargetN``
+``id``   	        Unique identifier of the Type.
+``classification``  One of ``dynamic`` or ``static``.
+``version``         Optional version of the Type. If omitted version 1.0.0.0 is assumed.
+``name``            Optional friendly name for the Type.
+``description``     Optional description for the Type.
+``tags``            Optional array of strings to tag the Type.
+``metadata``        Optional key-value pairs associated with the Type.
+``properties``      Key-value pairs defining the properties of the Type.
 =================== =============================
+
+The ``id`` cannot begin with the character sequence __. This is reserved for predefined Types. Currently supported predefined Types are __Link and __Span.
+
+A ``static`` classification represents metadata describing a device being observed and should be used to capture data that is descriptive and relatively unchanging. A ``dynamic`` classification represents observed or calculated measurements taken from a device.
+
+At least one property must be designated as the index by supplying the ``isindex`` keyword with a value of ``true``. The designated ``isindex`` property is used to uniquely identify discrete Data objects so that they can be updated or deleted after their initial creation. For a compound index, the order of index properties within the message determines the order within the index.
+
+One property may be optionally designated as the name by supplying the ``isname`` keyword with a value of ``true``. Because the ``isindex`` must be unique across all assets, the name keyword allows for multiple distinct Data objects to share a common name.
+
+Each property may have an optional friendly name and description specified by the ``name`` and ``description`` keywords respectively with a string value.
 
 .. toctree::
 
+   Link_Type
+   Span_Type 
    Property_Types_and_Formats
    Type_Msg_Sample

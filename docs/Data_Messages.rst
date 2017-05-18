@@ -1,7 +1,18 @@
 Data Messages
 -------------
 
-Once usable Types and Streams have been created, Data messages can be posted to a Stream. Data messages can span multiple Streams. The body of a Data message is comprised of an array of key-value pairs, where the key is the Stream ID, and the value is an array of Data objects conforming to the given Stream's Type definition.
+Data messages can span multiple Types and Containers. The body of a Data message is composed of an array of objects with the following keywords: 
+
+=============== =================================================================================================
+Name            Value
+=============== =================================================================================================
+``typeid``      Optional ID of the type. If omitted, container is expected.
+``containerid`` Optional ID of the container. If omitted, type is expected.
+``typeversion`` Optional version of the Type, if one is specified. If omitted, version 1.0.0.0 is assumed.
+``values`` 	    An array of objects conforming to the type.
+=============== =================================================================================================
+
+For each object, either ``typeid`` or ``containerid`` must be specified. If ``containerid`` is specified, the values must conform to the Type with which the Container is associated. If ``typeid`` is specified, the values must conform to that Type.
 
 .. toctree::
 

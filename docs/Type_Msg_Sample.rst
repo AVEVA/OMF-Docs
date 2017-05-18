@@ -1,48 +1,50 @@
-Sample
-^^^^^^
+Type Example
+^^^^^^^^^^^^^^
 
 **Headers**
 
 ::
 
 	producertoken = b7CNvN36cq
-	version = 0.12
+	omfversion = 1.0
 	messagetype = type
+	messageformat = json
 	action = create
 
 **Body**
 
 ::
 
-	[
-	{
-		"id": "TankMeasurement",
+	[{
+		"id": "Plant",
 		"version": "1.0.0.0",
 		"type": "object",
-		"classification": "stream",
+		"classification": "static",
 		"properties": {
-			"Time": {
-				"format": "date-time",
+			"PlantId": {
 				"type": "string",
-				"index": true
+				"isindex": true
 			},
-			"Pressure": {
-				"type": "number"
+			"PlantName": {
+				"type": "string",
+				"isname": true
 			},
-			"Temperature": {
-				"type": "number"
+			"Address": {
+				"type": "string"
+			},
+			"Contact": {
+				"type": "string"
 			}
 		}
-	},
-	{
+	}, {
 		"id": "Tank",
 		"version": "1.0.0.0",
 		"type": "object",
-	        "classification": "asset",
+		"classification": "static",
 		"properties": {
 			"Name": {
 				"type": "string",
-				"index": true
+				"isindex": true
 			},
 			"Serial": {
 				"type": "string"
@@ -51,51 +53,28 @@ Sample
 				"type": "string"
 			}
 		}
-	},
-	{
-	        "id": "OverRange",
+	}, {
+		"id": "TankMeasurement",
 		"version": "1.0.0.0",
 		"type": "object",
-		"classification": "span",
+		"classification": "dynamic",
 		"properties": {
-		        "ID": {
-			        "type": "string",
-				"index": true
+			"Time": {
+				"format": "date-time",
+				"type": "string",
+				"isindex": true
 			},
-			"StartTime": {
-			        "format": "date-time",
-				"type": "string"
+			"Pressure": {
+				"type": "number",
+				"name": "Tank Pressure",
+				"description": "Tank Pressure in Pa"
 			},
-			"EndTime": {
-			        "format": "date-time",
-				"type": "string"
+			"Temperature": {
+				"type": "number",
+				"name": "Tank Temperature",
+				"description": "Tank Temperature in K"
 			}
 		}
-	},
-	{
-	        "id": "TankLink",
-		"version": "1.0.0.0",
-		"type": "object",
-		"classification": "link",
-		"properties": {
-		        "ID": {
-			        "type": "string",
-				"index": true
-			},
-			"Source": {
-			        "type": "string",
-				"linkType": "Tank"
-			},
-			"Target0": {
-			        "type": "string",
-				"linkType": "Tank"
-			},
-			"Target1": {
-			        "type": "string",
-				"linkType": "Pump",
-				"linkTypeVersion": "2.0.0.0"
-			}
-		}
-	}	
-	]
+	}]
+
 	

@@ -1,12 +1,12 @@
-Sample
-^^^^^^
+Data Example
+^^^^^^^^^^^^^
 
 **Headers**
 
 ::
 
 	producertoken = b7CNvN36cq
-	version = 0.12
+	omfversion = 1.0
 	messagetype = data
 	action = create
 	messageformat = json
@@ -15,23 +15,93 @@ Sample
 
 ::
 
-	[
-	{
-	    "stream": "Building1TankMeasurements",
-	    "values": [
-	    { "Time": "2015-12-31T22:33:39.069083Z", "Pressure": 25.4, "Temperature": 120.542 },
-	    { "Time": "2015-12-31T22:34:39.069083Z", "Pressure": 25.6, "Temperature": 120.784 },
-	    { "Time": "2015-12-31T22:35:39.069083Z", "Pressure": 25.7, "Temperature": 122.242 },
-	    { "Time": "2015-12-31T22:36:39.069083Z", "Pressure": 25.9, "Temperature": 123.423 }
-	    ]
-	},
-	{
-	    "stream": "Building2TankMeasurements",
-	    "values": [
-	    { "Time": "2015-12-31T22:33:39.069083Z", "Pressure": 29.4, "Temperature": 129.542 },
-	    { "Time": "2015-12-31T22:34:39.069083Z", "Pressure": 30.1, "Temperature": 130.223 },
-	    { "Time": "2015-12-31T22:35:39.069083Z", "Pressure": 30.8, "Temperature": 130.852 }
-	    ]
-	}
-	]
+	[{
+		"typeid": "Plant",
+		"values": [{
+			"PlantId": "PlantId1",
+			"PlantName": "Plant1",
+			"Address": "123 Meridian Ave",
+			"Contact": "Bob Ross"
+		}]
+	}, {
+		"typeid": "Tank",
+		"values": [{
+			"Name": "Tank1",
+			"Serial": "5236-3523-KKF4",
+			"Model": "FN-2187"
+		}, {
+			"Name": "Tank2",
+			"Serial": "2364-4243-FS12",
+			"Model": "TK-421"
+		}]
+	}, {
+		"typeid": "__Link",
+		"values": [{
+			"source": {
+				"typeid": "Plant",
+				"index": "PlantId1"
+			},
+			"target": {
+				"typeid": "Tank",
+				"index": "Tank1"
+			}
+		}, {
 
+			"source": {
+				"typeid": "Plant",
+				"index": "PlantId1"
+			},
+			"target": {
+				"typeid": "Tank",
+				"index": "Tank2"
+			}
+		}, {
+
+			"source": {
+				"typeid": "Tank",
+				"index": "Tank1"
+			},
+			"target": {
+				"containerid": "Tank1Measurements"
+			}
+		}, {
+
+			"source": {
+				"typeid": "Tank",
+				"index": "Tank2"
+			},
+			"target": {
+				"containerid": "Tank2Measurements"
+			}
+		}]
+	}, {
+		"containerid": "Tank1Measurements",
+		"values": [{
+			"Time": "2017-01-11T22:23:23.430Z",
+			"Pressure": "12.0",
+			"Temperature": "100.1"
+		}, {
+			"Time": "2017-01-11T22:24:23.430Z",
+			"Pressure": "11.5",
+			"Temperature": "101.2"
+		}]
+	}, {
+		"containerid": "Tank2Measurements",
+		"values": [{
+			"Time": "2017-01-11T22:23:23.430Z",
+			"Pressure": "14.0",
+			"Temperature": "90.1"
+		}, {
+			"Time": "2017-01-11T22:24:23.430Z",
+			"Pressure": "15.1",
+			"Temperature": "91.2"
+		}]
+	}, {
+		"typeid": "__Span",
+		"values": [{
+			"id": "Tank1Wednesday",
+			"containerid": "Tank1Measurements",
+			"startindex": "2017-01-11T00:00:00.000Z",
+			"endindex": "2017-01-12T00:00:00.000Z"
+		}]
+	}]

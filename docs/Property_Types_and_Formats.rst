@@ -7,20 +7,20 @@ OMF supports the array, boolean, integer, number, and string data types defined 
 ========   =================  ===========
 Type       Format             Description
 ========   =================  ===========
-array                         An array of objects. The ``items`` keyword defines the type of the objects
-\                             in the array.
+array                         An array of objects. The ``items`` keyword defines the type of the objects in the array.                           
 boolean                       A value of either "true" or "false".
 integer    int64              64-bit integer.
 integer    int32 (default)    32-bit integer.
 integer    int16              16-bit integer.
+integer    uint64             64-bit unsigned integer.
+integer    uint32             32-bit unsigned integer.
+integer    uint16             16-bit unsigned integer.
 number     float64            64-bit floating point.
 number     float32 (default)  32-bit floating point.
 number     float16            16-bit floating point.
-object     dictionary         A dictionary of objects, indexed by a string key. The ``additionalProperties``
-\                             keyword defines the dictionary's value type.
+object     dictionary         A dictionary of objects, indexed by a string key. The ``additionalProperties`` keyword defines the dictionary's value type.                             
 string                        A string.
-string     date-time          A string representation of a timestamp, formatted as
-\                             YYYY-MM-DDThh:mm:ss.fffZ.
+string     date-time          A string representation of a timestamp, formatted as YYYY-MM-DDThh:mm:ss.fffZ.                            
 ========   =================  ===========
 
 
