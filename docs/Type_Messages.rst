@@ -20,7 +20,7 @@ Name                Value
 ``properties``      Key-value pairs defining the properties of the Type.
 =================== =============================
 
-The ``id`` cannot begin with the character sequence __. This is reserved for predefined Types. Currently supported predefined Types are __Link and __Span.
+The ``id`` cannot begin with the character sequence __. This is reserved for predefined Types. One currently supported predefined Type is __Link.
 
 A ``static`` classification represents metadata describing a device being observed and should be used to capture data that is descriptive and relatively unchanging. A ``dynamic`` classification represents observed or calculated measurements taken from a device.
 
@@ -33,6 +33,5 @@ Each property may have an optional friendly name and description specified by th
 .. toctree::
 
    Link_Type
-   Span_Type 
    Property_Types_and_Formats
    Type_Msg_Sample

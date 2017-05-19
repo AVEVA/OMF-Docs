@@ -16,9 +16,9 @@ Each ``source`` and ``target`` object has the following keywords:
 Name                Value
 =================== ======================================
 ``typeid``          Optional id of the type. If omitted, 
-                    group is expected.
+                    containerid is expected.
 ``containerid``     Optional id of the container. If 
-                    omitted, type is expected.
+                    omitted, typeid is expected.
 ``typeversion``     Optional version of the type to be 
                     linked to or from. If omitted 
                     version 1.0.0.0 is assumed.

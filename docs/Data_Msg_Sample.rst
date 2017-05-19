@@ -96,12 +96,4 @@ Data Example
 			"Pressure": "15.1",
 			"Temperature": "91.2"
 		}]
-	}, {
-		"typeid": "__Span",
-		"values": [{
-			"id": "Tank1Wednesday",
-			"containerid": "Tank1Measurements",
-			"startindex": "2017-01-11T00:00:00.000Z",
-			"endindex": "2017-01-12T00:00:00.000Z"
-		}]
 	}]
