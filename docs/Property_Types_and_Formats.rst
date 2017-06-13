@@ -7,7 +7,7 @@ OMF supports the array, boolean, integer, number, and string data types defined 
 ========   =================  ===========
 Type       Format             Description
 ========   =================  ===========
-array                         An array of objects. The ``items`` keyword defines the type of the objects in the array.                           
+array                         An array of objects. The requierd ``items`` keyword defines the type of the objects in the array.                           
 boolean                       A value of either "true" or "false".
 integer    int64              64-bit integer.
 integer    int32 (default)    32-bit integer.
