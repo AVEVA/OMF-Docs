@@ -1,7 +1,7 @@
 The OSIsoft Message Format 
 ==========================
 
-v1.0rc4
+v1.0
 -----
 
 
@@ -33,7 +33,6 @@ Contents
    Type_Messages
    Container_Messages
    Data_Messages
-   Samples
    
 
 
