@@ -18,6 +18,7 @@ Name                Value
 ``tags``            Optional array of strings to tag the Type.
 ``metadata``        Optional key-value pairs associated with the Type.
 ``properties``      Key-value pairs defining the properties of the Type.
+``type``            Inherited from JSON Schema. Must be set to ``object``.
 =================== =============================
 
 The ``id`` cannot begin with the character sequence __. This is reserved for predefined Types. One currently supported predefined Type is __Link.
