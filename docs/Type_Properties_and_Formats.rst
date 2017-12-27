@@ -2,7 +2,7 @@
 Type Properties and Formats
 ==========================
 
-The following keywords used to define a Type Property:
+The following keywords are used to define a Type Property:
 
 =================== =============================
 Keyword             Description
