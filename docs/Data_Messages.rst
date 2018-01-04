@@ -14,7 +14,7 @@ Name            Value
 
 For each object, either ``typeid`` or ``containerid`` must be specified. If ``containerid`` is specified, the values must conform to the Type with which the Container is associated. If ``typeid`` is specified, the values must conform to that Type.
 
-If a Type Property is defined but no property value is provided in the Data message, a default value will be assumed. Default values are specified in :doc:`Property_Types_and_Formats`.
+If a Type Property is defined but no property value is provided in the Data message, a default value will be assumed. Default values are specified in :doc:`Type_Properties_and_Formats`.
 
 .. toctree::
 
