@@ -78,22 +78,22 @@ Data Example
 		"containerid": "Tank1Measurements",
 		"values": [{
 			"Time": "2017-01-11T22:23:23.430Z",
-			"Pressure": "12.0",
-			"Temperature": "100.1"
+			"Pressure": 12.0,
+			"Temperature": 100.1
 		}, {
 			"Time": "2017-01-11T22:24:23.430Z",
-			"Pressure": "11.5",
-			"Temperature": "101.2"
+			"Pressure": 11.5,
+			"Temperature": 101.2
 		}]
 	}, {
 		"containerid": "Tank2Measurements",
 		"values": [{
 			"Time": "2017-01-11T22:23:23.430Z",
-			"Pressure": "14.0",
-			"Temperature": "90.1"
+			"Pressure": 14.0,
+			"Temperature": 90.1
 		}, {
 			"Time": "2017-01-11T22:24:23.430Z",
-			"Pressure": "15.1",
-			"Temperature": "91.2"
+			"Pressure": 15.1,
+			"Temperature": 91.2
 		}]
 	}]
