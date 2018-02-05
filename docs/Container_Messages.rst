@@ -17,6 +17,7 @@ Name            Value
 ``description`` Optional description for the Container.
 ``tags``        Optional array of strings to tag the Container.
 ``metadata``    Optional key-value pairs associated with the Container.
+**indexes**     **Optional array of Type Property ids to be used as secondary indexes for the Container.**
 =============== =================================================================================================
 
 .. toctree::

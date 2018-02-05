@@ -67,12 +67,14 @@ Type Example
 			"Pressure": {
 				"type": "number",
 				"name": "Tank Pressure",
-				"description": "Tank Pressure in Pa"
+				"description": "Tank Pressure in Pa",
+				>>>>>>>> "uom": "pascal" <<<<<<<<
 			},
 			"Temperature": {
 				"type": "number",
 				"name": "Tank Temperature",
-				"description": "Tank Temperature in K"
+				"description": "Tank Temperature in K",
+				>>>>>>>> "uom": "K" <<<<<<<<
 			}
 		}
 	}]
