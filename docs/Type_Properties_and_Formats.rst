@@ -38,7 +38,7 @@ string     date-time            0 UTC, January 1, 0001  A string representation 
 ========   =================    ======================  ===========
 
 
-**Nullable property types are supported by specifying an array of accepted values including the type and ``null``. For example,**
+**Nullable types properties are supported by specifying an array of accepted values including the type and ``null``. For example:**
 
 ::
 
