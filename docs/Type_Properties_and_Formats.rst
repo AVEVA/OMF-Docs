@@ -10,7 +10,7 @@ Name                Value
 type                Required type of the Type Property which must match one of those listed in the table below.
 format              Optional format of the Type Propety type that, if specified, must be from the table below.
 isindex   	        At least one Type Property must be designated as the index by supplying the isindex keyword with a value of true. The designated isindex property is used to uniquely identify discrete Data objects so that they can be updated or deleted after their initial creation. For a compound index, the order of index properties within the message determines the order within the index.
-isname              One Type Property may be optionally designated as the name by supplying the isname keyword with a value of true. Because the isindex must be unique across all assets, the name keyword allows for multiple distinct Data objects to share a common name.
+isname              One Type Property may be optionally designated as the name by supplying the isname keyword with a value of true. Because the index must be unique across all Data objects, the isname keyword allows for multiple distinct Data objects to share a common name.
 name                Optional friendly name for the Type Property.
 description         Optional description for the Type Property.
 =================== =============================
@@ -33,7 +33,7 @@ number     float32 (default)    0                       32-bit floating point.
 number     float16              0                       16-bit floating point.
 object     dictionary           null                    A dictionary of objects, indexed by a string key. The ``additionalProperties`` keyword defines the dictionary's value type.                             
 string                          null                    A string.
-string     date-time            0 UTC, January 1, 0001  A string representation of a timestamp, formatted as YYYY-MM-DDThh:mm:ss.fffZ.                            
+string     date-time            0001-01-01T00:00:00Z    A string representation of a timestamp, formatted as YYYY-MM-DDThh:mm:ssZ, with optional subsecond precision.                        
 ========   =================    ======================  ===========
 
 
