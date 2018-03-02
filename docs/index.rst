@@ -34,5 +34,14 @@ Contents
    Container_Messages
    Data_Messages
    
+HTTP Behaviors
+--------------
 
+While the OMF specification does not define a particular binary message protocol, OSIsoft 
+systems accepting OMF over HTTP conform to a set of behaviors described in this section.
+
+.. toctree::
+   
+   Message_Size
+   Standard_Responses
 
