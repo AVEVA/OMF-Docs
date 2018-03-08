@@ -44,7 +44,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'OMF'
-copyright = u'2017, OSIsoft, LLC'
+copyright = u'2018, OSIsoft, LLC'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -274,7 +274,7 @@ texinfo_documents = [
 epub_title = u'OMF'
 epub_author = u'OSIsoft, LLC'
 epub_publisher = u'OSIsoft, LLC'
-epub_copyright = u'2017, OSIsoft, LLC'
+epub_copyright = u'2018, OSIsoft, LLC'
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = u'OMF'
