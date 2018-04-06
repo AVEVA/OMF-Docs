@@ -8,7 +8,7 @@ Status code                   Description
 ============================= =============================
 ``200 OK``   	              The OMF message was successfully processed. Response body contains additional information.
 ``204 No Content``            The OMF message was successfully processed, but there is no additional information to return. 
-``400 Bad request``           The OMF message was malformed or not understood. The client should not retry sending the message without modifications.
+``400 Bad Request``           The OMF message was malformed or not understood. The client should not retry sending the message without modifications.
 ``401 Unauthorized``          Authentication failed.
 ``403 Forbidden``             Authentication succeeded, but not authorized.
 ``413 Payload Too Large``     Payload size exceeds OMF body size limit.
