@@ -6,7 +6,8 @@ The following status codes are returned by OSIsoft products accepting OMF messag
 ============================= =============================
 Status code                   Description
 ============================= =============================
-``2xx Success``   	          OMF message was successfully processed.
+``200 OK``   	              The OMF message was successfully processed. Response body contains additional information.
+``204 No Content``            The OMF message was successfully processed, but there is no additional information to return. 
 ``400 Bad request``           The OMF message was malformed or not understood. The client should not retry sending the message without modifications.
 ``401 Unauthorized``          Authentication failed.
 ``403 Forbidden``             Authentication succeeded, but not authorized.

@@ -28,4 +28,8 @@ Name                Value
                     optional.
 =================== ======================================
 
-If ``typeid`` and ``index`` are specified, the link is for a particular non-container value. If ``containerid`` is specified with an ``index``, the link is for a particular container value. If ``containerid`` is specified without an ``index``, the link is for a container.
+If ``typeid`` and ``index`` are specified, the link is for a particular non-container value. 
+
+If ``containerid`` is specified with an ``index``, the link is for a particular container value. 
+
+If ``containerid`` is specified without an ``index``, the link is for a container.
