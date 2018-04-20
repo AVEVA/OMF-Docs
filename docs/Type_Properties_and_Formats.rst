@@ -42,7 +42,7 @@ string     date-time            0001-01-01T00:00:00Z    A string representation 
 ========   =================    ======================  ===========
 
 
-Nullable types properties are supported by specifying an array of accepted values including the type and ``null``. For example:
+Nullable type properties are supported by specifying an array of accepted values including the type and ``null``. For example:
 
 ::
 
