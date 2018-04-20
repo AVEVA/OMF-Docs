@@ -2,8 +2,7 @@ Headers
 =======
 
 The following headers are supported in version 1.0 of the message specification. Headers may 
-be added to or removed from the specification over time. Backwards compatibility is achievable 
-through the ``omfversion`` header. 
+be added or removed over time. Backwards compatibility is achievable through the ``omfversion`` header. 
 
 =================    ========================================================================================
 Name                 Value

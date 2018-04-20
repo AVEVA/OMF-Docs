@@ -3,7 +3,7 @@
 ===============
 Types are defined using the JSON Schema specification (http://json-schema.org/). For details on supported property data types and formats, see :doc:`Type_Properties_and_Formats`.
 
-Types can be created, updated, or deleted. Updating a Type without updating the Type’s version will result in failure. Once a Type is deleted, any operations on Containers or Data using that Type will fail.
+Types can be created, updated, or deleted. Updating a Type without updating the Type’s version will result in a failure. Once a Type is deleted, any operations on Containers or Data using that Type will fail.
 
 The body of a Type message consists of an array of objects. The following keywords are used to define a Type:
 
