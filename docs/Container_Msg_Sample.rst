@@ -6,7 +6,7 @@ Container Example
 ::
 
 	producertoken = b7CNvN36cq
-	omfversion = 1.0
+	omfversion = 1.1
 	messagetype = container
 	action = create
 	messageformat = json
