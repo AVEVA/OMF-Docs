@@ -74,7 +74,8 @@ Type Example
 				"type": "number",
 				"name": "Tank Temperature",
 				"description": "Tank Temperature in K",
-				"uom": "K" 			}
+				"uom": "K" 			
+			}
 		}
 	}]
 
