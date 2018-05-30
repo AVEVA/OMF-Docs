@@ -6,7 +6,7 @@ Type Example
 ::
 
 	producertoken = b7CNvN36cq
-	omfversion = 1.1
+	omfversion = 1.2-alpha1
 	messagetype = type
 	messageformat = json
 	action = create
@@ -75,6 +75,11 @@ Type Example
 				"name": "Tank Temperature",
 				"description": "Tank Temperature in K",
 				"uom": "K" 			
+			},
+			"Quality": {
+				"type": "integer",
+				"format": "uint32",
+				"isquality": true 			
 			}
 		}
 	}]
