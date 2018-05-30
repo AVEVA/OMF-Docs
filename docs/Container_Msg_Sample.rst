@@ -24,5 +24,12 @@ Container Example
 	}, {
 		"id": "Tank2Measurements",
 		"typeid": "TankMeasurement",
-		"typeVersion": "1.0.0.0"
+		"typeVersion": "1.0.0.0",
+		"propertyoverrides": {
+			"Pressure": {
+				"name": "Particular Tank Pressure",
+				"description": "Tank Pressure in atm",
+				"uom": "atm"
+			}
+		}
 	}]

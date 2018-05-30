@@ -1,8 +1,8 @@
 The OSIsoft Message Format 
 ==========================
 
-v1.1
-----
+v1.2-alpha1
+-----------
 
 
 Overview
@@ -19,6 +19,7 @@ Contents
 
 .. toctree::
 
+   Whats_New
    Headers
    Message_Types
    Type_Messages
