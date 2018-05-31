@@ -80,7 +80,7 @@ Type Example
 				"type": "integer",
 				"format": "uint32",
 				"isquality": true,
-				"qualityformat": "OPC UA"				
+				"qualityscheme": "OPC UA"				
 			}
 		}
 	}]
