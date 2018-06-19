@@ -42,7 +42,7 @@ string     date-time            0001-01-01T00:00:00Z    A string representation 
 ========   =================    ======================  ===========
 
 
-Nullable type properties are supported by specifying an array of accepted values including the type and ``null``. For example:
+Nullable type properties are supported by specifying an array of accepted values including the type and ``null``. The order of the type and ``null`` in the array does not matter. For example:
 
 ::
 
@@ -50,7 +50,8 @@ Nullable type properties are supported by specifying an array of accepted values
 	
 ::
 
-	"Nullable DateTime": {"type": ["string", "null"], "format": "date-time"}	
+	"Nullable DateTime": {"type": ["null", "string"], "format": "date-time"}
+	
 ::
 
 	"Nullable Boolean": {"type": ["boolean", "null"]}
