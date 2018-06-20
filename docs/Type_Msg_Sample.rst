@@ -83,6 +83,46 @@ Type Example
 				"qualityscheme": "OPC UA"				
 			}
 		}
+	}, {
+		"id": "Tank2",
+		"version": "1.0.0.0",
+		"type": "object",
+		"classification": "static",
+		"properties": {
+			"Name": {
+				"type": "string",
+				"isindex": true
+			},
+			"Dimensions": {
+				"type": "object",
+				"format": "dictionary",
+				"additionalProperties": {
+					"type": "number",
+					"format": "float64"
+				}
+			},
+			"Maintenance Schedule": {
+				"type": "array",
+				"items": { 
+					"type": "string",
+					"format": "date-time"
+				}
+			},
+			"Location": {
+				"type": "object",
+				"properties": {
+					"Latitude": {
+						"type": "number"
+					},
+					"Longitude": {
+						"type": "number"
+					}
+				}
+			}
+		}
 	}]
+
+	
+
 
 	
