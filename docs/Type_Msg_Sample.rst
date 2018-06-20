@@ -81,6 +81,10 @@ Type Example
 		"type": "object",
 		"classification": "static",
 		"properties": {
+			"Name": {
+				"type": "string",
+				"isindex": true
+			},
 			"Dimensions": {
 				"type": "object",
 				"format": "dictionary",
@@ -92,8 +96,8 @@ Type Example
 			"Maintenance Schedule": {
 				"type": "array",
 				"items": { 
-					"type": "date-time",
-					"format": "string"
+					"type": "string",
+					"format": "date-time"
 				}
 			},
 			"Location": {
@@ -109,5 +113,8 @@ Type Example
 			}
 		}
 	}]
+
+	
+
 
 	
