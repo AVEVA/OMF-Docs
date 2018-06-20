@@ -23,6 +23,10 @@ protocol that defines headers and bodies. For up-to-date information about the s
 binary protocols currently supported by OSIsoft systems, consult the Qi and PI 
 Connector Relay documentation.
 
+Please note that anything defined in this document, such as keywords and enumerated
+values, is treated as case insensitive. Case sensitivity for all user specified values
+is determined by the rules of the backend system.
+
 Contents
 --------
 
