@@ -75,6 +75,39 @@ Type Example
 				"description": "Tank Temperature in K"
 			}
 		}
+	}, {
+		"id": "Tank2",
+		"version": "1.0.0.0",
+		"type": "object",
+		"classification": "static",
+		"properties": {
+			"Dimensions": {
+				"type": "object",
+				"format": "dictionary",
+				"additionalProperties": {
+					"type": "number",
+					"format": "float64"
+				}
+			},
+			"Maintenance Schedule": {
+				"type": "array",
+				"items": { 
+					"type": "date-time",
+					"format": "string"
+				}
+			},
+			"Location": {
+				"type": "object",
+				"properties": {
+					"Latitude": {
+						"type": "number"
+					},
+					"Longitude": {
+						"type": "number"
+					}
+				}
+			}
+		}
 	}]
 
 	
