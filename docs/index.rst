@@ -19,6 +19,7 @@ Contents
 
 .. toctree::
 
+   Whats_New
    Headers
    Message_Types
    Type_Messages
