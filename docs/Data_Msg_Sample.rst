@@ -6,7 +6,7 @@ Data Example
 ::
 
 	producertoken = b7CNvN36cq
-	omfversion = 1.1
+	omfversion = 1.2-alpha1
 	messagetype = data
 	action = create
 	messageformat = json
@@ -79,21 +79,25 @@ Data Example
 		"values": [{
 			"Time": "2017-01-11T22:23:23.430Z",
 			"Pressure": 12.0,
-			"Temperature": 100.1
+			"Temperature": 100.1,
+			"Quality": 0
 		}, {
 			"Time": "2017-01-11T22:24:23.430Z",
 			"Pressure": 11.5,
-			"Temperature": 101.2
+			"Temperature": 101.2,
+			"Quality": 1
 		}]
 	}, {
 		"containerid": "Tank2Measurements",
 		"values": [{
 			"Time": "2017-01-11T22:23:23.430Z",
 			"Pressure": 14.0,
-			"Temperature": 90.1
+			"Temperature": 90.1,
+			"Quality": 0
 		}, {
 			"Time": "2017-01-11T22:24:23.430Z",
 			"Pressure": 15.1,
-			"Temperature": 91.2
+			"Temperature": 91.2,
+			"Quality": 0
 		}]
 	}]
