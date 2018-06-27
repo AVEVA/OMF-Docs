@@ -10,16 +10,16 @@ The body of a Type message consists of an array of objects. The following keywor
 =================== =============================
 Name                Value
 =================== =============================
-``id``   	        Unique identifier of the Type.
 ``classification``  One of ``dynamic`` or ``static``.
-``version``         Optional version of the Type. If omitted version 1.0.0.0 is assumed.
-``name``            Optional friendly name for the Type.
-``description``     Optional description for the Type.
-``tags``            Optional array of strings to tag the Type.
-``metadata``        Optional key-value pairs associated with the Type.
-``action``          Optional: One of: ``create``, ``update``, or ``delete``. Describes the action to be performed using this particular object. The value specified here overrides the value of the ``action`` header. If omitted, the value of the ``action`` header is assumed. See :doc:`Headers`.
-``properties``      Key-value pairs defining the properties of the Type
+``id``   	        Unique identifier of the Type.
+``properties``      Key-value pairs defining the properties of the Type.
 ``type``            Inherited from JSON Schema. Must be set to ``object``.
+``action``          Optional: One of: ``create``, ``update``, or ``delete``. Describes the action to be performed using this particular object. The value specified here overrides the value of the ``action`` header. If omitted, the value of the ``action`` header is assumed. See :doc:`Headers`.
+``description``     Optional description for the Type.
+``metadata``        Optional key-value pairs associated with the Type.
+``name``            Optional friendly name for the Type.
+``tags``            Optional array of strings to tag the Type.
+``version``         Optional version of the Type. If omitted version 1.0.0.0 is assumed.
 =================== =============================
 
 The ``id`` cannot begin with the character sequence __. This is reserved for predefined Types. One currently supported predefined Type is __Link.

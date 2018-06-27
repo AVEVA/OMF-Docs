@@ -6,10 +6,11 @@ Data messages can span multiple Types and Containers. The body of a Data message
 =============== =================================================================================================
 Name            Value
 =============== =================================================================================================
-``typeid``      Optional ID of the type. If omitted, container is expected.
-``containerid`` Optional ID of the container. If omitted, type is expected.
-``typeversion`` Optional version of the Type, if one is specified. If omitted, version 1.0.0.0 is assumed.
 ``values`` 	    An array of objects conforming to the type.
+``action``      Optional: One of: ``create``, ``update``, or ``delete``. Describes the action to be performed using this particular object. The value specified here overrides the value of the ``action`` header. If omitted, the value of the ``action`` header is assumed. See :doc:`Headers`.
+``containerid`` Optional ID of the container. If omitted, type is expected.
+``typeid``      Optional ID of the type. If omitted, container is expected.
+``typeversion`` Optional version of the Type, if one is specified. If omitted, version 1.0.0.0 is assumed.
 =============== =================================================================================================
 
 For each object, either ``typeid`` or ``containerid`` must be specified. If ``containerid`` is specified, the values must conform to the Type with which the Container is associated. If ``typeid`` is specified, the values must conform to that Type.
