@@ -17,6 +17,8 @@ For each object, either ``typeid`` or ``containerid`` must be specified. If ``co
 
 If a Type Property is defined but no property value is provided in the Data message, a default value will be assumed. Default values are specified in :doc:`Type_Properties_and_Formats`.
 
+If ``action`` is specified, the action to be performed will apply to all entries in ``values``.
+
 .. toctree::
 
    Data_Msg_Sample
