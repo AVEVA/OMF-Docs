@@ -17,7 +17,8 @@ Name                Value
 ``description``     Optional description for the Type.
 ``tags``            Optional array of strings to tag the Type.
 ``metadata``        Optional key-value pairs associated with the Type.
-``properties``      Key-value pairs defining the properties of the Type.
+``action``          Optional: One of: ``create``, ``update``, or ``delete``. Describes the action to be performed using this particular object. The value specified here overrides the value of the ``action`` header. If omitted, the value of the ``action`` header is assumed. See :doc: `Headers <Headers>`.
+``properties``      Key-value pairs defining the properties of the Type
 ``type``            Inherited from JSON Schema. Must be set to ``object``.
 =================== =============================
 
