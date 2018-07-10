@@ -12,7 +12,7 @@ Name                   Value
 =====================  =================================================================================================
 ``id``                 Unique identifier of the Container.
 ``typeid``             ID of the Type used by the Container.
-``action``             Optional: One of: ``create``, ``update``, or ``delete``. Describes the action to be performed using this particular object. The value specified here overrides the value of the ``action`` header. If omitted, the value of the ``action`` header is assumed. See :doc:`Headers`.
+``action``             Optional: One of: ``create``, ``update``, or ``delete``. The value specified overrides the value of the ``action`` header. If omitted, the value of the ``action`` header is assumed. See :doc:`Headers`.
 ``description``        Optional description for the Container.
 ``indexes``            Optional array of Type Property ids to be used as secondary indexes for the Container.
 ``metadata``           Optional key-value pairs associated with the Container.

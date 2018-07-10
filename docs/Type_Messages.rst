@@ -14,7 +14,7 @@ Name                Value
 ``id``   	        Unique identifier of the Type.
 ``properties``      Key-value pairs defining the properties of the Type.
 ``type``            Inherited from JSON Schema. Must be set to ``object``.
-``action``          Optional: One of: ``create``, ``update``, or ``delete``. Describes the action to be performed using this particular object. The value specified here overrides the value of the ``action`` header. If omitted, the value of the ``action`` header is assumed. See :doc:`Headers`.
+``action``          Optional: One of: ``create``, ``update``, or ``delete``. The value specified overrides the value of the ``action`` header. If omitted, the value of the ``action`` header is assumed. See :doc:`Headers`.
 ``description``     Optional description for the Type.
 ``metadata``        Optional key-value pairs associated with the Type.
 ``name``            Optional friendly name for the Type.
@@ -25,6 +25,7 @@ Name                Value
 The ``id`` cannot begin with the character sequence __. This is reserved for predefined Types. One currently supported predefined Type is __Link.
 
 A ``static`` classification represents metadata describing a device being observed and should be used to capture data that is descriptive and relatively unchanging. A ``dynamic`` classification represents observed or calculated measurements taken from a device.
+
 
 .. toctree::
 
