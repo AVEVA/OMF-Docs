@@ -70,6 +70,7 @@ Assuming the type below has been defined previously:
 Partial updates can be sent as follows:
 	
 ::	
+
 	[
 		
 		...
@@ -92,7 +93,7 @@ Partial updates can be sent as follows:
 		
 	]
 
-In this example the first entry in the ``values`` array updates Temperature only without affecting Pressure while the second entry updates Pressure only without updating Temperature.
+In this example the first entry in the ``values`` array updates *Temperature* only without affecting *Pressure* while the second entry updates *Pressure* only without updating *Temperature*.
 	
 
 .. toctree::
