@@ -67,7 +67,7 @@ Assuming the type below has been defined previously:
 	
 	]
 	
-Partial updates can be sent as follows:
+Partial updates can be sent as follows assuming a container *Tank1Measurements* with the above type registered:
 	
 ::	
 
