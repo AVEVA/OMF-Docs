@@ -49,16 +49,16 @@ Assuming the type below has been defined previously:
 						"uom": "pascal"
 					},
 					"Temperature": {
-                        "type": "number",
-                        "name": "Tank Temperature",
-                        "description": "Tank Temperature in K",
-                        "uom": "K"
+						"type": "number",
+						"name": "Tank Temperature",
+						"description": "Tank Temperature in K",
+						"uom": "K"
 					},
 					"Quality": {
-                        "type": "integer",
-                        "format": "uint32",
-                        "isquality": true,
-                        "qualityscheme": "OPC UA"
+						"type": "integer",
+						"format": "uint32",
+						"isquality": true,
+						"qualityscheme": "OPC UA"
 					}
 			}
 		},
@@ -93,7 +93,7 @@ Partial updates can be sent as follows:
 		
 	]
 
-In this example the first entry in the ``values`` array updates *Temperature* only without affecting *Pressure* while the second entry updates *Pressure* only without updating *Temperature*.
+In this example the first entry in the ``values`` array updates *Temperature* only without affecting *Pressure* while the second entry updates *Pressure* only without updating *Temperature*. If ``action`` is omitted or a value other than ``patch`` is specified, the above example will assume default values for the missing properties.
 	
 
 .. toctree::
