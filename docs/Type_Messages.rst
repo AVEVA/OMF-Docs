@@ -19,7 +19,7 @@ Name                Value
 ``metadata``        Optional key-value pairs associated with the Type.
 ``name``            Optional friendly name for the Type.
 ``tags``            Optional array of strings to tag the Type.
-``version``         Optional version of the Type. The version must be of format x.x.x.x, where x must be a positive integer.If omitted version 1.0.0.0 is assumed.
+``version``         Optional version of the Type. The version must be of format x.x.x.x, where x must be a positive integer. If omitted version 1.0.0.0 is assumed.
 =================== =============================
 
 The ``id`` cannot begin with the character sequence __. This is reserved for predefined Types. One currently supported predefined Type is __Link.
