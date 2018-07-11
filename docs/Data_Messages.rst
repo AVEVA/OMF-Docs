@@ -1,7 +1,7 @@
 Data Messages
 -------------
 
-Data messages can span multiple Types and Containers. Data can be created, updated, deleted, or patched.
+Data messages can span multiple Types and Containers. Data can be created, updated, or deleted.
 
 The body of a Data message is composed of an array of objects with the following keywords: 
 
@@ -60,9 +60,8 @@ Assuming the type below has been defined previously:
 					},
 					"Quality": {
 						"type": "integer",
-						"format": "uint32",
-						"isquality": true,
-						"qualityscheme": "OPC UA"
+						"format": "uint32",						
+						"quality": "OPC UA"
 					}
 			}
 		},

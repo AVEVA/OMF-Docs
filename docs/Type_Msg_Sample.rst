@@ -78,9 +78,8 @@ Type Example
 			},
 			"Quality": {
 				"type": "integer",
-				"format": "uint32",
-				"isquality": true,
-				"qualityscheme": "OPC UA"				
+				"format": "uint32",				
+				"quality": "OPC UA"				
 			}
 		}
 	}, {
