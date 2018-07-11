@@ -6,7 +6,7 @@ Data Example
 ::
 
 	producertoken = b7CNvN36cq
-	omfversion = 1.2-alpha1
+	omfversion = 1.2
 	messagetype = data
 	action = create
 	messageformat = json
