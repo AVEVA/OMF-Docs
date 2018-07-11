@@ -11,7 +11,7 @@ Name            Value
 ``values`` 	    An array of objects conforming to the type.
 ``action``      Optional: One of: ``create``, ``update``, or ``delete``. The value specified overrides the value of the ``action`` header. If omitted, the value of the ``action`` header is assumed. See :doc:`Headers`.
 ``containerid`` Optional ID of the container. If omitted, type is expected.
-``patch``		Optional array of properties to patch. If specified, ``action`` must also be specified and set to ``update``.
+``patch``		Optional array of properties to update. If specified, ``action`` must also be specified and set to ``update``.
 ``typeid``      Optional ID of the type. If omitted, container is expected.
 ``typeversion`` Optional version of the Type, if one is specified. The version must be of format x.x.x.x, where x must be a positive integer. If omitted, version 1.0.0.0 is assumed.
 =============== =================================================================================================
