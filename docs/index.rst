@@ -1,7 +1,7 @@
 The OSIsoft Message Format 
 ==========================
 
-v1.2-alpha1
+v1.2
 -----------
 
 

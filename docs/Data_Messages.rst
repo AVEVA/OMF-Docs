@@ -9,8 +9,9 @@ The body of a Data message is composed of an array of objects with the following
 Name            Value
 =============== =================================================================================================
 ``values`` 	    An array of objects conforming to the type.
-``action``      Optional: One of: ``create``, ``update``, ``delete``, or ``patch``. The value specified overrides the value of the ``action`` header. If omitted, the value of the ``action`` header is assumed. See :doc:`Headers`.
+``action``      Optional: One of: ``create``, ``update``, or ``delete``. The value specified overrides the value of the ``action`` header. If omitted, the value of the ``action`` header is assumed. See :doc:`Headers`.
 ``containerid`` Optional ID of the container. If omitted, type is expected.
+``patch``		Optional array of properties to patch. If specified, ``action`` must also be specified and set to ``update``.
 ``typeid``      Optional ID of the type. If omitted, container is expected.
 ``typeversion`` Optional version of the Type, if one is specified. The version must be of format x.x.x.x, where x must be a positive integer. If omitted, version 1.0.0.0 is assumed.
 =============== =================================================================================================
@@ -21,7 +22,10 @@ If a Type Property is defined but no property value is provided in the Data mess
 
 If ``action`` is specified, the action to be performed will apply to all entries in ``values``. 
 
-Partial updates of data are supported by including ``action`` with a value of ``patch`` in the message. For example:
+Partial updates of data are supported by including ``action`` with a value of ``update`` and including ``patch`` with the list of properties to update in the message. When sending ``values`` any property not present in the ``patch`` array will be ignored. If a property is present in ``patch`` but not present in ``values``, the default value of the property type will be assumed as specified in :doc:`Type_Properties_and_Formats`. 
+
+
+For example:
 
 Assuming the type below has been defined previously:
 
@@ -77,23 +81,24 @@ Partial updates can be sent as follows assuming a container *Tank1Measurements* 
 		
 		{
 			"containerid": "Tank1Measurements",
-			"action": "patch",
+			"action": "update",
+			"patch": ["Temperature", "Quality"],
 			"values": [{
-					"Time": "2017-01-11T22:23:23.430Z",					
-					"Temperature": 100.1
-					"Quality": 0
+				"Time": "2017-01-11T22:23:23.430Z",
+				"Temperature": 100.1,
+				"Quality": 0
 			}, {
-					"Time": "2017-01-11T22:24:23.430Z",
-					"Pressure": 11.5					
-					"Quality": 1
+				"Time": "2017-01-11T22:24:23.430Z",
+				"Pressure": 11.5,
+				"Quality": 1
 			}]
-		},			
+		},
 		
 		...
 		
 	]
 
-In this example the first entry in the ``values`` array updates *Temperature* only without affecting *Pressure* while the second entry updates *Pressure* only without updating *Temperature*. If ``action`` is omitted or a value other than ``patch`` is specified, the above example will assume default values for the missing properties.
+In this example the first entry in the ``values`` array updates *Temperature* and *Quality* only without affecting *Pressure*. The second entry also updates *Temperature* and *Quality* only without updating *Pressure*. *Pressure* is ignored, since it is not specified in ``patch``. *Temperature* will be assumed to be the default value of 0, since it is not specified in the second array entry.  
 	
 
 .. toctree::
