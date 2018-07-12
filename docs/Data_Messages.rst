@@ -13,7 +13,7 @@ Name            Value
 ``containerid`` Optional ID of the container. If omitted, type is expected.
 ``patch``		Optional array of properties to update. If specified, ``action`` must also be specified and set to ``update``.
 ``typeid``      Optional ID of the type. If omitted, container is expected.
-``typeversion`` Optional version of the Type, if one is specified. The version must be of format x.x.x.x, where x must be a positive integer. If omitted, version 1.0.0.0 is assumed.
+``typeversion`` Optional version of the Type, if one is specified. The version must be of format x.x.x.x, where x must be an integer greater than or equal to 0. If omitted, version 1.0.0.0 is assumed.
 =============== =================================================================================================
 
 For each object, either ``typeid`` or ``containerid`` must be specified. If ``containerid`` is specified, the values must conform to the Type with which the Container is associated. If ``typeid`` is specified, the values must conform to that Type.
@@ -22,7 +22,7 @@ If a Type Property is defined but no property value is provided in the Data mess
 
 If ``action`` is specified, the action to be performed will apply to all entries in ``values``. 
 
-Partial updates of data are supported by including ``action`` with a value of ``update`` and including ``patch`` with the list of properties to update in the message. When sending ``values`` any property not present in the ``patch`` array will be ignored. If a property is present in ``patch`` but not present in ``values``, the default value of the property type will be assumed as specified in :doc:`Type_Properties_and_Formats`. 
+Partial updates of data are supported by including ``action`` with a value of ``update`` and including ``patch`` with the list of properties to update in the message. When sending ``values`` any property not present in the ``patch`` array will be ignored. If a property is present in ``patch`` but not present in ``values``, the default value of the property type will be assumed as specified in :doc:`Type_Properties_and_Formats`. Index properties must always be included with values when patching data.
 
 
 For example:
