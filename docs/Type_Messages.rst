@@ -10,20 +10,22 @@ The body of a Type message consists of an array of objects. The following keywor
 =================== =============================
 Name                Value
 =================== =============================
-``id``   	        Unique identifier of the Type.
 ``classification``  One of ``dynamic`` or ``static``.
-``version``         Optional version of the Type. If omitted version 1.0.0.0 is assumed.
-``name``            Optional friendly name for the Type.
-``description``     Optional description for the Type.
-``tags``            Optional array of strings to tag the Type.
-``metadata``        Optional key-value pairs associated with the Type.
+``id``   	        Unique identifier of the Type.
 ``properties``      Key-value pairs defining the properties of the Type.
 ``type``            Inherited from JSON Schema. Must be set to ``object``.
+``action``          Optional: One of: ``create``, ``update``, or ``delete``. The value specified overrides the value of the ``action`` header. If omitted, the value of the ``action`` header is assumed. See :doc:`Headers`.
+``description``     Optional description for the Type.
+``metadata``        Optional key-value pairs associated with the Type.
+``name``            Optional friendly name for the Type.
+``tags``            Optional array of strings to tag the Type.
+``version``         Optional version of the Type. The version must be of format x.x.x.x, where x must be an integer greater than or equal to 0. If omitted version 1.0.0.0 is assumed.
 =================== =============================
 
 The ``id`` cannot begin with the character sequence __. This is reserved for predefined Types. One currently supported predefined Type is __Link.
 
 A ``static`` classification represents metadata describing a device being observed and should be used to capture data that is descriptive and relatively unchanging. A ``dynamic`` classification represents observed or calculated measurements taken from a device.
+
 
 .. toctree::
 

@@ -6,7 +6,7 @@ A Link is a pre-defined type with the typeid __Link. It has the following proper
 =================== =============================
 Name                Value
 =================== =============================
-``source``   	      An object representing the source of the link
+``source``   	    An object representing the source of the link
 ``target``          An object representing the target of the link
 =================== =============================
 
@@ -19,9 +19,7 @@ Name                Value
                     containerid is expected.
 ``containerid``     Optional id of the container. If 
                     omitted, typeid is expected.
-``typeversion``     Optional version of the type to be 
-                    linked to or from. If omitted 
-                    version 1.0.0.0 is assumed.
+``typeversion``     Optional version of the type to be linked to or from. The version must be of format x.x.x.x, where x must be an integer greater than or equal to 0. If omitted version 1.0.0.0 is assumed.
 ``index``           Index of either the data. If typeid 
                     is specified, index is mandatory. 
                     If containerid is specified it is 

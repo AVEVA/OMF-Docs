@@ -1,8 +1,8 @@
 The OSIsoft Message Format 
 ==========================
 
-v1.1
-----
+v1.2
+-----------
 
 
 Overview
