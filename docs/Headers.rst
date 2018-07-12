@@ -14,8 +14,7 @@ Name                 Value
                      ``type``, ``container``, or ``data``. See :doc:`Message_Types`.
 ``messageformat``    Describes the data serialization format employed in the message body. Currently 
                      limited to ``json``.
-``omfversion``       Specifies the version of the OSIsoft Message Format used in the message. The version 
-                     for the current specification is 1.0.
+``omfversion``       Specifies the version of the OSIsoft Message Format used in the message. The version must be of format x.x, where x must be an integer greater than or equal to 0. The version for the current specification is 1.0.
 ``action``           Optional: One of: ``create``, ``update``, or ``delete``. Describes the action to be 
                      performed using the data in the message body. If omitted, ``create`` is assumed.
 ``compression``	     Optional: The compression algorithm used to compress the message body. Currently 
