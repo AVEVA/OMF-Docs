@@ -12,7 +12,7 @@ Name                Value
 =================== =============================
 ``id``   	        Unique identifier of the Type.
 ``classification``  One of ``dynamic`` or ``static``.
-``version``         Optional version of the Type. If omitted version 1.0.0.0 is assumed.
+``version``         Optional version of the Type. The version must be of format x.x.x.x, where x must be an integer greater than or equal to 0. If omitted version 1.0.0.0 is assumed.
 ``name``            Optional friendly name for the Type.
 ``description``     Optional description for the Type.
 ``tags``            Optional array of strings to tag the Type.
