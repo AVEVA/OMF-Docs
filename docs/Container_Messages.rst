@@ -12,7 +12,7 @@ Name            Value
 =============== =================================================================================================
 ``id``          Unique identifier of the Container.
 ``typeid``        ID of the Type used by the Container.
-``typeversion`` Optional version of the Type used by the Container. If omitted, version 1.0.0.0 is used.
+``typeversion`` Optional version of the Type used by the Container. The version must be of format x.x.x.x, where x must be an integer greater than or equal to 0. If omitted, version 1.0.0.0 is used.
 ``name`` 	    Optional friendly name for the Container.
 ``description`` Optional description for the Container.
 ``tags``        Optional array of strings to tag the Container.
