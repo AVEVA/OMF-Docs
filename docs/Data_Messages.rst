@@ -88,7 +88,11 @@ Partial updates can be sent as follows assuming a container *Tank1Measurements* 
 				"Quality": 0
 			}, {
 				"Time": "2017-01-11T22:24:23.430Z",
+				"Quality": 1
+			}, {
+				"Time": "2017-01-11T22:24:23.430Z",
 				"Pressure": 11.5,
+				"Temperature": 100.1,
 				"Quality": 1
 			}]
 		},
@@ -97,7 +101,7 @@ Partial updates can be sent as follows assuming a container *Tank1Measurements* 
 		
 	]
 
-In this example the first entry in the ``values`` array updates *Temperature* and *Quality* only without affecting *Pressure*. The second entry also updates *Temperature* and *Quality* only without updating *Pressure*. *Pressure* is ignored, since it is not specified in ``patch``. *Temperature* will be assumed to be the default value of 0, since it is not specified in the second array entry.  
+In this example the first entry in the ``values`` array updates *Temperature* and *Quality* without affecting *Pressure*. The second entry also updates *Temperature* and *Quality* only. *Temperature* will be assumed to be the default value of 0, since it is not specified in the second array entry. The third entry updates both *Temperature* and *Quality* without affecting *Pressure* even though a value for *Pressure* is included. *Pressure* is ignored, since it is not specified in ``patch``.
 	
 
 .. toctree::
