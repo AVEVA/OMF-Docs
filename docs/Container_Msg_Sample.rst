@@ -20,7 +20,7 @@ Container Example
 		"id": "Tank1Measurements",
 		"typeid": "TankMeasurement",
 		"typeVersion": "1.0.0.0",
-		"dataSource": "myDataSource",
+		"dataSource": "tankDS",
 		"indexes": ["Pressure"]
 	}, {
 		"id": "Tank2Measurements",
