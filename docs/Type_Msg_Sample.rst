@@ -76,7 +76,7 @@ Type Example
 			}
 		}
 	}, {
-		"id": "Tank2",
+		"id": "ComplexTank",
 		"version": "1.0.0.0",
 		"type": "object",
 		"classification": "static",
