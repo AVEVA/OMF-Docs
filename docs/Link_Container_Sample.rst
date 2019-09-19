@@ -1,5 +1,9 @@
-Data Example
-^^^^^^^^^^^^^
+Link Example using Type and Container
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Data messages are used to create instances of Types, create relationships between instances, and send data values for static and dynamic data.
+
+When creating instances of Types, the Type defintion can include the reference to another Type, or the data can be linked when creating instances to form relationships.
 
 **Headers**
 
@@ -15,14 +19,6 @@ Data Example
 ::
 
 	[{
-		"typeid": "Plant",
-		"values": [{
-			"PlantId": "PlantId1",
-			"PlantName": "Plant1",
-			"Address": "123 Meridian Ave",
-			"Contact": "Bob Ross"
-		}]
-	}, {
 		"typeid": "Tank",
 		"values": [{
 			"Name": "Tank1",
@@ -34,31 +30,17 @@ Data Example
 		}, {
 			"Name": "Tank2",
 			"Serial": "2364-4243-FS12",
-			"Model": "TK-421",
-			"Measurements": {
-				"containerid": "Tank2Measurements"
-			}
+			"Model": "TK-421"
 		}]
 	}, {
 		"typeid": "__Link",
 		"values": [{
 			"source": {
-				"typeid": "Plant",
-				"index": "PlantId1"
-			},
-			"target": {
-				"typeid": "Tank",
-				"index": "Tank1"
-			}
-		}, {
-
-			"source": {
-				"typeid": "Plant",
-				"index": "PlantId1"
-			},
-			"target": {
 				"typeid": "Tank",
 				"index": "Tank2"
+			},
+			"target": {
+				"containerid": "Tank2Measurements"
 			}
 		}]
 	}, {

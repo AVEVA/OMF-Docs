@@ -4,9 +4,8 @@ Container Example
 **Headers**
 
 ::
-
-	producertoken = b7CNvN36cq
-	omfversion = 1.0
+	
+	omfversion = 1.2
 	messagetype = container
 	action = create
 	messageformat = json
@@ -19,9 +18,18 @@ Container Example
 	[{
 		"id": "Tank1Measurements",
 		"typeid": "TankMeasurement",
-		"typeVersion": "1.0.0.0"
+		"indexes": ["Pressure"], 
+		"metadata": {
+			"datasource":"Modbus"
+		},
 	}, {
 		"id": "Tank2Measurements",
-		"typeid": "TankMeasurement",
-		"typeVersion": "1.0.0.0"
+		"typeid": "TankMeasurement"		
+		"propertyoverrides": {
+			"Pressure": {				
+				"description": "Tank Pressure in atm",
+				"uom": "atm"
+			}
+		}			
 	}]
+

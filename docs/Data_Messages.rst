@@ -14,6 +14,20 @@ Name            Value
 
 For each object, either ``typeid`` or ``containerid`` must be specified. If ``containerid`` is specified, the values must conform to the Type with which the Container is associated. If ``typeid`` is specified, the values must conform to that Type.
 
+If a Type Property is defined but no property value is provided in the Data message, a default value will be assumed. Default values are specified in :doc:`Type_Properties_and_Formats`.
+
+
+   
+Linking Data
+-----------------
+
+Link messages are used to create relationships between instances of types, or instances of a type and container. To define a link relationship, set the ``typeid`` of the data message to ``__Link``. 
+In the ``values`` array, define the ``source`` and ``target`` of the link using the format defined by :doc:`Link Type<Link_Type>`
+
+
+For examples of Linking Data and Data Messages see the following Topics:
+
 .. toctree::
 
-   Data_Msg_Sample
+	Link_Type   	
+	Data_Msg_Sample

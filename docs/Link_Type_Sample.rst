@@ -1,5 +1,7 @@
-Data Example
-^^^^^^^^^^^^^
+Link Example using Types
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Data messages are used to create instances of Types, create relationships between instances, and send data values for static and dynamic data.
 
 **Headers**
 
@@ -20,7 +22,7 @@ Data Example
 			"PlantId": "PlantId1",
 			"PlantName": "Plant1",
 			"Address": "123 Meridian Ave",
-			"Contact": "Bob Ross"
+			"Contact": "Bob Ross"			
 		}]
 	}, {
 		"typeid": "Tank",
@@ -60,7 +62,7 @@ Data Example
 				"typeid": "Tank",
 				"index": "Tank2"
 			}
-		}]
+		}
 	}, {
 		"containerid": "Tank1Measurements",
 		"values": [{
