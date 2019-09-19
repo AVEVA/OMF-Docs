@@ -81,9 +81,9 @@ Complex type defintions can be created by using the ``reftype`` keyword, and set
 
 Type Qualifiers:
 
-Properties with ``isindex`` keyword must be of type String. 
-Properties of a ``dynamic`` type with the ``isindex`` keyword must also include the ``format`` and be set to the value ``date-time``. 
-Properties with the ``isname`` keyword must be of type String.
+Properties with ``isindex`` keyword designate that property as the index and must have unique values. The index is set when creating instances of the Type.
+Properties of a ``dynamic`` type with the ``isindex`` keyword are typically used for indexing on time and in that case the ``format`` should be set to the ``date-time``. 
+
 
 The ``isquality`` keyword is used to designate a particular property as the data quality. When set the type can either be a ``boolean`` or a reference to an enumeration set previously defined by :doc:`enum<Type_Messages>`.
 The following formats are supported:
