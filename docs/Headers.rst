@@ -4,11 +4,10 @@ Headers
 The following headers are supported in version 1.2 of the message specification. Headers may 
 be added or removed over time. Backwards compatibility is achievable through the ``omfversion`` header. 
 
+
 =================    ========================================================================================
 Name                 Value
 =================    ========================================================================================
-``producertoken``    A unique token used to identify and authorize a given OMF producer. Consult the OSIsoft 
-                     Cloud Services or PI Connector Relay documentation for further information. 
 ``messagetype``      Describes the type of message contained in the message body. One of: 
                      ``type``, ``container``, or ``data``. See :doc:`Message_Types`.
 ``messageformat``    Describes the data serialization format employed in the message body. Currently 
@@ -19,3 +18,5 @@ Name                 Value
 ``compression``	     Optional: The compression algorithm used to compress the message body. Currently 
                      limited to ``gzip``. If not specified, the message body is assumed to be uncompressed.
 =================    ========================================================================================
+
+\* The ``producertoken`` field has been obsoleted and is no longer supported in OMF 1.2.

@@ -4,8 +4,7 @@ Data Example
 **Headers**
 
 ::
-
-	producertoken = b7CNvN36cq
+	
 	omfversion = 1.2
 	messagetype = data
 	action = create
@@ -18,28 +17,34 @@ Data Example
 	[{
 		"typeid": "Plant",
 		"values": [{
-			"PlantId": "PlantId1",
-			"PlantName": "Plant1",
+			"PlantId": "WTP1",
+			"PlantName": "Water Treatment Plant One",
 			"Address": "123 Meridian Ave",
 			"Contact": "Bob Ross"
 		}]
 	}, {
 		"typeid": "Tank",
 		"values": [{
-			"Name": "Tank1",
+			"TankName": "Tank1",
 			"Serial": "5236-3523-KKF4",
-			"Model": "FN-2187"
+			"Model": "FN-2187",
+			"Measurements": {
+				"containerid": "Tank1Measurements"
+			}
 		}, {
-			"Name": "Tank2",
+			"TankName": "Tank2",
 			"Serial": "2364-4243-FS12",
-			"Model": "TK-421"
+			"Model": "TK-421",
+			"Measurements": {
+				"containerid": "Tank2Measurements"
+			}
 		}]
 	}, {
 		"typeid": "__Link",
 		"values": [{
 			"source": {
 				"typeid": "Plant",
-				"index": "PlantId1"
+				"index": "WTP1"
 			},
 			"target": {
 				"typeid": "Tank",
@@ -49,55 +54,33 @@ Data Example
 
 			"source": {
 				"typeid": "Plant",
-				"index": "PlantId1"
+				"index": "WTP1"
 			},
 			"target": {
 				"typeid": "Tank",
 				"index": "Tank2"
-			}
-		}, {
-
-			"source": {
-				"typeid": "Tank",
-				"index": "Tank1"
-			},
-			"target": {
-				"containerid": "Tank1Measurements"
-			}
-		}, {
-
-			"source": {
-				"typeid": "Tank",
-				"index": "Tank2"
-			},
-			"target": {
-				"containerid": "Tank2Measurements"
 			}
 		}]
 	}, {
 		"containerid": "Tank1Measurements",
 		"values": [{
-			"Time": "2017-01-11T22:23:23.430Z",
+			"Time": "2019-09-11T22:23:23.430Z",
 			"Pressure": 12.0,
-			"Temperature": 100.1,
-			"Quality": 0
+			"Temperature": 100.1
 		}, {
-			"Time": "2017-01-11T22:24:23.430Z",
+			"Time": "2019-09-11T22:24:23.430Z",
 			"Pressure": 11.5,
-			"Temperature": 101.2,
-			"Quality": 1
+			"Temperature": 101.2
 		}]
 	}, {
 		"containerid": "Tank2Measurements",
 		"values": [{
-			"Time": "2017-01-11T22:23:23.430Z",
+			"Time": "2019-09-11T22:23:23.430Z",
 			"Pressure": 14.0,
-			"Temperature": 90.1,
-			"Quality": 0
+			"Temperature": 90.1
 		}, {
-			"Time": "2017-01-11T22:24:23.430Z",
+			"Time": "2019-09-11T22:24:23.430Z",
 			"Pressure": 15.1,
-			"Temperature": 91.2,
-			"Quality": 0
+			"Temperature": 91.2
 		}]
 	}]
