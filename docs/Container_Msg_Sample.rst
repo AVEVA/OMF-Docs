@@ -29,7 +29,7 @@ Container Example
 			"datasource":"Modbus"
 		}		
 		"propertyoverrides": {
-			"Temperature{				
+			"Temperature": {				
 				"description": "Tank Temperature in degree Fahrenheit",
 				"uom": "F"
 			}
