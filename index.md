@@ -25,7 +25,7 @@ is determined by the rules of the backend system.
 # Contents
 
 
-## v1.2
+## OMF v1.2 Draft
 
    - [Whats New](xref:whatsNew)
    - [Message Headers](xref:headers)
@@ -42,7 +42,7 @@ is determined by the rules of the backend system.
    - [OMF v1.2 Example](xref:OMFMsgSample)
 
 
-## v1.1
+## OMF v1.1
 
    - [Whats New](xref:whatsNewv11)
    - [Message Headers](xref:headersv11)
