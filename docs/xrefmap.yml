@@ -1,0 +1,84 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: containerExample
+  name: Container Example
+  href: documentation_v12/Containers/Container_Msg_Example.html
+- uid: containerExamplev11
+  name: Container Example
+  href: documentation_v11/Containers/Container_Msg_Example.html
+- uid: containerMessages
+  name: Container Messages
+  href: documentation_v12/Containers/Container_Messages.html
+- uid: containerMessagesv11
+  name: Container Messages
+  href: documentation_v11/Containers/Container_Messages.html
+- uid: dataExample
+  name: Data Example
+  href: documentation_v12/Data/Data_Msg_Example.html
+- uid: dataExamplev11
+  name: Data Example
+  href: documentation_v11/Data/Data_Msg_Example.html
+- uid: dataMessages
+  name: Data Messages
+  href: documentation_v12/Data/Data_Messages.html
+- uid: dataMessagesv11
+  name: Data Messages
+  href: documentation_v11/Data/Data_Messages.html
+- uid: enumType
+  name: Enum Type Messages
+  href: documentation_v12/Types/Enum_Type.html
+- uid: headers
+  name: Message Headers
+  href: documentation_v12/Headers.html
+- uid: headersv11
+  name: Message Headers
+  href: documentation_v11/Headers.html
+- uid: httpStatusCodes
+  name: HTTP Status Codes
+  href: documentation/HttpBehaviors/Http_Status_Codes.html
+- uid: index
+  name: 'OSIsoft Message Format '
+  href: index.html
+- uid: linkType
+  name: Link Data Messages
+  href: documentation_v12/Data/Link_Type.html
+- uid: linkTypev11
+  name: Link Type
+  href: documentation_v11/Types/Link_Type.html
+- uid: messageSize
+  name: Message Size
+  href: documentation/HttpBehaviors/Message_Size.html
+- uid: messageTypes
+  name: Message Types
+  href: documentation_v12/Message_Types.html
+- uid: messageTypesv11
+  name: Message Types
+  href: documentation_v11/Message_Types.html
+- uid: OMFMsgSample
+  name: OMF v1.2 Example
+  href: documentation_v12/OMF_Msg_Sample.html
+- uid: typeExample
+  name: Type Example
+  href: documentation_v12/Types/Type_Msg_Example.html
+- uid: typeExamplev11
+  name: Type Example
+  href: documentation_v11/Types/Type_Msg_Example.html
+- uid: typeMessages
+  name: Type Messages
+  href: documentation_v12/Types/Type_Messages.html
+- uid: typeMessagesv11
+  name: Type Messages
+  href: documentation_v11/Types/Type_Messages.html
+- uid: typePropertiesAndFormats
+  name: Type Properties and Formats
+  href: documentation_v12/Types/Type_Properties_and_Formats.html
+- uid: typePropertiesAndFormatsv11
+  name: Type Properties and Formats
+  href: documentation_v11/Types/Type_Properties_and_Formats.html
+- uid: whatsNew
+  name: What's New
+  href: documentation_v12/Whats_New.html
+- uid: whatsNewv11
+  name: What's New
+  href: documentation_v11/Whats_New.html

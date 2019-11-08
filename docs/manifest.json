@@ -1,0 +1,504 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/VSO/Corporate Policies and Procedures/TestProjects/Pam/Atlantis/docfx_project_generated",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation/HttpBehaviors/Http_Status_Codes.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/HttpBehaviors/Http_Status_Codes.html",
+          "hash": "fkPWE6Qi42P1HBLapcEeXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation/HttpBehaviors/Message_Size.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/HttpBehaviors/Message_Size.html",
+          "hash": "af1jSQTtiRC0GY3GlVvvvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "documentation/HttpBehaviors/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/HttpBehaviors/toc.html",
+          "hash": "3MDzOdrEWG2xvgwx4K2H2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v11/Containers/Container_Messages.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v11/Containers/Container_Messages.html",
+          "hash": "20ZkQ2RE7+jBgJrU0ad9sw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v11/Containers/Container_Msg_Example.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v11/Containers/Container_Msg_Example.html",
+          "hash": "rSsnCwZAM3tEg/Ds8KZlzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v11/Data/Data_Messages.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v11/Data/Data_Messages.html",
+          "hash": "HLm543Y+kNifFXaUcnHigw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v11/Data/Data_Msg_Example.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v11/Data/Data_Msg_Example.html",
+          "hash": "4kmWE3v/Yu7QH83zhHJ1Xw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v11/Headers.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v11/Headers.html",
+          "hash": "3NlZj6TL1Bk8iDgN57yL9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v11/Message_Types.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v11/Message_Types.html",
+          "hash": "exdIpbDg7HxGQwzqmwGUxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v11/Types/Link_Type.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v11/Types/Link_Type.html",
+          "hash": "uvwg8Y6F0xTovc0owD9BJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v11/Types/Type_Messages.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v11/Types/Type_Messages.html",
+          "hash": "Dg4xEgU2R29sJh8CBHv6rg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v11/Types/Type_Msg_Example.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v11/Types/Type_Msg_Example.html",
+          "hash": "L5HUmgZf222YfRqEwyRW8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v11/Types/Type_Properties_and_Formats.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v11/Types/Type_Properties_and_Formats.html",
+          "hash": "Rm/znwy6rW9a/G6rL1Wcpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v11/Whats_New.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v11/Whats_New.html",
+          "hash": "fWlz5ydNjkZhkihFAvfFFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "documentation_v11/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v11/toc.html",
+          "hash": "gSy2aKj+yftNKA/gMS/qmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v12/Containers/Container_Messages.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v12/Containers/Container_Messages.html",
+          "hash": "t3VDG/+wsrNpIt2CATI0Vg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v12/Containers/Container_Msg_Example.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v12/Containers/Container_Msg_Example.html",
+          "hash": "aNQCvkL9zYmbpmccjc4KpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v12/Data/Data_Messages.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v12/Data/Data_Messages.html",
+          "hash": "h8bEaGaWwMDTFrgy/WLn5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v12/Data/Data_Msg_Example.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v12/Data/Data_Msg_Example.html",
+          "hash": "MsoOb/cq/N4x5Fpq126R1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v12/Data/Link_Type.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v12/Data/Link_Type.html",
+          "hash": "EyOCvj++nAFng916MsKpvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v12/Headers.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v12/Headers.html",
+          "hash": "owDADbI6ZE1e4rGSn5dojw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v12/Message_Types.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v12/Message_Types.html",
+          "hash": "EqkcpujIk0xAoLhLxDeQxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v12/OMF_Msg_Sample.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v12/OMF_Msg_Sample.html",
+          "hash": "JL6EjjvlLd7PL3rqxu5YjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v12/Types/Enum_Type.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v12/Types/Enum_Type.html",
+          "hash": "FsGA0vridc1V8JY8yXZk8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v12/Types/Type_Messages.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v12/Types/Type_Messages.html",
+          "hash": "0unuz5nxV+XadHMdFw/pvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v12/Types/Type_Msg_Example.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v12/Types/Type_Msg_Example.html",
+          "hash": "AF8koagAyuoCd30bBBxELw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v12/Types/Type_Properties_and_Formats.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v12/Types/Type_Properties_and_Formats.html",
+          "hash": "OmAzonubAd2CjmDN8b5FGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation_v12/Whats_New.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v12/Whats_New.html",
+          "hash": "ZVBWHhFO0hjOo1kryMuDgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "documentation_v12/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation_v12/toc.html",
+          "hash": "d6NWSQjKbB5qxXvoO2D34A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Add_Button.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Add_Button.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/PI16.ICO",
+      "output": {
+        "resource": {
+          "relative_path": "images/PI16.ICO"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/PI16.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/PI16.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/atlas_icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/atlas_icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/atlas_icon_small.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/atlas_icon_small.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "hMg+MoLNhnc3jw1afViTZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "01MeldqhOE2R7d/LaA5qzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 27,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

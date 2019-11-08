@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Data Messages | OSIsoft Message Format </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Data Messages | OSIsoft Message Format ">
+    <meta name="generator" content="docfx 2.46.0.0">
+    
+    <link rel="shortcut icon" href="../.././images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../.././images/atlas_icon_small.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="dataMessages">
+<h1 id="data-messages">Data Messages</h1>
+
+<p>Data messages are used to create instance data for previously defined Types and Containers, relate instances of static and dynamic data, and relate Types. </p>
+<p>The body of a Data message is composed of a JSON array with JSON objects defined by the following keywords: </p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>typeid</code></td>
+<td>Optional ID of the type. If omitted, container is expected.</td>
+</tr>
+<tr>
+<td><code>containerid</code></td>
+<td>Optional ID of the container. If omitted, type is expected.</td>
+</tr>
+<tr>
+<td><code>properties</code></td>
+<td>Optional key-value pairs defining the properties for type-less static data values.</td>
+</tr>
+<tr>
+<td><code>values</code></td>
+<td>An array of objects conforming to the type.</td>
+</tr>
+</tbody>
+</table>
+<p>For each object, either <code>typeid</code>, <code>containerid</code>, or <code>properties</code> must be specified. 
+If <code>typeid</code> is specified, the values array must conform to the definition of that Type. 
+If <code>containerid</code> is specified, the values must conform to the Type associated with the Container.
+If <code>properties</code> is specified, then optionally a <code>typeid</code> may also be specified. This format is used to either extend a <code>static</code> Type, or send static data for an instance that has no Type.</p>
+<p>If the data message is used to define a relationship then <code>typeid</code> is specified with the value <a class="xref" href="Link_Type.html">__Link</a>.</p>
+<p>If a Type Property is defined but no property value is provided in the Data message, a default value will be assumed. Default values are specified 
+in the <a class="xref" href="../Types/Type_Properties_and_Formats.html">Supported Formats</a> Table.</p>
+<h3 id="link-data-messages">Link Data Messages</h3>
+<p><a class="xref" href="Link_Type.html">__Link</a> messages are used to create relationships between static Types, static and dynamic Types, and instance Data.
+To define a link relationship, set the <code>typeid</code> of the data message to <code>__Link</code>, and in the values array specify the <code>source</code> and <code>target</code> of the link relationship. 
+Refer to <a class="xref" href="Link_Type.html">Link Type</a> for detailed information on defining links in data messages to relate data. </p>
+<h3 id="examples-of-data-messages">Examples of Data Messages</h3>
+<ul>
+<li><a class="xref" href="Link_Type.html">Link Type</a></li>
+<li><a class="xref" href="Data_Msg_Example.html">Data Example</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            © 2018-2019 - OSIsoft, LLC.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
