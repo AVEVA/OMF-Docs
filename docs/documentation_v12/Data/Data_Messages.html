@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="dataMessages">
 <h1 id="data-messages">Data Messages</h1>
 
-<p>Data messages are used to create instance data for previously defined Types and Containers, relate instances of static and dynamic data, and relate Types. </p>
+<p>Data messages can be used to create instance data for previously defined Types and Containers, relate instances of static and dynamic data, relate Types, or send type-less static data. </p>
 <p>The body of a Data message is composed of a JSON array with JSON objects defined by the following keywords: </p>
 <table>
 <thead>
@@ -91,15 +91,15 @@
 <tbody>
 <tr>
 <td><code>typeid</code></td>
-<td>Optional ID of the type. If omitted, container is expected.</td>
+<td>Optional ID of the type. If omitted, container or properties is expected.</td>
 </tr>
 <tr>
 <td><code>containerid</code></td>
-<td>Optional ID of the container. If omitted, type is expected.</td>
+<td>Optional ID of the container. If omitted, type or properties is expected.</td>
 </tr>
 <tr>
 <td><code>properties</code></td>
-<td>Optional key-value pairs defining the properties for type-less static data values.</td>
+<td>Optional key-value pairs defining the properties of the Type. Used to support sending type-less static data values.</td>
 </tr>
 <tr>
 <td><code>values</code></td>
@@ -107,15 +107,15 @@
 </tr>
 </tbody>
 </table>
-<p>For each object, either <code>typeid</code>, <code>containerid</code>, or <code>properties</code> must be specified. 
-If <code>typeid</code> is specified, the values array must conform to the definition of that Type. 
-If <code>containerid</code> is specified, the values must conform to the Type associated with the Container.
-If <code>properties</code> is specified, then optionally a <code>typeid</code> may also be specified. This format is used to either extend a <code>static</code> Type, or send static data for an instance that has no Type.</p>
-<p>If the data message is used to define a relationship then <code>typeid</code> is specified with the value <a class="xref" href="Link_Type.html">__Link</a>.</p>
-<p>If a Type Property is defined but no property value is provided in the Data message, a default value will be assumed. Default values are specified 
+<p>For a data message, either the <code>id</code> of a previously defined <code>type</code> or <code>container</code> must be specified, or the data messages must be used to send type-less static data and specify the <code>properties</code>.</p>
+<p>If <code>typeid</code> is specified, the values array must conform to the definition of that Type.</p>
+<p>If <code>containerid</code> is specified, the values must conform to the Type associated with the Container.</p>
+<p>If <code>properties</code> is specified, then the data message can be used to send static data for an instance that has no Type.
+Optionally a <code>typeid</code> may be specified along with the <code>properties</code> to extend a <code>static</code> Type with additional properties.</p>
+<p>If a property is defined on the Type definition, but no property value is provided in the Data message, then a default value will be assumed. Default values are specified 
 in the <a class="xref" href="../Types/Type_Properties_and_Formats.html">Supported Formats</a> Table.</p>
 <h3 id="link-data-messages">Link Data Messages</h3>
-<p><a class="xref" href="Link_Type.html">__Link</a> messages are used to create relationships between static Types, static and dynamic Types, and instance Data.
+<p><a class="xref" href="Link_Type.html">__Link</a> Data messages are used to create relationships between static Types, static and dynamic Types, and instance Data.
 To define a link relationship, set the <code>typeid</code> of the data message to <code>__Link</code>, and in the values array specify the <code>source</code> and <code>target</code> of the link relationship. 
 Refer to <a class="xref" href="Link_Type.html">Link Type</a> for detailed information on defining links in data messages to relate data. </p>
 <h3 id="examples-of-data-messages">Examples of Data Messages</h3>

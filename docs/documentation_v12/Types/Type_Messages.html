@@ -96,7 +96,7 @@ Once a Type is deleted, any operations on Containers or Data using that Type wil
 </tr>
 <tr>
 <td><code>version</code></td>
-<td>Optional version of the Type. The version must be of format x.x.x.x, where x must be an integer greater than or equal to 0. If omitted version 1.0.0.0 is assumed.</td>
+<td>Optional version of the Type stored as metadata. The version must be of format x.x.x.x, where x must be an integer greater than or equal to 0. If omitted version 1.0.0.0 is assumed.</td>
 </tr>
 <tr>
 <td><code>classification</code></td>
@@ -139,13 +139,12 @@ Once a Type is deleted, any operations on Containers or Data using that Type wil
 <p>The <code>id</code> cannot begin with the character sequence __. This has been reserved for predefined Types. Currently the only supported predefined Type 
 is <a class="xref" href="../Data/Link_Type.html">__Link</a>. The <code>id</code> property is referenced when creating instances of Types in Container and Data messages, or when 
 creating other Types that include this Type as a base type or referenced Type.</p>
-<p>The <code>version</code> is used to supply information about the Type definition and is stored as meta data. 
-When a Type is referenced by another Type then the current version of that type is applied. </p>
+<p>The <code>version</code> is used to supply information about the Type definition and is stored as meta data. </p>
 <p>A <code>static</code> classification represents metadata describing a device being observed and should be used to capture data that is descriptive and
 relatively unchanging. A <code>dynamic</code> classification represents observed or calculated measurements taken from a device that update frequently. </p>
-<p>The <code>basetypeid</code> is used to support Type inheritance and is an <code>id</code> of previously defined Type. The properties of the base type are then included in the new Type. 
+<p>The <code>basetypeid</code> is used to support Type inheritance and is an <code>id</code> of previously defined Type. The properties of the base type are then included in the new Type. Circular inheritance or self-referencing is not supported when using <code>basetypeid</code>. 
 If a Type is created for the sole purpose of being referenced by another Type, then <code>classification</code> is not required. If classification is not set, then instance data of that Type cannot be created.
-If the classification is set then the classification of each Type must match when reusing Type definitions.</p>
+If the classification is set to <code>static</code> or <code>dynamic</code> then the classification of each Type must match when using <code>basetypeid</code> to define an inheritance relationship.</p>
 <p>An <code>enum</code> Type defines a set of name/value pairs and is used for properties that have a predefined set of allowed values. 
 The enum Type is created separately so that it can be referenced by multiple properties. Refer to <a class="xref" href="Enum_Type.html">Enum Type</a> for detailed information on defining an enum, and using the <code>reftypeid</code> to relate the enum property with the enum definition.</p>
 <p>The supported data types and data formats for <code>properties</code> are documented in the <a class="xref" href="Type_Properties_and_Formats.html">Type Properties and Formats</a> Topic. </p>

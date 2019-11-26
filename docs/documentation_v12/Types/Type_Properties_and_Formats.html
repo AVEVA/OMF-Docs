@@ -90,11 +90,11 @@
 <tbody>
 <tr>
 <td><code>type</code></td>
-<td>Type of the Property which must match a type listed in the Supported Formats table below. Either <code>type</code> or <code>reftypeid</code> is required for each property.</td>
+<td>Type of the Property. Must match a type listed in the &#39;Supported Formats&#39; table below. Either <code>type</code> or <code>reftypeid</code> is required for each property.</td>
 </tr>
 <tr>
 <td><code>format</code></td>
-<td>Optional format of the <code>type</code> Property that, if specified, must be from the table below.</td>
+<td>Optional format of the <code>type</code> Property that, if specified, must be from the &#39;Supported Formats&#39; table below.</td>
 </tr>
 <tr>
 <td><code>reftypeid</code></td>
@@ -142,12 +142,13 @@
 </tr>
 </tbody>
 </table>
-<p>For each property, <code>type</code> or <code>reftypeid</code> must be defined. </p>
-<p>If <code>type</code> is used, then the <code>type</code> property must be set to a valid JSON type as defined by JSON Schema. The supported types include string, integer, number, object, boolean, and array. 
-The format of the <code>type</code> may be set using the <code>format</code> keyword, as described in the Supported Formats table below. This allows for the creation of timestamps, dictionaries, and bit length-specific numeric properties.</p>
-<p>If <code>reftypeid</code> is used, then the <code>reftypeid</code> must be set to the <code>id</code> of a previously defined Type. If the referenced type is an <code>enum</code> then it defines the allowed set of data values for this property.
-If the referenced Type is a static or dynamic Type, then it defines the data type of this property, and provides a reference to a previously defined type. In this case all the properties of the reference Type are included within this Type as child properties.</p>
-<p>This provides the ability to define a relationship between Type definitions at the property level. <code>basetypeid</code> is used to define a relationship between Type definitions at the Type level and creates a flat property structure.</p>
+<p>For each property, <code>type</code> or <code>reftypeid</code> must be defined. When using <code>type</code> refer to the &#39;Supported Formats&#39; table below for the list of allowed values.
+When using <code>reftypeid</code>, the value must be set to the <code>id</code> of a previously defined Type. Circular inheritance or self-referencing is not supported when using <code>reftypeid</code>. </p>
+<p>If <code>type</code> is used, the format of the type may be set using the <code>format</code> keyword, as described in the &#39;Supported Formats&#39; table below. 
+This allows for the creation of timestamps, dictionaries, and bit length-specific numeric properties.</p>
+<p>If <code>reftypeid</code> is used, set the value to the <code>id</code> of a previously defined Type. 
+If the referenced type is an <code>enum</code> then it defines the allowed set of data values for this property.
+If the referenced type is a <code>static</code> or <code>dynamic</code> Type, then the properties of that Type are included as child properties of this property. </p>
 <h3 id="supported-formats">Supported Formats</h3>
 <table>
 <thead>

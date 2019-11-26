@@ -13,7 +13,7 @@ The body of a Type message consists of an array of objects. The following keywor
 | Name | Value |
 | --- | --- |
 | `id` | Unique identifier of the Type. |
-| `version` | Optional version of the Type. The version must be of format x.x.x.x, where x must be an integer greater than or equal to 0. If omitted version 1.0.0.0 is assumed. |
+| `version` | Optional version of the Type stored as metadata. The version must be of format x.x.x.x, where x must be an integer greater than or equal to 0. If omitted version 1.0.0.0 is assumed. |
 | `classification` | One of `dynamic` or `static`. If omitted, the type cannot be directly created, for example enumerations, base types, and types composed into other types. |
 | `type` | Inherited from JSON Schema. Set to `object` to define a static or dynamic Type. Set to [\"string\", \"integer\"] to define an enumeration. |
 | `basetypeid` | Optional id of a previously defined type. Used to inherit properties for Types of the same classification, or inherit from a Type with no classification. |
@@ -29,14 +29,13 @@ is [__Link](xref:linkType). The `id` property is referenced when creating instan
 creating other Types that include this Type as a base type or referenced Type.
 
 The `version` is used to supply information about the Type definition and is stored as meta data. 
-When a Type is referenced by another Type then the current version of that type is applied. 
 
 A `static` classification represents metadata describing a device being observed and should be used to capture data that is descriptive and
 relatively unchanging. A `dynamic` classification represents observed or calculated measurements taken from a device that update frequently. 
 
-The `basetypeid` is used to support Type inheritance and is an `id` of previously defined Type. The properties of the base type are then included in the new Type. 
+The `basetypeid` is used to support Type inheritance and is an `id` of previously defined Type. The properties of the base type are then included in the new Type. Circular inheritance or self-referencing is not supported when using `basetypeid`. 
 If a Type is created for the sole purpose of being referenced by another Type, then `classification` is not required. If classification is not set, then instance data of that Type cannot be created.
-If the classification is set then the classification of each Type must match when reusing Type definitions.
+If the classification is set to `static` or `dynamic` then the classification of each Type must match when using `basetypeid` to define an inheritance relationship.
 
 An `enum` Type defines a set of name/value pairs and is used for properties that have a predefined set of allowed values. 
 The enum Type is created separately so that it can be referenced by multiple properties. Refer to [Enum Type](xref:enumType) for detailed information on defining an enum, and using the `reftypeid` to relate the enum property with the enum definition.
