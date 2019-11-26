@@ -7,6 +7,9 @@
 - name: OMF v1.1
   href: documentation_v11/
   topicHref: documentation_v11/Whats_New.md
+- name: OMF v1.0
+  href: documentation_v10/
+  topicHref: documentation_v10/Headers.md
 - name: HTTP Behaviors
   href: documentation/HttpBehaviors/
   topicHref: documentation/HttpBehaviors/Message_Size.md
