@@ -53,10 +53,11 @@ If the referenced type is a `static` or `dynamic` Type, then the properties of t
 | string | date-time | 0001-01-01T00:00:00Z | A string representation of a timestamp, formatted as YYYY-MM-DDThh:mm:ssZ, with optional subsecond precision. |                   
 
 
+
 ### Nullable type properties
 
 Nullable type properties are supported by specifying an array that defines the datatype and includes the keyword `null`. 
-The datatype and `null` may appear in any order in the array. For example: 
+The datatype and `null` may appear in any order in the array. The default value for any nullable type is null. For example: 
 
 
 	"MeasurementValue": {"type": ["integer", "null"], "format": "int64"}

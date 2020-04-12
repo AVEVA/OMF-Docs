@@ -27,11 +27,11 @@ uid: dataExamplev11
 	}, {
         "typeid": "Tank",
         "values": [{
-                "Name": "Tank1",
+                "TankName": "Tank1",
                 "Serial": "5236-3523-KKF4",
                 "Model": "FN-2187"
         }, {
-                "Name": "Tank2",
+                "TankName": "Tank2",
                 "Serial": "2364-4243-FS12",
                 "Model": "TK-421"
         }]

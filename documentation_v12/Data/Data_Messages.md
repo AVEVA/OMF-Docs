@@ -24,7 +24,7 @@ If `containerid` is specified, the values must conform to the Type associated wi
 If `properties` is specified, then the data message can be used to send static data for an instance that has no Type.
 Optionally a `typeid` may be specified along with the `properties` to extend a `static` Type with additional properties.
 
-If a property is defined on the Type definition, but no property value is provided in the Data message, then a default value will be assumed. Default values are specified 
+If a property is defined on the Type definition, and that property is not included in the `values` array, then a default value for that property will be assumed. Default values are specified 
 in the [Supported Formats](xref:typePropertiesAndFormats) Table.
 
 	

@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "documentation_v10/Data/Data_Msg_Example.html",
-          "hash": "H5v6X1OoomBR3l8STEaSBA=="
+          "hash": "HUaABGDgKyDYmxfI4gMbWw=="
         }
       },
       "is_incremental": false,
@@ -222,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "documentation_v11/Data/Data_Msg_Example.html",
-          "hash": "4kmWE3v/Yu7QH83zhHJ1Xw=="
+          "hash": "8wclsJTQWPGxejalofAjjw=="
         }
       },
       "is_incremental": false,
@@ -354,7 +354,7 @@
       "output": {
         ".html": {
           "relative_path": "documentation_v12/Data/Data_Messages.html",
-          "hash": "7bHqGWVZSlZcOK2Svs9OrQ=="
+          "hash": "AVZgPwKmVwEaeco8WMwLCg=="
         }
       },
       "is_incremental": false,
@@ -462,7 +462,7 @@
       "output": {
         ".html": {
           "relative_path": "documentation_v12/Types/Type_Properties_and_Formats.html",
-          "hash": "K91PvJDeg315W3Jo2Hnh8Q=="
+          "hash": "oL7Xc3FhvJnJXRVAcMhmiw=="
         }
       },
       "is_incremental": false,
@@ -520,6 +520,17 @@
       "output": {
         "resource": {
           "relative_path": "images/PI16.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/PamelaHawkins_2020.bmp",
+      "output": {
+        "resource": {
+          "relative_path": "images/PamelaHawkins_2020.bmp"
         }
       },
       "is_incremental": false,
@@ -586,14 +597,19 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -602,17 +618,10 @@
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 37,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
+          "skipped_file_count": 36
         }
       }
     },
