@@ -8,7 +8,7 @@
     <title>OSIsoft Message Format  | OSIsoft Message Format </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="OSIsoft Message Format  | OSIsoft Message Format ">
-    <meta name="generator" content="docfx 2.46.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="./images/favicon.png">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -82,37 +82,14 @@ systems, consult the OSIsoft Cloud Services and PI Web API documentation.</p>
 <p>Please note that anything defined in this document, such as keywords and enumerated
 values, is treated as case insensitive. Case sensitivity for all user specified values
 is determined by the rules of the backend system.</p>
-<h1 id="contents">Contents</h1>
-<h2 id="omf-v12-draft">OMF v1.2 Draft</h2>
-<ul>
-<li><a class="xref" href="documentation_v12/Whats_New.html">Whats New</a></li>
-<li><a class="xref" href="documentation_v12/Headers.html">Message Headers</a></li>
-<li><a class="xref" href="documentation_v12/Message_Types.html">Message Types</a></li>
-<li><a class="xref" href="documentation_v12/Types/Type_Messages.html">Type Messages</a>     <ul>
-<li><a class="xref" href="documentation_v12/Types/Type_Properties_and_Formats.html">Type Properties and Formats</a></li>
-<li><a class="xref" href="documentation_v12/Types/Enum_Type.html">Enum Type</a></li>
-<li><a class="xref" href="documentation_v12/Types/Type_Msg_Example.html">Type Example</a></li>
-</ul>
-</li>
-<li><a class="xref" href="documentation_v12/Containers/Container_Messages.html">Container Messages</a><ul>
-<li><a class="xref" href="documentation_v12/Containers/Container_Msg_Example.html">Container Example</a></li>
-</ul>
-</li>
-<li><a class="xref" href="documentation_v12/Data/Data_Messages.html">Data Messages</a><ul>
-<li><a class="xref" href="documentation_v12/Data/Link_Type.html">Link Type</a></li>
-<li><a class="xref" href="documentation_v12/Data/Data_Msg_Example.html">Data Example</a></li>
-</ul>
-</li>
-<li><a class="xref" href="documentation_v12/OMF_Msg_Sample.html">OMF v1.2 Example</a></li>
-</ul>
-<h2 id="omf-v11">OMF v1.1</h2>
+<h1 id="omf-specification-11">OMF Specification (1.1)</h1>
 <ul>
 <li><a class="xref" href="documentation_v11/Whats_New.html">Whats New</a></li>
 <li><a class="xref" href="documentation_v11/Headers.html">Message Headers</a></li>
 <li><a class="xref" href="documentation_v11/Message_Types.html">Message Types</a></li>
 <li><a class="xref" href="documentation_v11/Types/Type_Messages.html">Type Messages</a>     <ul>
 <li><a class="xref" href="documentation_v11/Types/Link_Type.html">Link Type</a></li>
-<li><a class="xref" href="documentation_v11/Types/Type_Properties_and_Formats.html">Type Properties and Formats</a>   </li>
+<li><a class="xref" href="documentation_v11/Types/Type_Properties_and_Formats.html">Type Properties and Formats</a>  </li>
 <li><a class="xref" href="documentation_v11/Types/Type_Msg_Example.html">Type Example</a></li>
 </ul>
 </li>
@@ -120,31 +97,12 @@ is determined by the rules of the backend system.</p>
 <li><a class="xref" href="documentation_v11/Containers/Container_Msg_Example.html">Container Example</a></li>
 </ul>
 </li>
-<li><a class="xref" href="documentation_v11/Data/Data_Messages.html">Data Messages</a>   <ul>
-<li><a class="xref" href="documentation_v11/Data/Data_Msg_Example.html">Data Example</a>  </li>
+<li><a class="xref" href="documentation_v11/Data/Data_Messages.html">Data Messages</a>  <ul>
+<li><a class="xref" href="documentation_v11/Data/Data_Msg_Example.html">Data Example</a> </li>
 </ul>
 </li>
 </ul>
-<h2 id="omf-v10">OMF v1.0</h2>
-<ul>
-<li><a class="xref" href="documentation_v10/Headers.html">Message Headers</a></li>
-<li><a class="xref" href="documentation_v10/Message_Types.html">Message Types</a></li>
-<li><a class="xref" href="documentation_v10/Types/Type_Messages.html">Type Messages</a>     <ul>
-<li><a class="xref" href="documentation_v10/Types/Link_Type.html">Link Type</a></li>
-<li><a class="xref" href="documentation_v10/Types/Type_Properties_and_Formats.html">Type Properties and Formats</a>   </li>
-<li><a class="xref" href="documentation_v10/Types/Type_Msg_Example.html">Type Example</a></li>
-</ul>
-</li>
-<li><a class="xref" href="documentation_v10/Containers/Container_Messages.html">Container Messages</a><ul>
-<li><a class="xref" href="documentation_v10/Containers/Container_Msg_Example.html">Container Example</a></li>
-</ul>
-</li>
-<li><a class="xref" href="documentation_v10/Data/Data_Messages.html">Data Messages</a>   <ul>
-<li><a class="xref" href="documentation_v10/Data/Data_Msg_Example.html">Data Example</a>  </li>
-</ul>
-</li>
-</ul>
-<h2 id="http-behaviors">HTTP Behaviors</h2>
+<h1 id="http-behaviors">HTTP Behaviors</h1>
 <p>While the OMF specification does not define a particular binary message protocol, OSIsoft 
 systems accepting OMF over HTTP conform to a set of behaviors described in this section.</p>
 <ul>
@@ -158,6 +116,9 @@ systems accepting OMF over HTTP conform to a set of behaviors described in this 
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/OMF-Docs/blob/v1.2-versiondroplist/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
