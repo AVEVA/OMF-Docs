@@ -22,59 +22,25 @@ Please note that anything defined in this document, such as keywords and enumera
 values, is treated as case insensitive. Case sensitivity for all user specified values
 is determined by the rules of the backend system.
 
-# Contents
+# OMF Specification (1.1)
 
+- [Whats New](xref:whatsNewv11)
+- [Message Headers](xref:headersv11)
+- [Message Types](xref:messageTypesv11)
+- [Type Messages](xref:typeMessagesv11)     
+  - [Link Type](xref:linkTypev11)
+  - [Type Properties and Formats](xref:typePropertiesAndFormatsv11)	 
+  - [Type Example](xref:typeExamplev11)
+- [Container Messages](xref:containerMessagesv11)
+  - [Container Example](xref:containerExamplev11)
+- [Data Messages](xref:dataMessagesv11)	 
+  - [Data Example](xref:dataExamplev11) 
 
-## OMF v1.2 Draft
-
-   - [Whats New](xref:whatsNew)
-   - [Message Headers](xref:headers)
-   - [Message Types](xref:messageTypes)
-   - [Type Messages](xref:typeMessages)     
-	 - [Type Properties and Formats](xref:typePropertiesAndFormats)
-	 - [Enum Type](xref:enumType)
-	 - [Type Example](xref:typeExample)
-   - [Container Messages](xref:containerMessages)
-     - [Container Example](xref:containerExample)
-   - [Data Messages](xref:dataMessages)
-	 - [Link Type](xref:linkType)
-     - [Data Example](xref:dataExample)
-   - [OMF v1.2 Example](xref:OMFMsgSample)
-
-
-## OMF v1.1
-
-   - [Whats New](xref:whatsNewv11)
-   - [Message Headers](xref:headersv11)
-   - [Message Types](xref:messageTypesv11)
-   - [Type Messages](xref:typeMessagesv11)     
-     - [Link Type](xref:linkTypev11)
-	 - [Type Properties and Formats](xref:typePropertiesAndFormatsv11)	 
-	 - [Type Example](xref:typeExamplev11)
-   - [Container Messages](xref:containerMessagesv11)
-     - [Container Example](xref:containerExamplev11)
-   - [Data Messages](xref:dataMessagesv11)	 
-     - [Data Example](xref:dataExamplev11)  
-
-
-## OMF v1.0
-  
-   - [Message Headers](xref:headersv10)
-   - [Message Types](xref:messageTypesv10)
-   - [Type Messages](xref:typeMessagesv10)     
-     - [Link Type](xref:linkTypev10)
-	 - [Type Properties and Formats](xref:typePropertiesAndFormatsv10)	 
-	 - [Type Example](xref:typeExamplev10)
-   - [Container Messages](xref:containerMessagesv10)
-     - [Container Example](xref:containerExamplev10)
-   - [Data Messages](xref:dataMessagesv10)	 
-     - [Data Example](xref:dataExamplev10)  
-   
-## HTTP Behaviors
+# HTTP Behaviors
 
 While the OMF specification does not define a particular binary message protocol, OSIsoft 
 systems accepting OMF over HTTP conform to a set of behaviors described in this section.
 
-   - [Message Size](xref:messageSize)
-   - [HTTP Status Codes](xref:httpStatusCodes)
+- [Message Size](xref:messageSize)
+- [HTTP Status Codes](xref:httpStatusCodes)
 
