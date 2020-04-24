@@ -1,7 +1,7 @@
 # OMF-Docs
 The OSIsoft Message Format (OMF) defines a set of message headers and bodies that can be used to generate messages for ingestion into a compliant system.
 
-This repository contains the documentation for OMF. You can access a readable version of this documentation [here.](http://omf-docs.osisoft.com)
+This repository contains the documentation for OMF. You can access a readable version of this documentation [here.](https://omf-docs.osisoft.com)
 
 ##License
 
