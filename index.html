@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>OSIsoft Message Format  | OSIsoft Message Format </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="OSIsoft Message Format  | OSIsoft Message Format ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="./images/atlas_icon_small.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="index">
+<h1 id="osisoft-message-format-">OSIsoft Message Format </h1>
+
+<h1 id="overview">Overview</h1>
+<p>The OSIsoft Message Format (OMF) defines a set of message headers and bodies that can be used to generate messages for ingestion into a compliant back-end system.</p>
+<p>OMF can be used to develop data acquisition applications on platforms and in languages for which there are no supported OSIsoft libraries.</p>
+<p>OMF itself does not define or depend on any particular binary message protocol (HTTP, AMQP, Kafka, etc.) It is instead based on an abstract message type, 
+where a message consists of a set of key / value pairs, called the headers, and a binary payload, called the body. OMF messages can thus be constructed 
+using any message protocol that defines headers and bodies. For up to date information on the specific binary protocols currently supported by OSIsoft 
+systems, consult the OSIsoft Cloud Services and PI Web API documentation.</p>
+<p>Please note that anything defined in this document, such as keywords and enumerated
+values, is treated as case insensitive. Case sensitivity for all user specified values
+is determined by the rules of the backend system.</p>
+<h1 id="omf-specification-11">OMF Specification (1.1)</h1>
+<ul>
+<li><a class="xref" href="documentation_v11/Whats_New.html">Whats New</a></li>
+<li><a class="xref" href="documentation_v11/Headers.html">Message Headers</a></li>
+<li><a class="xref" href="documentation_v11/Message_Types.html">Message Types</a></li>
+<li><a class="xref" href="documentation_v11/Types/Type_Messages.html">Type Messages</a>     <ul>
+<li><a class="xref" href="documentation_v11/Types/Link_Type.html">Link Type</a></li>
+<li><a class="xref" href="documentation_v11/Types/Type_Properties_and_Formats.html">Type Properties and Formats</a>  </li>
+<li><a class="xref" href="documentation_v11/Types/Type_Msg_Example.html">Type Example</a></li>
+</ul>
+</li>
+<li><a class="xref" href="documentation_v11/Containers/Container_Messages.html">Container Messages</a><ul>
+<li><a class="xref" href="documentation_v11/Containers/Container_Msg_Example.html">Container Example</a></li>
+</ul>
+</li>
+<li><a class="xref" href="documentation_v11/Data/Data_Messages.html">Data Messages</a>  <ul>
+<li><a class="xref" href="documentation_v11/Data/Data_Msg_Example.html">Data Example</a> </li>
+</ul>
+</li>
+</ul>
+<h1 id="http-behaviors">HTTP Behaviors</h1>
+<p>While the OMF specification does not define a particular binary message protocol, OSIsoft 
+systems accepting OMF over HTTP conform to a set of behaviors described in this section.</p>
+<ul>
+<li><a class="xref" href="documentation/HttpBehaviors/Message_Size.html">Message Size</a></li>
+<li><a class="xref" href="documentation/HttpBehaviors/Http_Status_Codes.html">HTTP Status Codes</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/OMF-Docs/blob/v1.2-versiondroplist/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            © 2018-2019 - OSIsoft, LLC.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
