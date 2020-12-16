@@ -75,8 +75,8 @@ Their values will be referenced later when defining instance data and creating r
                 "uom": "pascal",
                 "interpolation": "Continuous",
                 "extrapolation": "Forward",
-                "max": "20",
-                "min": "10"
+                "maximum": 20,
+                "minimum": 10
             }                    
         }
     }]
