@@ -15,14 +15,15 @@ The body of a Type message consists of an array of objects. The following keywor
 | `id` | Unique identifier of the Type. |
 | `version` | Optional version of the Type stored as metadata. The version must be of format x.x.x.x, where x must be an integer greater than or equal to 0. If omitted version 1.0.0.0 is assumed. |
 | `classification` | One of `dynamic` or `static`. If omitted, the type cannot be directly created, for example enumerations, base types, and types composed into other types. |
-| `type` | Inherited from JSON Schema. Set to `object` to define a static or dynamic Type. Set to [\"string\", \"integer\"] to define an enumeration. |
+| `type` | Inherited from JSON Schema. Set to `object` to define a static or dynamic Type. |
 | `basetypeid` | Optional id of a previously defined type. Used to inherit properties for Types of the same classification, or inherit from a Type with no classification. |
 | `name` | Optional friendly name for the Type. |
 | `description` | Optional description for the Type. |
 | `tags` | Optional array of strings to tag the Type. |
 | `metadata` | Optional key-value pairs associated with the Type. |
-| `enum` | Optional array of name/value pairs used to define an allowed set of values. Classification should not be set when defining an enum Type. |
-| `properties` | Key-value pairs defining the properties of a static or dynamic Type. Required unless the Type defines an enum. |
+| `enum` | Optional object containing name/value pairs used to define an allowed set of values. Classification should not be set when defining an enum Type. |
+| `flags` | Optional object containing name/value pairs used to define an allowed set of values. Classification should not be set when defining an enum Type. |
+| `properties` | Key-value pairs defining the properties of a static or dynamic Type. Required unless the Type defines enum or flags. |
 
 The `id` cannot begin with the character sequence __. This has been reserved for predefined Types. Currently the only supported predefined Type 
 is [__Link](xref:linkType). The `id` property is referenced when creating instances of Types in Container and Data messages, or when 
@@ -47,4 +48,3 @@ The supported data types and data formats for `properties` are documented in the
    - [Type Properties and Formats](xref:typePropertiesAndFormats)
    - [Enum Type](xref:enumType)
    - [Type Message Example](xref:typeExample)
-

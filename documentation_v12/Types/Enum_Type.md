@@ -7,9 +7,19 @@ uid: enumType
 An `enum` is a Type message defined using an array of name/value pairs used to create a limited set of allowed values. Once defined, the `enum` can be referenced by Properties within other Type messages.
 
 An `enum` can also be used to define a a set of Data Quality values. 
-When defining data quality include the `quality` property in the enum definition, and denote the quality as `good`, `bad`, or `questionable`.  
+When defining data quality include the `quality` property in the enum definition, and denote the quality as `good`, `bad`, or `questionable`.
 
-To define an `enum` Type, include the following keywords. If a keyword is not specified, then the default value will be used.
+## Enum Type Properties
+The following keywords are used to define Enum Type definition.
+
+| Name | Value |
+| --- | --- |
+| `type` | Optional type of the enum. The only currently supported type is integer. Default: integer |
+| `format` | Optional format of the type property. Must be from the OMF 1.2 'supported' formats table. Default: int16 |
+| `values` | Array of name/value pairs used to create a limited set of allowed values. When enum is used to define a set of Data Quality values quality property can be included to denote the quality as good, bad, or questionable. |
+
+## Enum values collection keywords
+To define values possible values of an `enum` type, include the following keywords. If a keyword is not specified the default is going to be used.
 
 | Name | Value |
 | --- | --- |
@@ -23,17 +33,23 @@ For example a Valve could have 2 states, CLOSED or OPEN and accept the defaults,
 
 	{ 
 		"id": "ValveState", 
-		"enum":[ "CLOSED", "OPEN"] 
+		"enum": {
+			"values":[ "CLOSED", "OPEN"]
+		}
 	}
 
 	{ 
 		"id": "ValveState", 
-		"enum": [ {"name":"CLOSED", "value":0}, {"name":"OPEN", "value":1} ] 
+		"enum": {
+			"values": [ {"name":"CLOSED", "value":0}, {"name":"OPEN", "value":1} ] 
+		}
 	}
 	
 	{ 
 		"id": "ValveState", 
-		"enum":[ {"value":0, "name":"CLOSED" }, {"value":1, "name":"OPEN"} ] 
+		"enum": {
+			"values":[ {"value":0, "name":"CLOSED" }, {"value":1, "name":"OPEN"} ] 
+		}
 	}
 
 
@@ -46,12 +62,14 @@ If quality is not explicitly set then it is assumed to be \'good\'.
 
 	{ 
 		"id": "DeviceStatusEnum", 
-		"enum":[ 
-			{ "name": "Device Connected", "value": 0 },
-			{ "name": "Device Failure", "value": 1, "quality": "bad" },
-			{ "name": "Device Comm Failure", "value": 2, "quality": "bad" },
-			{ "name": "Uncertain - Out Limits", "value": 3, "quality": "questionable" } 
-		] 
+		"enum": {
+			"values": [ 
+				{ "name": "Device Connected", "value": 0 },
+				{ "name": "Device Failure", "value": 1, "quality": "bad" },
+				{ "name": "Device Comm Failure", "value": 2, "quality": "bad" },
+				{ "name": "Uncertain Out Limits", "value": 3, "quality": "questionable" } 
+			]
+		}
 	}
 
 
@@ -67,15 +85,19 @@ When referencing the `enum` from the property that holds quality, include the [i
 	[{
         "id": "ValveState",
         "version": "1.0.0.0",        
-        "enum": [ {"name":"CLOSED", "value":0}, {"name":"OPEN", "value":1} ] 
+        "enum": {
+			"values": [ {"name":"CLOSED", "value":0}, {"name":"OPEN", "value":1} ]
+		}
 	}, { 
         "id": "DeviceStatusEnum", 
-		"enum":[ 
-			{ "name": "Device Connected", "value": 0, "quality": "good" },
-			{ "name": "Device Failure", "value": 1, "quality": "bad" },
-			{ "name": "Device Comm Failure", "value": 2, "quality": "bad" },
-			{ "name": "Uncertain - Out Limits", "value": 3, "quality": "questionable" } 
-		] 
+		"enum": {
+			"values": [ 
+				{ "name": "Device Connected", "value": 0, "quality": "good" },
+				{ "name": "Device Failure", "value": 1, "quality": "bad" },
+				{ "name": "Device Comm Failure", "value": 2, "quality": "bad" },
+				{ "name": "Uncertain Out Limits", "value": 3, "quality": "questionable" } 
+			]
+		}
     }, {
         "id": "TankMeasurementV1",
         "version": "1.0.0.0",
