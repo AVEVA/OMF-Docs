@@ -2,9 +2,7 @@
   href: Type_Messages.md
 - name: Type Properties and Formats
   href: Type_Properties_and_Formats.md
-- name: Enum Type Messages
+- name: Enum and Flags Type Messages
   href: Enum_Type.md
-- name: Flags Type Messages
-  href: Flags_Type.md
 - name: Type Example
   href: Type_Msg_Example.md
