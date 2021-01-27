@@ -20,7 +20,6 @@ Their values will be referenced later when defining instance data and creating r
 
     [{
         "id": "Plant",
-        "version": "1.0.0.0",
         "type": "object",
         "classification": "static",
         "properties": {
@@ -41,7 +40,6 @@ Their values will be referenced later when defining instance data and creating r
         }
     }, {
         "id": "Tank",
-        "version": "1.0.0.0",
         "type": "object",
         "classification": "static",     
         "properties": {
@@ -59,7 +57,6 @@ Their values will be referenced later when defining instance data and creating r
         }
     }, {
         "id": "TankPressure",
-        "version": "1.0.0.0",
         "type": "object",
         "classification": "dynamic",        
         "properties": { 
@@ -89,7 +86,6 @@ Serial, Model, TankHeight, and Tank Width, similarly the 'CylindricalTank' conta
 
     [{
         "id":"RectangularTank",
-        "version": "1.0.0.0",
         "type": "object",
         "classification": "static",
         "basetypeid": "Tank",
@@ -107,7 +103,6 @@ Serial, Model, TankHeight, and Tank Width, similarly the 'CylindricalTank' conta
         }
     }, {
         "id":"CylindricalTank",
-        "version": "1.0.0.0",
         "type": "object",
         "classification": "static",
         "basetypeid": "Tank",
@@ -158,7 +153,6 @@ In this example we define data quality on the 'TankPressureV2' object to be of t
 		]	
 	}, {
         "id": "TankPressureV2",
-        "version": "1.0.0.0",
         "type": "object",
 		"basetypeid": "TankPressure",
         "classification": "dynamic",        

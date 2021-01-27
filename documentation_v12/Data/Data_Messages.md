@@ -4,7 +4,7 @@ uid: dataMessages
 
 # Data Messages
 
-Data messages can be used to create instance data for previously defined Types and Containers, relate instances of static and dynamic data, relate Types, or send type-less static data. 
+Data messages can be used to create instance data for previously defined Types and Containers, relate instances of static and dynamic data, relate Types, or send type-less static data. Data messages support the folowing set of actions: `create`, `update` and `delete`.
  
 The body of a Data message is composed of a JSON array with JSON objects defined by the following keywords: 
 

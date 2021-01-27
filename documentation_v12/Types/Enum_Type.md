@@ -34,7 +34,7 @@ For example a Valve could have 2 states, CLOSED or OPEN and accept the defaults,
 	{ 
 		"id": "ValveState", 
 		"enum": {
-			"values":[ "CLOSED", "OPEN"]
+			"values":[ "CLOSED", "OPEN" ]
 		}
 	}
 
@@ -48,6 +48,15 @@ For example a Valve could have 2 states, CLOSED or OPEN and accept the defaults,
 	{ 
 		"id": "ValveState", 
 		"enum": {
+			"values":[ { "value":0, "name":"CLOSED" }, { "value":1, "name":"OPEN" } ] 
+		}
+	}
+
+	{ 
+		"id": "ValveState", 
+		"enum": {
+			"type": integer,
+        	"format": int16,
 			"values":[ { "value":0, "name":"CLOSED" }, { "value":1, "name":"OPEN" } ] 
 		}
 	}
@@ -108,9 +117,9 @@ The example below shows 'flags' type definition describing various configuration
 ```json
     { 
 		"id": "ConfigurationFlags",
-        "type": integer,
-        "format": int16
 		"flags": {
+			"type": integer,
+        	"format": int16,
 			"values": [ 
                 { "name":"CONFIG_BIT01", "value":1 }, 
                 { "name":"CONFIG_BIT02", "value":2 },
@@ -154,7 +163,8 @@ When referencing the `flags` enum from the property that holds quality, include 
 ```
 
 ## Remarks
-Properties referencing `flags` or `enum` type must send integers in a data message, since use of strings is unsupported.
+ - Properties referencing `flags` or `enum` type must send integers in a data message, since use of strings is unsupported.
+ - Both `flags` and `enum` can be defined as non-continuous sets.
 
 
 ## Examples

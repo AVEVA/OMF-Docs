@@ -10,7 +10,7 @@ Version 1.2 introduces the following incremental changes from version 1.1:
 ### Enhancements for Type messages:
 
 - Ability to support Type Inheritance using `basetypeid` defined on a [Type Message](xref:typeMessages), and Type Reuse using `reftypeid` defined on a [Property](xref:typePropertiesAndFormats) within a Type message.
-- Addition of the `enum` keyword defined on a [Type Message](xref:typeMessages), used to create a reusable set of allowed values, and reference the enum as the datatype for a [Property](xref:typePropertiesAndFormats) using `reftypeid`.
+- Addition of the `enum` and `flags` keywords defined on a [Type Message](xref:typeMessages), used to create a reusable set of allowed values, and reference it as the datatype for a [Property](xref:typePropertiesAndFormats) using `reftypeid`.
 - Ability to designate a property as holding data quality using `isquality` defined on a [Property](xref:typePropertiesAndFormats), and the ability to reference a set of quality values defined using an [enum Type Message](xref:enumType).
 - Support for `minimum` and `maximum` type qualifiers defined on a [Property](xref:typePropertiesAndFormats), used to restrict data values.
 - Support for `interpolation` and `extrapolation` modes defined on a [Property](xref:typePropertiesAndFormats), used to categorize the behavior of data being stored.

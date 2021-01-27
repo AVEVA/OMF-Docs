@@ -144,9 +144,7 @@ In this example, the Data message contains values for the ValvePosition and Devi
 		}]
 	}
 
-
-
-
+Numeric values must be used for properties defined as `enum` or `flags` types.
 	
 ### Type-less Static Data Message
 
