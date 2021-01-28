@@ -9,15 +9,15 @@ In this example, instance data is created for the `static` types \'Plant\' and \
 \'Tank1_PressureMeasurements\' and \'Tank2_PressureMeasurements\'. The link data messages are used to relate the instance data as well as combine static and dynamic Types.
 
 ### Headers
-
+```
 	omfversion = 1.2
 	messagetype = data
 	action = create
 	messageformat = json
-
+```
 ### Body
 
-
+```json
 	[{
 		"typeid": "Plant",
 		"values": [{
@@ -93,12 +93,13 @@ In this example, instance data is created for the `static` types \'Plant\' and \
 			"Pressure": 15.1
 		}]
 	}]
+```
 
 ### Inheritance Data Message Example
 
 In this example, the Data message contains values for the inherited properties TankName, Serial and Model as well as the properties TankHeight and TankWidth.
  
-
+```json
 	{
 		"typeid":"RectangularTank",		
 		"values": [{ 
@@ -109,11 +110,13 @@ In this example, the Data message contains values for the inherited properties T
 			"TankWidth": 90
 		}]
 	}
+```
 
 ### Reference Data Message Example
 
-In this example, the Data message contains values Latitude and Longitude which were included using `reftypeid` on the Location property. 
+In this example, the Data message contains values Latitude and Longitude which were included using `reftypeid` on the Location property.
 
+```json
 	{
 		"typeid":"TankV2",		
 		"values": [{ 
@@ -126,13 +129,13 @@ In this example, the Data message contains values Latitude and Longitude which w
 			}
 		}]
 	}
-
-
+```
 	
 ### Enum Data Message Example
 
 In this example, the Data message contains values for the ValvePosition and DeviceStatus. These properties were defined as `enum` types using `reftypeid`. 
 
+```json
 	{
 		"containerid":"TankMeasurementsV1_Tank3",		
 		"values": [{ 			
@@ -143,6 +146,7 @@ In this example, the Data message contains values for the ValvePosition and Devi
 			"Temperature": 90.1
 		}]
 	}
+```
 
 Numeric values must be used for properties defined as `enum` or `flags` types.
 	
@@ -150,6 +154,7 @@ Numeric values must be used for properties defined as `enum` or `flags` types.
 
 In this example, the Data message extends the 'Tank' type to include a 'Maintenance Schedule' for this instance. The 'Tank' Type itself is not extended.
 
+```json
 	[{ 
 	   "typeid": "Tank",
        "properties": { 
@@ -168,10 +173,11 @@ In this example, the Data message extends the 'Tank' type to include a 'Maintena
 			  "Maintenance Schedule": [ "2019-09-01T00:00:00Z", "2019-09-01T08:00:00Z", "2019-09-01T16:00:00Z" ]
         }] 
 	}] 
-
+```
 
 In this example, the Data message defines properties for a Tank, and sends the instance data. No Type definitions are defined or created. 
 
+```json
 	[{ 	   
        "properties": { 
 			"Name": {
@@ -196,3 +202,4 @@ In this example, the Data message defines properties for a Tank, and sends the i
 			  "HourlyMaintenanceSchedule": 8
         }] 
 	}] 
+```

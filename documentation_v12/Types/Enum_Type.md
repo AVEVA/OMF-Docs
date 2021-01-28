@@ -10,13 +10,13 @@ An `enum` is a Type message defined using an array of name/value pairs used to c
 An `enum` can also be used to define a a set of Data Quality values. When defining data quality include the `quality` property in the enum definition, and denote the quality as `good`, `bad`, or `questionable`.
 
 ### Enum Type Properties
-The following keywords are used to define Enum Type definition.
+The following keywords are used to define Enum Type definition. If a keyword is not specified the default is going to be used.
 
 | Name | Value |
 | --- | --- |
 | `type` | Optional type of the enum. The only currently supported type is integer. Default: integer |
 | `format` | Optional format of the type property. Must be from the OMF 1.2 'supported' formats table. Default: int16 |
-| `values` | Array of name/value pairs used to create a limited set of allowed values. When enum is used to define a set of Data Quality values quality property can be included to denote the quality as good, bad, or questionable. |
+| `values` | Required array of name/value pairs used to create a limited set of allowed values. When enum is used to define a set of Data Quality values, `quality` property can be included to denote the quality as good, bad, or questionable. |
 
 ### Enum values collection keywords
 To define possible values of an `enum` type, include the following keywords. If a keyword is not specified the default is going to be used.
@@ -24,20 +24,14 @@ To define possible values of an `enum` type, include the following keywords. If 
 | Name | Value |
 | --- | --- |
 | `name` | A unique string that describes the condition or state being represented. This string is used as the displayed value when an enum is selected as the Type for a property. |
-| `value` | Optional integer value associated with the enum. If not defined the enum ranges from 0 to one less than size of the collection. The integer value is typically used when sending data of this type. |
+| `value` | Required integer value associated with the enum. The integer value must used when sending data of this type. |
 | `quality` | Optional field needed when defining a set of data quality values. Must be set to `good`, `bad`, or `questionable`. Defaults to \'good\' when not specified. |
 
 The `enum` definition could contain only the name property and accept the defaults for the other properties, or explicitly define all the properties. 
 
 For example a Valve could have 2 states, CLOSED or OPEN and accept the defaults, or explicitly define the values. The following Type messages are valid syntax:
-```json
-	{ 
-		"id": "ValveState", 
-		"enum": {
-			"values":[ "CLOSED", "OPEN" ]
-		}
-	}
 
+```json
 	{ 
 		"id": "ValveState", 
 		"enum": {
@@ -95,13 +89,13 @@ A `flag` enum is a Type message defined using an array of name/value pairs used 
 
 ### Flags Type Properties
 
-The following keywords are used to define Flags Type definition.
+The following keywords are used to define Flags Type definition. If a keyword is not specified the default is going to be used.
 
 | Name | Value |
 | --- | --- |
 | `type` | Optional type of the Flags definition. The only currently supported type is integer. Default: integer |
 | `format` | Optional format of the type property. Defines how many flags can be defined in the values array. Must be from the OMF 1.2 'supported' formats table. Default: int32 |
-| `values` | Array of name/value pairs used to create a limited set of allowed values. When enum is used to define a set of Data Quality values quality property can be included to denote the quality as good, bad, or questionable. |
+| `values` | Array of name/value pairs used to create a limited set of allowed values where multiple states (bits) can be active at the same time. When flags type is used to define a set of Data Quality values, `quality` property can be included to denote the quality as good, bad, or questionable. |
 
 ### Flags values collection keywords
 To define possible values of a `flags` type, include the following keywords. If a keyword is not specified the default is going to be used.
@@ -129,6 +123,20 @@ The example below shows 'flags' type definition describing various configuration
             ] 
 		}
 	}
+
+	{ 
+		"id": "ConfigurationFlags",
+		"flags": {
+        	"format": int16,
+			"values": [ 
+                { "value":1, "name":"CONFIG_BIT01" }, 
+                { "value":2, "name":"CONFIG_BIT02" },
+                { "value":4, "name":"CONFIG_BIT03" },
+                { "value":8, "name":"CONFIG_BIT04" },
+                { "value":16,"name":"CONFIG_BIT05" } 
+            ] 
+		}
+	}
 ```
 
 ## Flags Type Messages for Data Quality
@@ -139,7 +147,7 @@ A `flags` type could be used to define a set of allowed values that represents d
 If quality is not explicitly set then it is assumed to be \'good\'. Flags can combine multiple states with different quality mappings set:
  - When at least one flag with bad quality is set the value is considered bad.
  - When at least one flag with questionable quality is set the value is considered questionable.
- - Combination of Bad and Questionable flags is not allowed. When bad and questionable bits are combined the value is considered bad and questionable bit will not be set.
+ - Bad and questionable bits can be combined but bad does take precedence.
 
  ```json
 	{ 
@@ -190,6 +198,7 @@ When referencing the `flags` enum from the property that holds quality, include 
 	{ 
 		"id": "ConfigurationFlags", 
 		"flags": {
+			"format": int16,
 			"values": [ 
                 { "name":"CONFIG_BIT01", "value":1 }, 
                 { "name":"CONFIG_BIT02", "value":2 },
@@ -198,8 +207,8 @@ When referencing the `flags` enum from the property that holds quality, include 
                 { "name":"CONFIG_BIT05", "value":16 } 
             ] 
 		}
-	}
-	}, {
+	}, 
+	{
         "id": "TankMeasurementV1",
         "version": "1.0.0.0",
         "type": "object",

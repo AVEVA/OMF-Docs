@@ -10,14 +10,16 @@ Their values will be referenced later when defining instance data and creating r
 
 ### Headers
 
+```
     omfversion = 1.2
     messagetype = type
     action = create
     messageformat = json
-
+```
 
 ### Body
 
+```json
     [{
         "id": "Plant",
         "type": "object",
@@ -77,6 +79,7 @@ Their values will be referenced later when defining instance data and creating r
             }                    
         }
     }]
+```
 
 ### Inheritance Example
 
@@ -84,6 +87,7 @@ Properties of a Type definition can reference a previously defined Type using th
 `static` Type. In this example we reference the previously defined Type \'Tank\'. The resulting 'RectangularTank' contains the properties TankName, 
 Serial, Model, TankHeight, and Tank Width, similarly the 'CylindricalTank' contains the properties TankName, Serial, Model, and TankDiameter.
 
+```json
     [{
         "id":"RectangularTank",
         "type": "object",
@@ -113,13 +117,14 @@ Serial, Model, TankHeight, and Tank Width, similarly the 'CylindricalTank' conta
             }
         }
     }]
-
+```
 
 ### Reference Example
 
 Properties of a Type definition can reference a previously defined Type using the `reftypeid`.
 In this example we include the \'LocationProperties\' in the 'TankV2' Type, but cannot create instance data of the 'LocationProperties' Type.
 
+```json
     [{  
 		"id":"LocationProperties",
         "type":"object",
@@ -138,12 +143,14 @@ In this example we include the \'LocationProperties\' in the 'TankV2' Type, but 
 			"Location": { "reftypeid":"LocationProperties" }	
         }
     }]
-	
+```
+
 ### Enum Example
 
 Properties of a Type definition can reference a previously defined `enum` using the `reftypeid` keyword. 
 In this example we define data quality on the 'TankPressureV2' object to be of type 'DeviceStatusEnum'.
 
+```json
     [{
 		"id": "DeviceStatusEnum", 
 		"enum": [ 
@@ -162,3 +169,4 @@ In this example we define data quality on the 'TankPressureV2' object to be of t
 				"isquality": true
             }          
     }]
+```

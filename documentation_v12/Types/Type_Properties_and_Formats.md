@@ -59,11 +59,11 @@ If the referenced type is a `static` or `dynamic` Type, then the properties of t
 Nullable type properties are supported by specifying an array that defines the datatype and includes the keyword `null`. 
 The datatype and `null` may appear in any order in the array. The default value for any nullable type is null. For example: 
 
-
+```json
 	"MeasurementValue": {"type": ["integer", "null"], "format": "int64"}
 
 	"MeasurementValue": {"type": ["null", "integer"], "format": "int64"}
-	
+```
 	
 ### Type reuse and Inheritance
 
@@ -75,7 +75,7 @@ When `reftypeid` is used on a property, then all the properties of the reference
 In the example below, `basetypeid` is used to create the new \'CylindricalTank\' Type which will have all the properties of the existing \'Tank\' Type, maintain the index and name properties, 
 plus adds an additional property \'TankDiameter\'.
 
-
+```json
 	{
 		"id": "Tank",
 		"type": "object",
@@ -94,12 +94,14 @@ plus adds an additional property \'TankDiameter\'.
 			"TankDiameter": { "type": "number", "format":"float32" }
 		}	
 	}
+```
 
 In the example below, a reusable type \'LocationProperties\' is created then used with the \'TankV2\' definition via the `reftypeid` to define a Location property on a Tank.  
 The TankV2 Location property will contain the sub properties \'Latitude\' and \'Longitude\'.
 
-The referenced type \'LocationProperties\' does not define a classification, and does not define an index property and therefore \'LocationProperites\' cannot be used as the Type for instance data.
+The referenced type \'LocationProperties\' does not define a classification, and does not define an index property and therefore \'LocationProperties\' cannot be used as the Type for instance data.
 
+```json
 	{ 	
 		"id":"LocationProperties",
 		"type":"object",		
@@ -118,7 +120,8 @@ The referenced type \'LocationProperties\' does not define a classification, and
 			"Location": { "reftypeid":"LocationProperties" }	
 		}
 	}
-	
+```
+
 ### Type Qualifiers
 
 Properties with `isindex` keyword designate that property as the index and must have unique values. The index value is set when creating instances of the Type, and referenced when creating links.
@@ -126,7 +129,8 @@ Typically, the properties of a `dynamic` type index on time, and use the format 
 Types without an index property cannot be used to create instance data.
 
 The `isquality` keyword is used to designate a particular property as the data quality for the Type. Properties marked with the quality flag should have a reference  a reference to an `enum`.
-The quality of each `enum` value is indicated in the enum type definition. Refer to the [Enum Type](xref:enumType) for additional information about defining enums. The following format is supported:
+The quality of each `enum` value is indicated in the enum type definition. Refer to the [Enum and Flags Type](xref:enumFlagsType) for additional information about defining enums and flags types. The following format is supported:
 
+```json
 	"DeviceStatus": { "reftypeid":"DeviceStatusEnum", "isquality": true }	
-   
+```

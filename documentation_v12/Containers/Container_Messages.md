@@ -6,7 +6,7 @@ uid: containerMessages
 
 A Container can be defined for Types whose classification is `dynamic`, and provides a stream of data events. Each Container has a unique ID defined by the user.
 
-Immediately after a Type has been registered using a Type message, Containers may be created using that Type. Containers support the same set of actions defined for Type messsages: `create`, `update`, and `delete`.
+Immediately after a Type has been registered using a Type message, Containers may be created using that Type. Containers support the same set of actions defined for Type messages: `create` or `update`.
 
 The body of a Container message consists of an array of objects with the following keywords:
 

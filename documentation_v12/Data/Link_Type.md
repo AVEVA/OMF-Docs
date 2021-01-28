@@ -29,7 +29,7 @@ For an instance of a Container, specify the `containerid`.
 ### Link Examples for Instance Data
 
 For example, to relate an instance of a Plant, specified by its indexed property PlantId with value WTP1, to an instance of Tank, specified with by its indexed property TankName with value Tank1, use the following `__Link`:
-
+```json
     [{ 
         "typeid": "Plant", 
         "values": [{ 
@@ -54,10 +54,11 @@ For example, to relate an instance of a Plant, specified by its indexed property
 			} 
 		}]
     }]
-	
+```
 
 To associate the container, Tank1Measurements, with the instance of a Tank whose index is \'Tank1\', use the following `__Link`:
 
+```json
     [{  
 		"typeid": "__Link", 
         "values": [{ 
@@ -69,14 +70,15 @@ To associate the container, Tank1Measurements, with the instance of a Tank whose
 				"containerid": "Tank1Measurements" 
 			}
 		}]
-    }]  
+	}] 
+```
 
 ### Link Examples for Instance Data for Properties
 
 To associate instances of Types and Containers at the Property level, define the property in the Link relationship. 
 This expands the static Type \'Pump\' to include the properties InletFlow and OutletFlow, and creates a link between the instance data for Pump1 and Pump1InletFlowMeasurements.
  
-
+```json
 	[{ 
 		"typeid": "__Link", 
 		"values": [{ 
@@ -98,13 +100,14 @@ This expands the static Type \'Pump\' to include the properties InletFlow and Ou
 				"containerid": "Pump1OutletFlowMeasurements" 
 			} 
 	}]
-
+```
 
 
 To associate instances of Types and Containers at the Property level, and include only specific properties within the Types, define the property in the Link relationship. 
 This expands the static Type \'Pump\' to include the property InletFlowTemperature, and creates a link between the instance data for Pump1 and the Temperature property from the Pump1InletFlowMeasurements container.
 Similarly, the InletFlowPressue property is created on the Pump, and Pump1 InletFlowPressue property is linked withe Pressure property in the Pump1InletFlowMeasurements container.
 
+```json
 	 [{ 
 		"typeid": "__Link", 
 		"values": [{ 
@@ -129,15 +132,14 @@ Similarly, the InletFlowPressue property is created on the Pump, and Pump1 Inlet
 			} 
 		}]
 	}] 
-
-
+```
 	
 ### Link Examples for Types and Properties
 
 To associate Types and Containers at the Property level, define the property in the Link relationship. 
 This expands the static Type \'Pump\' to include the properties InletFlow and OutletFlow, and applies the definition of FlowMeasurements for the properties.
  
-
+```json
 	[{ 
 		"typeid": "__Link", 
 		"values": [{ 
@@ -158,13 +160,13 @@ This expands the static Type \'Pump\' to include the properties InletFlow and Ou
 			} 
 		}]
 	}] 
-
-
+```
 
 To associate Types and Containers at the Property level, and include only specific properties within the Types, define the property in the Link relationship. 
 This expands the static Type \'Pump\' to include the property InletFlowTemperature and InletFlowPressue, and applies the definition of the Pressure property in FlowMeasurements to the InletFlowPressure,
 and the Temperature property as the type for the InletFlowTemperature.
 
+```json
 	[{ 
 		"typeid": "__Link", 
 		"values": [{ 
@@ -186,4 +188,5 @@ and the Temperature property as the type for the InletFlowTemperature.
 				"property": "Pressure" 
 			} 
 		}]
-	}] 
+	}]
+```
