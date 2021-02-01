@@ -15,7 +15,6 @@ Version 1.2 introduces the following incremental changes from version 1.1:
 - Support for `minimum` and `maximum` type qualifiers defined on a [Property](xref:typePropertiesAndFormats), used to restrict data values.
 - Support for `interpolation` and `extrapolation` modes defined on a [Property](xref:typePropertiesAndFormats), used to categorize the behavior of data being stored.
 
-
 ### Enhancements for Container messages:
 
 - Ability to override values of `properties` defined by a dynamic Type using the `propertyoverrides` keyword in the [Container Message](xref:containerMessages). Currently supported property overrides include `name`, `description`, `uom`, `minimum`, and `maximum`.

@@ -128,9 +128,13 @@ Properties with `isindex` keyword designate that property as the index and must 
 Typically, the properties of a `dynamic` type index on time, and use the format `date-time`, and properties of a `static` type index on id or name.
 Types without an index property cannot be used to create instance data.
 
-The `isquality` keyword is used to designate a particular property as the data quality for the Type. Properties marked with the quality flag should have a reference  a reference to an `enum`.
-The quality of each `enum` value is indicated in the enum type definition. Refer to the [Enum and Flags Type](xref:enumFlagsType) for additional information about defining enums and flags types. The following format is supported:
+### Data Quality
+
+The `isquality` keyword is used to designate a particular property as the data quality for the Type. Properties marked with the quality flag should have a reference  a reference to an `enum` or `flags` type.
+The quality of each `enum` or `flags` value is indicated in the enum type definition. Refer to the [Enum and Flags Type](xref:enumFlagsType) for additional information about defining enums and flags. The following format is supported:
 
 ```json
 	"DeviceStatus": { "reftypeid":"DeviceStatusEnum", "isquality": true }	
 ```
+
+A type can have at most one property designated to hold data quality information. Data quality property value represents quality of the entire event. If Bad, the entire event is considered bad.
