@@ -64,6 +64,7 @@ The datatype and `null` may appear in any order in the array. The default value 
 
 	"MeasurementValue": {"type": ["null", "integer"], "format": "int64"}
 	
+Values of type "string" are treated as inherently nullable thus the additional null type specification is not needed.
 	
 ### Type reuse and Inheritance
 
