@@ -252,7 +252,8 @@ The datatype and <code>null</code> may appear in any order in the array. The def
 <pre><code>&quot;MeasurementValue&quot;: {&quot;type&quot;: [&quot;integer&quot;, &quot;null&quot;], &quot;format&quot;: &quot;int64&quot;}
 
 &quot;MeasurementValue&quot;: {&quot;type&quot;: [&quot;null&quot;, &quot;integer&quot;], &quot;format&quot;: &quot;int64&quot;}
-</code></pre><h3 id="type-reuse-and-inheritance">Type reuse and Inheritance</h3>
+</code></pre><p>Values of type &quot;string&quot; are treated as inherently nullable thus the additional null type specification is not needed.</p>
+<h3 id="type-reuse-and-inheritance">Type reuse and Inheritance</h3>
 <p>Type reuse and Type inheritance are supported for Types of the same <code>classification</code> or Types with no <code>classification</code>, using either <code>basetypeid</code> on a Type Message, or
 <code>reftypeid</code> at the Property level. When <code>basetypeid</code> is used on a Type, then all the properties of the base type are included within the new Type.
 When <code>reftypeid</code> is used on a property, then all the properties of the reference type are included under the specified property.</p>
