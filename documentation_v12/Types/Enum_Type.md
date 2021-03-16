@@ -29,7 +29,7 @@ To define possible values of an `enum` type, include the following keywords. If 
 
 In this example we have a Valve with 2 states, CLOSED or OPEN and accept the defaults, or explicitly define the values. The following Type messages are valid syntax:
 
-```json
+```
 	{ 
 		"id": "ValveState", 
 		"enum": {
@@ -61,7 +61,7 @@ The following Type message defines a data quality `enum`.
 An `enum` could be used to define a set of allowed values that represents data quality. In this case include the `quality` in the `enum` definition. 
 If quality is not explicitly set then it is assumed to be \'good\'.
 
-```json
+```
 	{ 
 		"id": "DeviceStatusEnum", 
 		"enum": {
@@ -77,7 +77,7 @@ If quality is not explicitly set then it is assumed to be \'good\'.
 
 When referencing the `enum` from the property that holds quality, include the [isquality](xref:typePropertiesAndFormats) keyword and use `reftypeid` as the data type of the property:
 
-```json
+```
     { "DeviceStatus": { "reftypeid": "DeviceStatusEnum", "isquality": true } }
 ```
 
@@ -106,7 +106,7 @@ To define possible values of a `flags` type, include the following keywords. If 
 
 The example below shows `flags` type definition describing various configuration bits where multiple can be set at the same time.
 
-```json
+```
     { 
 		"id": "ConfigurationFlags",
 		"flags": {
@@ -162,7 +162,7 @@ If quality is not explicitly set then it is assumed to be \'good\'. Flags can co
  - When at least one flag with questionable quality is set the value is considered questionable.
  - Bad and questionable bits can be combined but bad does take precedence.
 
- ```json
+ ```
 { 
 	"id": "ConfigurationQualityFlags", 
 	"flags": {
@@ -179,7 +179,7 @@ If quality is not explicitly set then it is assumed to be \'good\'. Flags can co
 
 When referencing the `flags` enum from the property that holds quality, include the [isquality](xref:typePropertiesAndFormats) keyword and use `reftypeid` as the data type of the property:
 
-```json
+```
     { "DeviceStatus": { "reftypeid": "ConfigurationQualityFlags", "isquality": true } }
 ```
 
@@ -189,7 +189,7 @@ When referencing the `flags` enum from the property that holds quality, include 
 
 ## Examples
 
-```json
+```
 [{
     "id": "ValveState",
     "version": "1.0.0.0",        
@@ -255,4 +255,4 @@ When referencing the `flags` enum from the property that holds quality, include 
 			}
     }
 }]
-	```
+```
