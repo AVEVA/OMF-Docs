@@ -11,15 +11,14 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 
 
 ### Type Message Headers
-```
+
 	omfversion = 1.2
 	messagetype = type
 	action = create
 	messageformat = json
-```
 
 ### Type Message Body
-```json
+
 	[{
 		"id": "Plant",
 		"type": "object",
@@ -112,19 +111,18 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 			}	
 		}
 	}]
-```
 
 Create containers for the `dynamic` types.
 
 ### Container Message Headers
-```
+
     omfversion = 1.2
     messagetype = container
     action = create
     messageformat = json
-```
+
 ### Container Message Body
-```json
+
 	[{
 		"id": "Tank1Measurements",
 		"typeid": "TankMeasurement",
@@ -145,19 +143,19 @@ Create containers for the `dynamic` types.
 		"typeid": "TankMeasurement",
 		"datasource":"Modbus"
 	}]
-```
+
 
 Send data messages to create assets, relate instances, and send data values, for static, dynamic and type-less data instances. 
 
 ### Data Message Headers
-```
+
     omfversion = 1.2
     messagetype = data
     action = create
     messageformat = json
-```
+
 ### Data Message Body
-```json
+
 	[{
 		"typeid": "Plant",
 		"values": [{
@@ -309,4 +307,3 @@ Send data messages to create assets, relate instances, and send data values, for
 			"Temperature": 97.1
 		}]
 	}]
-```

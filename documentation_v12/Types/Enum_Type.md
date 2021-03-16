@@ -29,7 +29,6 @@ To define possible values of an `enum` type, include the following keywords. If 
 
 In this example we have a Valve with 2 states, CLOSED or OPEN and accept the defaults, or explicitly define the values. The following Type messages are valid syntax:
 
-```
 	{ 
 		"id": "ValveState", 
 		"enum": {
@@ -52,7 +51,6 @@ In this example we have a Valve with 2 states, CLOSED or OPEN and accept the def
 			"values":[ { "value":0, "name":"CLOSED" }, { "value":1, "name":"OPEN" } ] 
 		}
 	}
-```
 
 ## Enum Type Messages for Data Quality
 
@@ -61,7 +59,6 @@ The following Type message defines a data quality `enum`.
 An `enum` could be used to define a set of allowed values that represents data quality. In this case include the `quality` in the `enum` definition. 
 If quality is not explicitly set then it is assumed to be \'good\'.
 
-```
 	{ 
 		"id": "DeviceStatusEnum", 
 		"enum": {
@@ -73,13 +70,10 @@ If quality is not explicitly set then it is assumed to be \'good\'.
 			]
 		}
 	}
-```
 
 When referencing the `enum` from the property that holds quality, include the [isquality](xref:typePropertiesAndFormats) keyword and use `reftypeid` as the data type of the property:
 
-```
     { "DeviceStatus": { "reftypeid": "DeviceStatusEnum", "isquality": true } }
-```
 
 ## Flags Type Messages
 
@@ -106,7 +100,6 @@ To define possible values of a `flags` type, include the following keywords. If 
 
 The example below shows `flags` type definition describing various configuration bits where multiple can be set at the same time.
 
-```
     { 
 		"id": "ConfigurationFlags",
 		"flags": {
@@ -150,7 +143,6 @@ The example below shows `flags` type definition describing various configuration
             ] 
 		}
 	}
-```
 
 ## Flags Type Messages for Data Quality
 
@@ -162,7 +154,6 @@ If quality is not explicitly set then it is assumed to be \'good\'. Flags can co
  - When at least one flag with questionable quality is set the value is considered questionable.
  - Bad and questionable bits can be combined but bad does take precedence.
 
- ```
 { 
 	"id": "ConfigurationQualityFlags", 
 	"flags": {
@@ -175,13 +166,10 @@ If quality is not explicitly set then it is assumed to be \'good\'. Flags can co
         ] 
 	}
 }
-```
 
 When referencing the `flags` enum from the property that holds quality, include the [isquality](xref:typePropertiesAndFormats) keyword and use `reftypeid` as the data type of the property:
 
-```
     { "DeviceStatus": { "reftypeid": "ConfigurationQualityFlags", "isquality": true } }
-```
 
 ## Remarks
  - Properties referencing `flags` or `enum` type must send integer values in a data message, since use of strings is unsupported.
@@ -189,70 +177,68 @@ When referencing the `flags` enum from the property that holds quality, include 
 
 ## Examples
 
-```
-[{
-    "id": "ValveState",
-    "version": "1.0.0.0",        
-    "enum": {
-		"values": [ {"name":"CLOSED", "value":0}, {"name":"OPEN", "value":1} ]
-	}
-}, { 
-    "id": "DeviceStatusEnum", 
-	"enum": {
-		"values": [ 
-			{ "name": "Device Connected", "value": 0, "quality": "good" },
-			{ "name": "Device Failure", "value": 1, "quality": "bad" },
-			{ "name": "Device Comm Failure", "value": 2, "quality": "bad" },
-			{ "name": "Uncertain Out Limits", "value": 3, "quality": "questionable" } 
-		]
-	}
-},
-{ 
-	"id": "ConfigurationFlags", 
-	"flags": {
-		"format": "int16",
-		"values": [ 
-            { "name":"CONFIG_BIT01", "value":1 }, 
-            { "name":"CONFIG_BIT02", "value":2 },
-            { "name":"CONFIG_BIT03", "value":4 },
-            { "name":"CONFIG_BIT04", "value":8 },
-            { "name":"CONFIG_BIT05", "value":16 } 
-        ] 
-	}
-}, 
-{
-    "id": "TankMeasurementV1",
-    "version": "1.0.0.0",
-    "type": "object",
-    "classification": "dynamic",
-    "properties": {
-            "Timestamp": {
+	[{
+    	"id": "ValveState",
+    	"version": "1.0.0.0",        
+    	"enum": {
+			"values": [ {"name":"CLOSED", "value":0}, {"name":"OPEN", "value":1} ]
+		}
+	}, { 
+    	"id": "DeviceStatusEnum", 
+		"enum": {
+			"values": [ 
+				{ "name": "Device Connected", "value": 0, "quality": "good" },
+				{ "name": "Device Failure", "value": 1, "quality": "bad" },
+				{ "name": "Device Comm Failure", "value": 2, "quality": "bad" },
+				{ "name": "Uncertain Out Limits", "value": 3, "quality": "questionable" } 
+			]
+		}
+	},
+	{ 
+		"id": "ConfigurationFlags", 
+		"flags": {
+			"format": "int16",
+			"values": [ 
+            	{ "name":"CONFIG_BIT01", "value":1 }, 
+            	{ "name":"CONFIG_BIT02", "value":2 },
+            	{ "name":"CONFIG_BIT03", "value":4 },
+            	{ "name":"CONFIG_BIT04", "value":8 },
+            	{ "name":"CONFIG_BIT05", "value":16 } 
+        	] 
+		}
+	}, 
+	{
+    	"id": "TankMeasurementV1",
+    	"version": "1.0.0.0",
+    	"type": "object",
+    	"classification": "dynamic",
+    	"properties": {
+            	"Timestamp": {
                     "type": "string",
                     "format":"date-time",
                     "isindex": true
-            },
-			"DeviceStatus": {
-				"reftypeid": "DeviceStatusEnum", 
-				"isquality": true
-			},
-            "ValvePosition": {
-                    "reftypeid": "ValveState"
-            },
-            "Pressure": {
+            	},
+				"DeviceStatus": {
+					"reftypeid": "DeviceStatusEnum", 
+					"isquality": true
+				},
+            	"ValvePosition": {
+                	"reftypeid": "ValveState"
+            	},
+            	"Pressure": {
                     "type": "number",
                     "name": "Tank Pressure",
                     "description": "Tank Pressure in Pa",
                     "uom": "pascal"
-            },
-            "Temperature": {
+            	},
+            	"Temperature": {
                     "type": "number",
                     "name": "Tank Temperature",
                     "description": "Tank Temperature in K",
                     "uom": "K"
-            },
-			"Configuration": {
+            	},
+				"Configuration": {
 					"reftypeid": "ConfigurationFlags"
-			}
-    }
-}]
-```
+				}
+    	}
+	}]
