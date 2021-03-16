@@ -209,27 +209,27 @@ When referencing the `flags` enum from the property that holds quality, include 
 		"id": "TankMeasurementV1",
 		"version": "1.0.0.0",
 		"type": "object",
-    		"classification": "dynamic",
-    		"properties": {
-            		"Timestamp": {
+		"classification": "dynamic",
+		"properties": {
+			"Timestamp": {
 				"type": "string",
 				"format":"date-time",
 				"isindex": true
-  			},
+			},
 			"DeviceStatus": {
 				"reftypeid": "DeviceStatusEnum", 
 				"isquality": true
 			},
-            		"ValvePosition": {
-                		"reftypeid": "ValveState"
+			"ValvePosition": {
+				"reftypeid": "ValveState"
+			},
+			"Pressure": {
+				"type": "number",
+				"name": "Tank Pressure",
+				"description": "Tank Pressure in Pa",
+				"uom": "pascal"
             		},
-            		"Pressure": {
-                    		"type": "number",
-                    		"name": "Tank Pressure",
-                    		"description": "Tank Pressure in Pa",
-                    		"uom": "pascal"
-            		},
-            		"Temperature": {
+			"Temperature": {
 				"type": "number",
 				"name": "Tank Temperature",
 				"description": "Tank Temperature in K",
@@ -238,5 +238,5 @@ When referencing the `flags` enum from the property that holds quality, include 
 			"Configuration": {
 				"reftypeid": "ConfigurationFlags"
 			}
-    	}
+		}
 	}]
