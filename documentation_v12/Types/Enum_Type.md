@@ -100,7 +100,7 @@ To define possible values of a `flags` type, include the following keywords. If 
 
 The example below shows `flags` type definition describing various configuration bits where multiple can be set at the same time.
 
-    	{ 
+    { 
 		"id": "ConfigurationFlags",
 		"flags": {
 			"values": [ 
@@ -155,18 +155,18 @@ If quality is not explicitly set then it is assumed to be \'good\'. Flags can co
  - Bad and questionable bits can be combined but bad does take precedence.
 
 ```
-	{ 
-		"id": "ConfigurationQualityFlags", 
-		"flags": {
-			"values": [ 
-            			{ "name":"Good", "value":1 }, 
-            			{ "name":"Uninitialized", "value":2, "quality": "bad" },
-            			{ "name":"Unreasonable", "value":4, "quality": "bad" },
-            			{ "name":"Suspect", "value":8, "quality": "questionable" },
-            			{ "name":"Commanded", "value":16 } 
-        		] 
-		}
+{ 
+	"id": "ConfigurationQualityFlags", 
+	"flags": {
+		"values": [ 
+            		{ "name":"Good", "value":1 }, 
+            		{ "name":"Uninitialized", "value":2, "quality": "bad" },
+            		{ "name":"Unreasonable", "value":4, "quality": "bad" },
+            		{ "name":"Suspect", "value":8, "quality": "questionable" },
+            		{ "name":"Commanded", "value":16 } 
+        	] 
 	}
+}
 ```
 
 When referencing the `flags` enum from the property that holds quality, include the [isquality](xref:typePropertiesAndFormats) keyword and use `reftypeid` as the data type of the property:
@@ -180,14 +180,14 @@ When referencing the `flags` enum from the property that holds quality, include 
 ## Examples
 
 	[{
-    	"id": "ValveState",
+	"id": "ValveState",
     	"version": "1.0.0.0",        
     	"enum": {
-			"values": [ {"name":"CLOSED", "value":0}, {"name":"OPEN", "value":1} ]
+		"values": [ {"name":"CLOSED", "value":0}, {"name":"OPEN", "value":1} ]
 		}
 	}, { 
     	"id": "DeviceStatusEnum", 
-	"enum": {
+		"enum": {
 		"values": [ 
 			{ "name": "Device Connected", "value": 0, "quality": "good" },
 			{ "name": "Device Failure", "value": 1, "quality": "bad" },
