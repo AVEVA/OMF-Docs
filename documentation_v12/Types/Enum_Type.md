@@ -47,7 +47,7 @@ In this example we have a Valve with 2 states, CLOSED or OPEN and accept the def
 		"id": "ValveState", 
 		"enum": {
 			"type": "integer",
-        	"format": "int16",
+        		"format": "int16",
 			"values":[ { "value":0, "name":"CLOSED" }, { "value":1, "name":"OPEN" } ] 
 		}
 	}
@@ -100,17 +100,17 @@ To define possible values of a `flags` type, include the following keywords. If 
 
 The example below shows `flags` type definition describing various configuration bits where multiple can be set at the same time.
 
-    { 
+    	{ 
 		"id": "ConfigurationFlags",
 		"flags": {
 			"values": [ 
-                { "name":"CONFIG_BIT01", "value":1 }, 
-                { "name":"CONFIG_BIT02", "value":2 },
-                { "name":"CONFIG_BIT03", "value":4 },
-                { "name":"CONFIG_BIT04", "value":8 },
-                { "name":"CONFIG_BIT05", "value":16 }
+                		{ "name":"CONFIG_BIT01", "value":1 }, 
+                		{ "name":"CONFIG_BIT02", "value":2 },
+                		{ "name":"CONFIG_BIT03", "value":4 },
+                		{ "name":"CONFIG_BIT04", "value":8 },
+                		{ "name":"CONFIG_BIT05", "value":16 }
 				{ "name":"CONFIG_BIT06", "value":1024 }  
-            ] 
+            		] 
 		}
 	}
 
@@ -118,29 +118,29 @@ The example below shows `flags` type definition describing various configuration
 		"id": "ConfigurationFlags",
 		"flags": {
 			"values": [ 
-                { "value":1, "name":"CONFIG_BIT01" }, 
-                { "value":2, "name":"CONFIG_BIT02" },
-                { "value":4, "name":"CONFIG_BIT03" },
-                { "value":8, "name":"CONFIG_BIT04" },
-                { "value":16,"name":"CONFIG_BIT05" },
+                		{ "value":1, "name":"CONFIG_BIT01" }, 
+                		{ "value":2, "name":"CONFIG_BIT02" },
+                		{ "value":4, "name":"CONFIG_BIT03" },
+                		{ "value":8, "name":"CONFIG_BIT04" },
+                		{ "value":16,"name":"CONFIG_BIT05" },
 				{ "value":1024, "name":"CONFIG_BIT06" }  
-            ] 
+            		] 
 		}
 	}
 
-    { 
+    	{ 
 		"id": "ConfigurationFlags",
 		"flags": {
 			"type": "Integer",
 			"format": "int32",
 			"values": [ 
-                { "name":"CONFIG_BIT01", "value":1 }, 
-                { "name":"CONFIG_BIT02", "value":2 },
-                { "name":"CONFIG_BIT03", "value":4 },
-                { "name":"CONFIG_BIT04", "value":8 },
-                { "name":"CONFIG_BIT05", "value":16 }
+                		{ "name":"CONFIG_BIT01", "value":1 }, 
+                		{ "name":"CONFIG_BIT02", "value":2 },
+                		{ "name":"CONFIG_BIT03", "value":4 },
+                		{ "name":"CONFIG_BIT04", "value":8 },
+                		{ "name":"CONFIG_BIT05", "value":16 }
 				{ "name":"CONFIG_BIT06", "value":1024 }  
-            ] 
+           	 	] 
 		}
 	}
 
@@ -154,18 +154,18 @@ If quality is not explicitly set then it is assumed to be \'good\'. Flags can co
  - When at least one flag with questionable quality is set the value is considered questionable.
  - Bad and questionable bits can be combined but bad does take precedence.
 
-{ 
-	"id": "ConfigurationQualityFlags", 
-	"flags": {
-		"values": [ 
-            { "name":"Good", "value":1 }, 
-            { "name":"Uninitialized", "value":2, "quality": "bad" },
-            { "name":"Unreasonable", "value":4, "quality": "bad" },
-            { "name":"Suspect", "value":8, "quality": "questionable" },
-            { "name":"Commanded", "value":16 } 
-        ] 
+	{ 
+		"id": "ConfigurationQualityFlags", 
+		"flags": {
+			"values": [ 
+            			{ "name":"Good", "value":1 }, 
+            			{ "name":"Uninitialized", "value":2, "quality": "bad" },
+            			{ "name":"Unreasonable", "value":4, "quality": "bad" },
+            			{ "name":"Suspect", "value":8, "quality": "questionable" },
+            			{ "name":"Commanded", "value":16 } 
+        		] 
+		}
 	}
-}
 
 When referencing the `flags` enum from the property that holds quality, include the [isquality](xref:typePropertiesAndFormats) keyword and use `reftypeid` as the data type of the property:
 
@@ -185,29 +185,25 @@ When referencing the `flags` enum from the property that holds quality, include 
 		}
 	}, { 
     	"id": "DeviceStatusEnum", 
-		"enum": {
-			"values": [ 
-				{ "name": "Device Connected", "value": 0, "quality": "good" },
-				{ "name": "Device Failure", "value": 1, "quality": "bad" },
-				{ "name": "Device Comm Failure", "value": 2, "quality": "bad" },
-				{ "name": "Uncertain Out Limits", "value": 3, "quality": "questionable" } 
-			]
+	"enum": {
+		"values": [ 
+			{ "name": "Device Connected", "value": 0, "quality": "good" },
+			{ "name": "Device Failure", "value": 1, "quality": "bad" },
+			{ "name": "Device Comm Failure", "value": 2, "quality": "bad" },
+			{ "name": "Uncertain Out Limits", "value": 3, "quality": "questionable" } ]
 		}
-	},
-	{ 
-		"id": "ConfigurationFlags", 
-		"flags": {
-			"format": "int16",
-			"values": [ 
-            	{ "name":"CONFIG_BIT01", "value":1 }, 
-            	{ "name":"CONFIG_BIT02", "value":2 },
-            	{ "name":"CONFIG_BIT03", "value":4 },
-            	{ "name":"CONFIG_BIT04", "value":8 },
-            	{ "name":"CONFIG_BIT05", "value":16 } 
-        	] 
+	}, { 
+	"id": "ConfigurationFlags", 
+	"flags": {
+		"format": "int16",
+		"values": [ 
+            		{ "name":"CONFIG_BIT01", "value":1 }, 
+            		{ "name":"CONFIG_BIT02", "value":2 },
+            		{ "name":"CONFIG_BIT03", "value":4 },
+            		{ "name":"CONFIG_BIT04", "value":8 },
+            		{ "name":"CONFIG_BIT05", "value":16 } ] 
 		}
-	}, 
-	{
+	}, {
     	"id": "TankMeasurementV1",
     	"version": "1.0.0.0",
     	"type": "object",
@@ -218,10 +214,10 @@ When referencing the `flags` enum from the property that holds quality, include 
                     "format":"date-time",
                     "isindex": true
             	},
-				"DeviceStatus": {
-					"reftypeid": "DeviceStatusEnum", 
-					"isquality": true
-				},
+		"DeviceStatus": {
+			"reftypeid": "DeviceStatusEnum", 
+			"isquality": true
+		},
             	"ValvePosition": {
                 	"reftypeid": "ValveState"
             	},
@@ -237,8 +233,8 @@ When referencing the `flags` enum from the property that holds quality, include 
                     "description": "Tank Temperature in K",
                     "uom": "K"
             	},
-				"Configuration": {
-					"reftypeid": "ConfigurationFlags"
-				}
+		"Configuration": {
+			"reftypeid": "ConfigurationFlags"
+		}
     	}
 	}]
