@@ -142,23 +142,23 @@ In this example we include the \'LocationProperties\' in the 'TankV2' Type, but 
 Properties of a Type definition can reference a previously defined `enum` using the `reftypeid` keyword. 
 In this example we define data quality on the 'TankPressureV2' object to be of type 'DeviceStatusEnum'.
 
-    [{
-	"id": "DeviceStatusEnum", 
-	"enum": {
-		"values": [
-			{"name": "Device Connected", "value": 0, "quality": "good"},
-			{"name": "Device Failure", "value": 1, "quality": "bad"},
-			{"name": "Uncertain - Out Limits", "value": 3, "quality": "questionable"} ]
-        }
+	[{
+		"id": "DeviceStatusEnum", 
+		"enum": {
+			"values": [
+				{"name": "Device Connected", "value": 0, "quality": "good"},
+				{"name": "Device Failure", "value": 1, "quality": "bad"},
+				{"name": "Uncertain - Out Limits", "value": 3, "quality": "questionable"} ]
+			}
 	}, {
-	"id": "TankPressureV2",
-	"type": "object",
-	"basetypeid": "TankPressure",
-	"classification": "dynamic",        
-	"properties": {
-		"DeviceStatus": {
-                "reftypeid": "DeviceStatusEnum",
-		"isquality": true
-            	}
-	}
-    }]
+		"id": "TankPressureV2",
+		"type": "object",
+		"basetypeid": "TankPressure",
+		"classification": "dynamic",        
+		"properties": {
+			"DeviceStatus": {
+				"reftypeid": "DeviceStatusEnum",
+				"isquality": true
+            		}
+		}
+	}]
