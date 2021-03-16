@@ -7,7 +7,7 @@ uid: containerExample
 ### Headers
 
 
-    	omfversion = 1.2
+    omfversion = 1.2
 	messagetype = container
 	action = create
 	messageformat = json
