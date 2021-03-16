@@ -6,16 +6,14 @@ uid: containerExample
 
 ### Headers
 
-```
-    omfversion = 1.2
+
+    	omfversion = 1.2
 	messagetype = container
 	action = create
 	messageformat = json
-```
 
 ### Body
 
-```json
     [{
 		"id": "Tank1_PressureMeasurements",
 		"typeid": "TankPressure",
@@ -33,4 +31,3 @@ uid: containerExample
 			}
 		}			
 	}]
-```
