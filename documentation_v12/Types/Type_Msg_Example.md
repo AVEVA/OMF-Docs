@@ -159,6 +159,6 @@ In this example we define data quality on the 'TankPressureV2' object to be of t
 			"DeviceStatus": {
 				"reftypeid": "DeviceStatusEnum",
 				"isquality": true
-            		}
+			}
 		}
 	}]
