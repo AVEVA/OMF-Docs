@@ -154,6 +154,7 @@ If quality is not explicitly set then it is assumed to be \'good\'. Flags can co
  - When at least one flag with questionable quality is set the value is considered questionable.
  - Bad and questionable bits can be combined but bad does take precedence.
 
+```
 	{ 
 		"id": "ConfigurationQualityFlags", 
 		"flags": {
@@ -166,6 +167,7 @@ If quality is not explicitly set then it is assumed to be \'good\'. Flags can co
         		] 
 		}
 	}
+```
 
 When referencing the `flags` enum from the property that holds quality, include the [isquality](xref:typePropertiesAndFormats) keyword and use `reftypeid` as the data type of the property:
 
