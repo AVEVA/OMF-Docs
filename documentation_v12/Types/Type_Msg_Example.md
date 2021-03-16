@@ -119,7 +119,7 @@ Properties of a Type definition can reference a previously defined Type using th
 In this example we include the \'LocationProperties\' in the 'TankV2' Type, but cannot create instance data of the 'LocationProperties' Type.
 
     [{  
-		"id":"LocationProperties",
+	"id":"LocationProperties",
         "type":"object",
         "properties": { 
             "Latitude":{ "type":"number", "format":"float32" },
@@ -143,22 +143,21 @@ Properties of a Type definition can reference a previously defined `enum` using 
 In this example we define data quality on the 'TankPressureV2' object to be of type 'DeviceStatusEnum'.
 
     [{
-		"id": "DeviceStatusEnum", 
-		"enum": {
-            "values": [
-			    {"name": "Device Connected", "value": 0, "quality": "good"},
-			    {"name": "Device Failure", "value": 1, "quality": "bad"},
-			    {"name": "Uncertain - Out Limits", "value": 3, "quality": "questionable"}
-            ]
+	"id": "DeviceStatusEnum", 
+	"enum": {
+		"values": [
+			{"name": "Device Connected", "value": 0, "quality": "good"},
+			{"name": "Device Failure", "value": 1, "quality": "bad"},
+			{"name": "Uncertain - Out Limits", "value": 3, "quality": "questionable"} ]
         }
 	}, {
         "id": "TankPressureV2",
         "type": "object",
-		"basetypeid": "TankPressure",
+	"basetypeid": "TankPressure",
         "classification": "dynamic",        
         "properties": {
-			"DeviceStatus": {
+		"DeviceStatus": {
                 "reftypeid": "DeviceStatusEnum",
-				"isquality": true
+		"isquality": true
             }          
     }]
