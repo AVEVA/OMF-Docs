@@ -122,8 +122,8 @@ In this example we include the \'LocationProperties\' in the 'TankV2' Type, but 
 	"id":"LocationProperties",
         "type":"object",
         "properties": { 
-            "Latitude":{ "type":"number", "format":"float32" },
-			"Longitude":{ "type":"number", "format":"float32" }
+		"Latitude":{ "type":"number", "format":"float32" },
+		"Longitude":{ "type":"number", "format":"float32" }
         }
     }, {
         "id":"TankV2",
@@ -151,13 +151,14 @@ In this example we define data quality on the 'TankPressureV2' object to be of t
 			{"name": "Uncertain - Out Limits", "value": 3, "quality": "questionable"} ]
         }
 	}, {
-        "id": "TankPressureV2",
-        "type": "object",
+	"id": "TankPressureV2",
+	"type": "object",
 	"basetypeid": "TankPressure",
-        "classification": "dynamic",        
-        "properties": {
+	"classification": "dynamic",        
+	"properties": {
 		"DeviceStatus": {
                 "reftypeid": "DeviceStatusEnum",
 		"isquality": true
-            }          
+            	}
+	}
     }]
