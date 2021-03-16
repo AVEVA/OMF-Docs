@@ -110,7 +110,7 @@ The example below shows `flags` type definition describing various configuration
                 		{ "name":"CONFIG_BIT04", "value":8 },
                 		{ "name":"CONFIG_BIT05", "value":16 }
 				{ "name":"CONFIG_BIT06", "value":1024 }  
-            		] 
+			] 
 		}
 	}
 
@@ -124,7 +124,7 @@ The example below shows `flags` type definition describing various configuration
                 		{ "value":8, "name":"CONFIG_BIT04" },
                 		{ "value":16,"name":"CONFIG_BIT05" },
 				{ "value":1024, "name":"CONFIG_BIT06" }  
-            		] 
+ 			] 
 		}
 	}
 
@@ -140,7 +140,7 @@ The example below shows `flags` type definition describing various configuration
                 		{ "name":"CONFIG_BIT04", "value":8 },
                 		{ "name":"CONFIG_BIT05", "value":16 }
 				{ "name":"CONFIG_BIT06", "value":1024 }  
-           	 	] 
+ 			] 
 		}
 	}
 
@@ -180,63 +180,63 @@ When referencing the `flags` enum from the property that holds quality, include 
 ## Examples
 
 	[{
-	"id": "ValveState",
-    	"version": "1.0.0.0",        
-    	"enum": {
-		"values": [ {"name":"CLOSED", "value":0}, {"name":"OPEN", "value":1} ]
-		}
-	}, { 
-    	"id": "DeviceStatusEnum", 
+		"id": "ValveState",
+		"version": "1.0.0.0",        
 		"enum": {
-		"values": [ 
-			{ "name": "Device Connected", "value": 0, "quality": "good" },
-			{ "name": "Device Failure", "value": 1, "quality": "bad" },
-			{ "name": "Device Comm Failure", "value": 2, "quality": "bad" },
-			{ "name": "Uncertain Out Limits", "value": 3, "quality": "questionable" } ]
+			"values": [ {"name":"CLOSED", "value":0}, {"name":"OPEN", "value":1} ]
 		}
 	}, { 
-	"id": "ConfigurationFlags", 
-	"flags": {
-		"format": "int16",
-		"values": [ 
-            		{ "name":"CONFIG_BIT01", "value":1 }, 
-            		{ "name":"CONFIG_BIT02", "value":2 },
-            		{ "name":"CONFIG_BIT03", "value":4 },
-            		{ "name":"CONFIG_BIT04", "value":8 },
-            		{ "name":"CONFIG_BIT05", "value":16 } ] 
-		}
+		"id": "DeviceStatusEnum", 
+		"enum": {
+			"values": [ 
+				{ "name": "Device Connected", "value": 0, "quality": "good" },
+				{ "name": "Device Failure", "value": 1, "quality": "bad" },
+				{ "name": "Device Comm Failure", "value": 2, "quality": "bad" },
+				{ "name": "Uncertain Out Limits", "value": 3, "quality": "questionable" } ]
+			}
+	}, { 
+		"id": "ConfigurationFlags", 
+		"flags": {
+			"format": "int16",
+			"values": [ 
+				{ "name":"CONFIG_BIT01", "value":1 }, 
+				{ "name":"CONFIG_BIT02", "value":2 },
+				{ "name":"CONFIG_BIT03", "value":4 },
+				{ "name":"CONFIG_BIT04", "value":8 },
+				{ "name":"CONFIG_BIT05", "value":16 } ] 
+			}
 	}, {
-    	"id": "TankMeasurementV1",
-    	"version": "1.0.0.0",
-    	"type": "object",
-    	"classification": "dynamic",
-    	"properties": {
-            	"Timestamp": {
-                    "type": "string",
-                    "format":"date-time",
-                    "isindex": true
-            	},
-		"DeviceStatus": {
-			"reftypeid": "DeviceStatusEnum", 
-			"isquality": true
-		},
-            	"ValvePosition": {
-                	"reftypeid": "ValveState"
-            	},
-            	"Pressure": {
-                    "type": "number",
-                    "name": "Tank Pressure",
-                    "description": "Tank Pressure in Pa",
-                    "uom": "pascal"
-            	},
-            	"Temperature": {
-                    "type": "number",
-                    "name": "Tank Temperature",
-                    "description": "Tank Temperature in K",
-                    "uom": "K"
-            	},
-		"Configuration": {
-			"reftypeid": "ConfigurationFlags"
-		}
+		"id": "TankMeasurementV1",
+		"version": "1.0.0.0",
+		"type": "object",
+    		"classification": "dynamic",
+    		"properties": {
+            		"Timestamp": {
+				"type": "string",
+				"format":"date-time",
+				"isindex": true
+  			},
+			"DeviceStatus": {
+				"reftypeid": "DeviceStatusEnum", 
+				"isquality": true
+			},
+            		"ValvePosition": {
+                		"reftypeid": "ValveState"
+            		},
+            		"Pressure": {
+                    		"type": "number",
+                    		"name": "Tank Pressure",
+                    		"description": "Tank Pressure in Pa",
+                    		"uom": "pascal"
+            		},
+            		"Temperature": {
+				"type": "number",
+				"name": "Tank Temperature",
+				"description": "Tank Temperature in K",
+				"uom": "K"
+            		},
+			"Configuration": {
+				"reftypeid": "ConfigurationFlags"
+			}
     	}
 	}]
