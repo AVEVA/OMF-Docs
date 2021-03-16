@@ -228,13 +228,13 @@ When referencing the `flags` enum from the property that holds quality, include 
 				"name": "Tank Pressure",
 				"description": "Tank Pressure in Pa",
 				"uom": "pascal"
-            		},
+			},
 			"Temperature": {
 				"type": "number",
 				"name": "Tank Temperature",
 				"description": "Tank Temperature in K",
 				"uom": "K"
-            		},
+			},
 			"Configuration": {
 				"reftypeid": "ConfigurationFlags"
 			}
