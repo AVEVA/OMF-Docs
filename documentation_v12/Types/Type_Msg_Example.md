@@ -118,24 +118,24 @@ Serial, Model, TankHeight, and Tank Width, similarly the 'CylindricalTank' conta
 Properties of a Type definition can reference a previously defined Type using the `reftypeid`.
 In this example we include the \'LocationProperties\' in the 'TankV2' Type, but cannot create instance data of the 'LocationProperties' Type.
 
-    [{  
-	"id":"LocationProperties",
-        "type":"object",
-        "properties": { 
-		"Latitude":{ "type":"number", "format":"float32" },
-		"Longitude":{ "type":"number", "format":"float32" }
-        }
-    }, {
-        "id":"TankV2",
-        "type":"object",
-        "classification":"static",
-        "properties": { 
-            "TankName": { "type": "string", "isname": true,  "isindex":true },
+	[{  
+		"id":"LocationProperties",
+		"type":"object",
+		"properties": { 
+			"Latitude":{ "type":"number", "format":"float32" },
+			"Longitude":{ "type":"number", "format":"float32" }
+		}
+	}, {
+		"id":"TankV2",
+		"type":"object",
+		"classification":"static",
+		"properties": { 
+			"TankName": { "type": "string", "isname": true,  "isindex":true },
 			"Serial": { "type": "string" },
 			"Model": { "type": "string" },
 			"Location": { "reftypeid":"LocationProperties" }	
-        }
-    }]
+		}
+	}]
 
 ### Enum Example
 
