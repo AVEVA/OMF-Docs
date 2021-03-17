@@ -20,6 +20,4 @@ If a Type Property is defined but no property value is provided in the Data mess
 
 ### Example of Data Message 
    
-   - [Data Example](xref:dataExample)
-
 

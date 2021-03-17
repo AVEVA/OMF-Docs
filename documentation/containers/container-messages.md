@@ -19,9 +19,9 @@ The body of a Container message consists of an array of objects with the followi
 | `description` | Optional description for the Container. |
 | `tags` | Optional array of strings to tag the Container. |
 | `metadata` | Optional key-value pairs associated with the Container. |
+| `indexes` | Optional array of Type Property ids to be used as secondary indexes for the Container. |
 
 
 ### Example of Container Message 
    
    - [Container Example](xref:containerExample)
-

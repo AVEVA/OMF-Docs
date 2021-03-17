@@ -14,6 +14,7 @@ The following keywords are used to define a Type Property:
 | `isname` | One Type Property may be optionally designated as the name by supplying the isname keyword with a value of true. Because the index must be unique across all Data objects, the isname keyword allows for multiple distinct Data objects to share a common name. |
 | `name` | Optional friendly name for the Type Property. |
 | `description` | Optional description for the Type Property. |
+| `uom` | Optional unit of measure for the Type Property. |
 
 OMF supports the array, boolean, integer, number, and string data types defined by JSON Schema. Timestamps, dictionaries, and bit length-specific numeric properties may also be 
 defined by setting the `format` keyword, as described in the Supported Formats table below.
@@ -37,3 +38,14 @@ defined by setting the `format` keyword, as described in the Supported Formats t
 | object | dictionary | null | A dictionary of objects, indexed by a string key. The `additionalProperties` keyword defines the dictionary\'s value type. |                       
 | string | | null | A string. |
 | string | date-time | 0001-01-01T00:00:00Z | A string representation of a timestamp, formatted as YYYY-MM-DDThh:mm:ssZ, with optional subsecond precision. |                   
+
+
+### Nullable type properties
+
+Nullable type properties are supported by specifying an array that defines the datatype and includes the keyword `null`. 
+The datatype and `null` may appear in any order in the array. For example: 
+
+
+	"MeasurementValue": {"type": ["integer", "null"], "format": "int64"}
+
+	"MeasurementValue": {"type": ["null", "integer"], "format": "int64"}

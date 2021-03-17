@@ -7,7 +7,7 @@ uid: containerExample
 ### Headers
 
     producertoken = b7CNvN36cq
-	omfversion = 1.0
+	omfversion = 1.1
 	messagetype = container
 	action = create
 	messageformat = json
@@ -18,7 +18,8 @@ uid: containerExample
     [{
 		"id": "Tank1Measurements",
 		"typeid": "TankMeasurement",
-		"typeVersion": "1.0.0.0"		
+		"typeVersion": "1.0.0.0",
+		"indexes": ["Pressure"]			
 	}, {
 		"id": "Tank2Measurements",
 		"typeid": "TankMeasurement",

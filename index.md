@@ -22,7 +22,7 @@ Please note that anything defined in this document, such as keywords and enumera
 values, is treated as case insensitive. Case sensitivity for all user specified values
 is determined by the rules of the backend system.
 
-# OMF Specification (1.0)
+# OMF Specification (1.1)
 
 - [Message Headers](xref:headers)
 - [Message Types](xref:messageTypes)
