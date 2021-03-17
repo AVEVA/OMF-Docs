@@ -7,12 +7,6 @@ uid: whatsNew
 
 Version 1.2 introduces the following incremental changes from version 1.1:
 
-### [Tab1](#tab/tab-id-1)
-This is Tab1 Content1 ...
-### [Tab2](#tab/tab-id-2)
-This is Tab2 Content2 ...
-***
-
 ### Enhancements for Type messages:
 
 - Ability to support Type Inheritance using `basetypeid` defined on a [Type Message](xref:typeMessages), and Type Reuse using `reftypeid` defined on a [Property](xref:typePropertiesAndFormats) within a Type message.

@@ -4,20 +4,39 @@ uid: dataMessages
 
 # Data Messages
 
-Data messages can span multiple Types and Containers. The body of a Data message is composed of an array of objects with the following keywords:
+Data messages can be used to create instance data for previously defined Types and Containers, relate instances of static and dynamic data, relate Types, or send type-less static data. 
+ 
+The body of a Data message is composed of a JSON array with JSON objects defined by the following keywords: 
 
 | Name | Value |
 | --- | --- |
-| `typeid` | Optional ID of the type. If omitted, container is expected. |
-| `containerid` | Optional ID of the container. If omitted, type is expected. |
-| `typeversion` | Optional version of the Type, if one is specified. The version must be of format x.x.x.x, where x must be an integer greater than or equal to 0. If omitted, version 1.0.0.0 is assumed. |
+| `typeid` | Optional ID of the type. If omitted, container or properties is expected. |
+| `containerid` | Optional ID of the container. If omitted, type or properties is expected. |
+| `properties` | Optional key-value pairs defining the properties of the Type. Used to support sending type-less static data values. |
 | `values` | An array of objects conforming to the type. |
 
-For each object, either `typeid` or `containerid` must be specified. If `containerid` is specified, the values must conform to the Type with which the Container is associated. 
-If `typeid` is specified, the values must conform to that Type.
+For a data message, either the `id` of a previously defined `type` or `container` must be specified, or the data messages must be used to send type-less static data and specify the `properties`.
 
-If a Type Property is defined but no property value is provided in the Data message, a default value will be assumed. Default values are specified in [Type Properties and Formats](xref:typePropertiesAndFormats).
+If `typeid` is specified, the values array must conform to the definition of that Type.
 
-### Example of Data Message 
-   
+If `containerid` is specified, the values must conform to the Type associated with the Container.
+
+If `properties` is specified, then the data message can be used to send static data for an instance that has no Type.
+Optionally a `typeid` may be specified along with the `properties` to extend a `static` Type with additional properties.
+
+If a property is defined on the Type definition, and that property is not included in the `values` array, then a default value for that property will be assumed. Default values are specified 
+in the [Supported Formats](xref:typePropertiesAndFormats) Table.
+
+	
+### Link Data Messages
+
+[__Link](xref:linkType) Data messages are used to create relationships between static Types, static and dynamic Types, and instance Data.
+To define a link relationship, set the `typeid` of the data message to `__Link`, and in the values array specify the `source` and `target` of the link relationship. 
+Refer to [Link Type](xref:linkType) for detailed information on defining links in data messages to relate data. 
+
+### Examples of Data Messages 
+
+   - [Link Type](xref:linkType)
+   - [Data Example](xref:dataExample)
+
 

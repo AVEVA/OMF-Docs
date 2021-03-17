@@ -15,3 +15,6 @@
   topicHref: data/data-messages.md
 - name: OMF v1.2 Example  
   href: omf-msg-sample.md
+- name: HTTP Behaviors
+  href: http-behaviors/toc.yml
+  topicHref: http-behaviors/message-size.md

@@ -4,9 +4,9 @@ uid: containerMessages
 
 # Container Messages
 
-A Container is defined as a collection of Data events of identical Type and version. Each Container has a unique ID, defined upon creation of the Container.
+A Container can be defined for Types whose classification is `dynamic`, and provides a stream of data events. Each Container has a unique ID defined by the user.
 
-Once a Type has been registered with a Type message, Containers can begin using that Type. Containers can be created, updated, or deleted.
+Immediately after a Type has been registered using a Type message, Containers may be created using that Type. Containers support the same set of actions defined for Type messsages: `create`, `update`, and `delete`.
 
 The body of a Container message consists of an array of objects with the following keywords:
 
@@ -14,14 +14,19 @@ The body of a Container message consists of an array of objects with the followi
 | --- | --- |
 | `id` | Unique identifier of the Container. |
 | `typeid` | ID of the Type used by the Container. |
-| `typeversion` | Optional version of the Type used by the Container. The version must be of format x.x.x.x, where x must be an integer greater than or equal to 0. If omitted, version 1.0.0.0 is used. |
 | `name` | Optional friendly name for the Container. |
 | `description` | Optional description for the Container. |
+| `datasource` | Optional string used to specify the source of a stream of data. |
 | `tags` | Optional array of strings to tag the Container. |
 | `metadata` | Optional key-value pairs associated with the Container. |
 | `indexes` | Optional array of Type Property ids to be used as secondary indexes for the Container. |
+| `propertyoverrides` | Optional key-value pairs used to override properties on a Type definition. |
 
 
-### Example of Container Message 
-   
+Certain keywords defined on Type `properties` may be overridden at the container level using the optional `propertyoverrides` keyword. 
+Currently supported overrides include `name`, `description`, `uom`, `minimum`, and `maximum`. 
+Refer to the [Type Properties and Formats](xref:typePropertiesAndFormats) for a complete list of Type `properties`. 
+
+### Container Example 
+
    - [Container Example](xref:containerExample)
