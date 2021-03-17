@@ -1,5 +1,5 @@
 ---
-uid: typeExamplev10
+uid: typeExample
 ---
 
 # Type Example

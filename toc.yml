@@ -1,18 +1,19 @@
-- name: OMF Docs
+- name: OMF Docs 1.0
   href: index.md
-  homepage: index.md
-- name: OMF Version
-  dropdown: true
-  items:
-  - name: OMF 1.1
-    href: documentation_v11/
-    topicHref: documentation_v11/Whats_New.md
-  - name: OMF 1.0
-    href: documentation_v10/
-    topicHref: documentation_v10/Headers.md
-  - name: OMF 1.2 Draft
-    href: documentation_v12/
-    topicHref: documentation_v12/Whats_New.md
-- name: HTTP Behaviors
-  href: documentation/HttpBehaviors/
-  topicHref: documentation/HttpBehaviors/Message_Size.md
+  items: 
+  - name: Message Headers
+    topicHref: headers.md
+  - name: Message Types
+    topicHref: message-types.md  
+  - name: Type Messages
+    href: types/toc.yml
+    topicHref: types/type-messages.md  
+  - name: Container Messages
+    href: containers/toc.yml
+    topicHref: containers/container-messages.md
+  - name: Data Messages
+    href: data/toc.yml
+    topicHref: data/data-Messages.md
+  - name: HTTP Behaviors
+    href: http-behaviors/
+    topicHref: http-behaviors/message-size.md

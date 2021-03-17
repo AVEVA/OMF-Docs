@@ -1,5 +1,5 @@
 ---
-uid: linkTypev10
+uid: linkType
 ---
 
 # Link Type

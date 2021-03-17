@@ -1,8 +1,8 @@
 - name: Overview
-  href: Type_Messages.md
+  href: type-messages.md
 - name: Link Type Messages
-  href: Link_Type.md
+  href: link-type.md
 - name: Type Properties and Formats
-  href: Type_Properties_and_Formats.md
+  href: type-properties-and-formats.md
 - name: Type Example
-  href: Type_Msg_Example.md
+  href: type-message-example.md

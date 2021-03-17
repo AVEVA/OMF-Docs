@@ -1,5 +1,5 @@
 ---
-uid: headersv10
+uid: headers
 ---
 
 
@@ -12,7 +12,7 @@ be added or removed over time. Backwards compatibility is achievable through the
 | Name | Value |
 | --- | --- |
 | `producertoken` | A unique token used to identify and authorize a given OMF producer. Consult the OSIsoft Cloud Services or PI Connector Relay documentation for further information. |
-| `messagetype` | Describes the type of message contained in the message body. One of: `type`, `container`, or `data`. See [Message Types](xref:messageTypesv10). |
+| `messagetype` | Describes the type of message contained in the message body. One of: `type`, `container`, or `data`. See [Message Types](xref:messageTypes). |
 | `messageformat` | Describes the data serialization format employed in the message body. Currently limited to `json`. |
 | `omfversion` | Specifies the version of the OSIsoft Message Format used in the message. The version for this specification is 1.0. |
 | `action` | Optional: One of: `create`, `update`, or `delete`. Describes the action to be performed using the data in the message body. If omitted, `create` is assumed. |

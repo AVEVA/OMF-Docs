@@ -22,19 +22,18 @@ Please note that anything defined in this document, such as keywords and enumera
 values, is treated as case insensitive. Case sensitivity for all user specified values
 is determined by the rules of the backend system.
 
-# OMF Specification (1.1)
+# OMF Specification (1.0)
 
-- [Whats New](xref:whatsNewv11)
-- [Message Headers](xref:headersv11)
-- [Message Types](xref:messageTypesv11)
-- [Type Messages](xref:typeMessagesv11)     
-  - [Link Type](xref:linkTypev11)
-  - [Type Properties and Formats](xref:typePropertiesAndFormatsv11)	 
-  - [Type Example](xref:typeExamplev11)
-- [Container Messages](xref:containerMessagesv11)
-  - [Container Example](xref:containerExamplev11)
-- [Data Messages](xref:dataMessagesv11)	 
-  - [Data Example](xref:dataExamplev11) 
+- [Message Headers](xref:headers)
+- [Message Types](xref:messageTypes)
+- [Type Messages](xref:typeMessages)     
+  - [Link Type](xref:linkType)
+  - [Type Properties and Formats](xref:typePropertiesAndFormats)	 
+  - [Type Example](xref:typeExample)
+- [Container Messages](xref:containerMessages)
+  - [Container Example](xref:containerExample)
+- [Data Messages](xref:dataMessages)	 
+  - [Data Example](xref:dataExample) 
 
 # HTTP Behaviors
 

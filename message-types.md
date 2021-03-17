@@ -1,5 +1,5 @@
 ---
-uid: messageTypesv10
+uid: messageTypes
 ---
 
 # Message Types

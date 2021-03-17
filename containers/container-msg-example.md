@@ -1,5 +1,5 @@
 ---
-uid: containerExamplev10
+uid: containerExample
 ---
 
 # Container Example

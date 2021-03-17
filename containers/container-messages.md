@@ -1,5 +1,5 @@
 ---
-uid: containerMessagesv10
+uid: containerMessages
 ---
 
 # Container Messages
@@ -23,5 +23,5 @@ The body of a Container message consists of an array of objects with the followi
 
 ### Example of Container Message 
    
-   - [Container Example](xref:containerExamplev10)
+   - [Container Example](xref:containerExample)
 

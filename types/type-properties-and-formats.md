@@ -1,5 +1,5 @@
 ---
-uid: typePropertiesAndFormatsv10
+uid: typePropertiesAndFormats
 ---
 
 # Type Properties and Formats

@@ -1,5 +1,5 @@
 ---
-uid: dataMessagesv10
+uid: dataMessages
 ---
 
 # Data Messages
@@ -16,10 +16,10 @@ Data messages can span multiple Types and Containers. The body of a Data message
 For each object, either `typeid` or `containerid` must be specified. If `containerid` is specified, the values must conform to the Type with which the Container is associated. 
 If `typeid` is specified, the values must conform to that Type.
 
-If a Type Property is defined but no property value is provided in the Data message, a default value will be assumed. Default values are specified in [Type Properties and Formats](xref:typePropertiesAndFormatsv10).
+If a Type Property is defined but no property value is provided in the Data message, a default value will be assumed. Default values are specified in [Type Properties and Formats](xref:typePropertiesAndFormats).
 
 ### Example of Data Message 
    
-   - [Data Example](xref:dataExamplev10)
+   - [Data Example](xref:dataExample)
 
 

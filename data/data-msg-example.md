@@ -1,5 +1,5 @@
 ---
-uid: dataExamplev10
+uid: dataExample
 ---
 
 # Data Example

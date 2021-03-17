@@ -1,11 +1,11 @@
 ---
-uid: typeMessagesv10
+uid: typeMessages
 ---
 
 # Type Messages
 
 
-Types are defined using the JSON Schema specification (http://json-schema.org/). For details on supported property data types and formats, see [Type Properties and Formats](xref:typePropertiesAndFormatsv10).
+Types are defined using the JSON Schema specification (http://json-schema.org/). For details on supported property data types and formats, see [Type Properties and Formats](xref:typePropertiesAndFormats).
 
 Types can be created, updated, or deleted. Updating a Type without updating the Type\'s version will result in a failure. Once a Type is deleted, any operations on Containers or Data using that Type will fail.
 
@@ -24,7 +24,7 @@ The body of a Type message consists of an array of objects. The following keywor
 | `type` | Inherited from JSON Schema. Must be set to `object`. |
 
 The `id` cannot begin with the character sequence __. This has been reserved for predefined Types. Currently the only supported predefined Type 
-is [__Link](xref:linkTypev10). 
+is [__Link](xref:linkType). 
 
 A `static` classification represents metadata describing a device being observed and should be used to capture data that is descriptive and relatively unchanging. 
 A `dynamic` classification represents observed or calculated measurements taken from a device.
@@ -32,7 +32,7 @@ A `dynamic` classification represents observed or calculated measurements taken 
 
 ### Examples of Type Messages and Property Formats
 
-   - [Link Type](xref:linkTypev10)
-   - [Type Properties and Formats](xref:typePropertiesAndFormatsv10)   
-   - [Type Message Example](xref:typeExamplev10)
+   - [Link Type](xref:linkType)
+   - [Type Properties and Formats](xref:typePropertiesAndFormats)   
+   - [Type Message Example](xref:typeExample)
 
