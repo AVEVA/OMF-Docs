@@ -1,19 +1,2 @@
 - name: OMF Docs 1.0
   href: index.md
-  items: 
-  - name: Message Headers
-    topicHref: headers.md
-  - name: Message Types
-    topicHref: message-types.md  
-  - name: Type Messages
-    href: types/toc.yml
-    topicHref: types/type-messages.md  
-  - name: Container Messages
-    href: containers/toc.yml
-    topicHref: containers/container-messages.md
-  - name: Data Messages
-    href: data/toc.yml
-    topicHref: data/data-Messages.md
-  - name: HTTP Behaviors
-    href: http-behaviors/
-    topicHref: http-behaviors/message-size.md

@@ -10,14 +10,10 @@
     "content": [
       {
         "files": [
-          "http-behaviors/toc.yml",
-          "http-behaviors/**.md",
-          "containers/toc.yml",
-          "containers/**.md",
-          "data/toc.yml",
-          "data/**.md",
-          "types/toc.yml",
-          "types/**.md",
+          "documentation/toc.yml",
+          "documentation/**.md",
+          "documentation/**/toc.yml",
+          "documentation/**/**.md",
           "toc.yml",
           "**.md"
         ]
