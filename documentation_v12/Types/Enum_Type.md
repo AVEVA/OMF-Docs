@@ -203,7 +203,8 @@ When referencing the `flags` enum from the property that holds quality, include 
 				{ "name":"CONFIG_BIT02", "value":2 },
 				{ "name":"CONFIG_BIT03", "value":4 },
 				{ "name":"CONFIG_BIT04", "value":8 },
-				{ "name":"CONFIG_BIT05", "value":16 } ] 
+				{ "name":"CONFIG_BIT05", "value":16 },
+				{ "name":"CONFIG_BIT06", "value":1024 }  ] 
 			}
 	}, {
 		"id": "TankMeasurementV1",
