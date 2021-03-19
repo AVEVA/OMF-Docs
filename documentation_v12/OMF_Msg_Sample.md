@@ -21,6 +21,7 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 
 	[{
 		"id": "Plant",
+		"version": "1.0.0.0",
 		"type": "object",
 		"classification": "static",
 		"properties": {
@@ -41,6 +42,7 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 		}
 	}{
 		"id": "TankMeasurement",
+		"version": "1.0.0.0",
 		"type": "object",
 		"classification": "dynamic",		
 		"properties": {			
@@ -75,6 +77,7 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 		}
 	},{
 		"id": "TankV2",
+		"version": "1.0.0.0",
 		"type": "object",
 		"classification": "static",		
 		"properties": {
@@ -95,6 +98,7 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 		}
 	}, {
 		"id":"RectangularTank",
+		"version": "1.0.0.0",
 		"type": "object",
 		"classification": "static",
 		"basetypeid": "TankV2",
