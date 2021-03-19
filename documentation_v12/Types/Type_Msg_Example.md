@@ -19,6 +19,7 @@ Their values will be referenced later when defining instance data and creating r
 
     [{
         "id": "Plant",
+	"version": "1.0.0.0",
         "type": "object",
         "classification": "static",
         "properties": {
@@ -39,6 +40,7 @@ Their values will be referenced later when defining instance data and creating r
         }
     }, {
         "id": "Tank",
+	"version": "1.0.0.0",
         "type": "object",
         "classification": "static",     
         "properties": {
@@ -56,6 +58,7 @@ Their values will be referenced later when defining instance data and creating r
         }
     }, {
         "id": "TankPressure",
+	"version": "1.0.0.0",
         "type": "object",
         "classification": "dynamic",        
         "properties": { 
