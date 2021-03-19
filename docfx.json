@@ -1,4 +1,4 @@
-{  
+{
   "build": {
     "globalMetadata": {
       "_enableSearch": true,
@@ -41,8 +41,10 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "default"
+      "default",
+      "_exported_templates/last-modified"
     ],
+    "postProcessors": [ "LastModifiedPostProcessor" ],
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,
