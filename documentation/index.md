@@ -21,25 +21,3 @@ systems, consult the OSIsoft Cloud Services and PI Web API documentation.
 Please note that anything defined in this document, such as keywords and enumerated
 values, is treated as case insensitive. Case sensitivity for all user specified values
 is determined by the rules of the backend system.
-
-# OMF Specification (1.0)
-
-- [Message Headers](xref:headers)
-- [Message Types](xref:messageTypes)
-- [Type Messages](xref:typeMessages)     
-  - [Link Type](xref:linkType)
-  - [Type Properties and Formats](xref:typePropertiesAndFormats)	 
-  - [Type Example](xref:typeExample)
-- [Container Messages](xref:containerMessages)
-  - [Container Example](xref:containerExample)
-- [Data Messages](xref:dataMessages)	 
-  - [Data Example](xref:dataExample) 
-
-# HTTP Behaviors
-
-While the OMF specification does not define a particular binary message protocol, OSIsoft 
-systems accepting OMF over HTTP conform to a set of behaviors described in this section.
-
-- [Message Size](xref:messageSize)
-- [HTTP Status Codes](xref:httpStatusCodes)
-
