@@ -1,4 +1,4 @@
-{
+{  
   "build": {
     "globalMetadata": {
       "_enableSearch": true,
@@ -10,10 +10,8 @@
     "content": [
       {
         "files": [
-          "documentation/toc.yml",
-          "documentation/**.md",
-          "documentation/**/toc.yml",
           "documentation/**/**.md",
+          "documentation/**/toc.yml",
           "toc.yml",
           "**.md"
         ]
@@ -44,7 +42,9 @@
       "default",
       "_exported_templates/last-modified"
     ],
-    "postProcessors": [ "LastModifiedPostProcessor" ],
+    "postProcessors": [
+      "LastModifiedPostProcessor"
+    ],
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,

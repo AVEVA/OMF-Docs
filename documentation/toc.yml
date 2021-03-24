@@ -1,9 +1,11 @@
+- name: OSIsoft Message Format
+  href: index.md
 - name: What's New
   topicHref: whats-new.md
 - name: Message Headers
-  topicHref: headers.md
+  href: headers.md
 - name: Message Types
-  topicHref: message-types.md  
+  href: message-types.md  
 - name: Type Messages
   href: types/toc.yml
   topicHref: types/type-messages.md  
@@ -13,8 +15,5 @@
 - name: Data Messages
   href: data/toc.yml
   topicHref: data/data-messages.md
-- name: OMF v1.2 Example  
-  href: omf-msg-sample.md
-- name: HTTP Behaviors
-  href: http-behaviors/toc.yml
-  topicHref: http-behaviors/message-size.md
+- name: Http Behaviors
+  href: http-behaviors.md
