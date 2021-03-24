@@ -1,3 +1,5 @@
+- name: OSIsoft Message Format
+  href: index.md
 - name: What's New
   topicHref: whats-new.md
 - name: Message Headers
@@ -13,6 +15,5 @@
 - name: Data Messages
   href: data/toc.yml
   topicHref: data/data-messages.md
-- name: HTTP Behaviors
-  href: http-behaviors/toc.yml
-  topicHref: http-behaviors/message-size.md
+- name: Http Behaviors
+  href: http-behaviors.md
