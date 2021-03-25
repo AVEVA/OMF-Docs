@@ -16,8 +16,8 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>2364</WindowHeight>
-  <WindowWidth>6756</WindowWidth>
+  <WindowHeight>3018</WindowHeight>
+  <WindowWidth>6576</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
@@ -57,10 +57,12 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">prod-omf-specification-1-1a</Data></Cell>
     <Cell ss:Index="6"><Data ss:Type="String">Public</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">prod-omf-specification-1-1a</Data></Cell>
     <Cell ss:Index="6"><Data ss:Type="String">Public</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -74,8 +76,7 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>10</ActiveRow>
-     <ActiveCol>2</ActiveCol>
+     <ActiveRow>25</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -107,7 +108,7 @@
   </DataValidation>
  </Worksheet>
  <Worksheet ss:Name="SubSchVals">
-  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="11" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="14" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="50.4"
    ss:DefaultRowHeight="14.774999999999999">
    <Column ss:AutoFitWidth="0" ss:Width="112.5"/>
@@ -174,8 +175,20 @@
       ss:Name="TaskType"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">prod-pi-adapters-opc-ua</Data></Cell>
-    <Cell ss:Index="3"><Data ss:Type="String">task-troubleshooting</Data></Cell>
+    <Cell><Data ss:Type="String">prod-omf-specification</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">task-admin</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-omf-specification-1-0a</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">task-monitoring</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-omf-specification-1-1a</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">task-monitoring</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-omf-specification-1-2a</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">task-monitoring</Data></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
@@ -183,7 +196,8 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>10</ActiveRow>
+     <ActiveRow>13</ActiveRow>
+     <ActiveCol>2</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
