@@ -16,8 +16,8 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>3018</WindowHeight>
-  <WindowWidth>6576</WindowWidth>
+  <WindowHeight>8562</WindowHeight>
+  <WindowWidth>14364</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
@@ -58,7 +58,8 @@
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
     <Cell ss:Index="3"><Data ss:Type="String">prod-omf-specification-1-1a</Data></Cell>
-    <Cell ss:Index="6"><Data ss:Type="String">Public</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">task-monitoring</Data></Cell>
+    <Cell><Data ss:Type="String">Public</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
@@ -73,10 +74,12 @@
    <Unsynced/>
    <Zoom>76</Zoom>
    <Selected/>
+   <LeftColumnVisible>1</LeftColumnVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>25</ActiveRow>
+     <ActiveRow>8</ActiveRow>
+     <ActiveCol>4</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -101,7 +104,7 @@
    <ErrorHide/>
   </DataValidation>
   <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
-   <Range>R3C5:R701C5</Range>
+   <Range>R4C5:R701C5,R2C5</Range>
    <Type>List</Type>
    <Value>TaskType</Value>
    <ErrorHide/>
@@ -196,8 +199,8 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>13</ActiveRow>
-     <ActiveCol>2</ActiveCol>
+     <ActiveRow>20</ActiveRow>
+     <ActiveCol>4</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
