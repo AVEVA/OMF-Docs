@@ -58,8 +58,7 @@
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
     <Cell ss:Index="3"><Data ss:Type="String">prod-omf-specification-1-1a</Data></Cell>
-    <Cell ss:Index="5"><Data ss:Type="String">task-monitoring</Data></Cell>
-    <Cell><Data ss:Type="String">Public</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">Public</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
@@ -78,7 +77,7 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>8</ActiveRow>
+     <ActiveRow>1</ActiveRow>
      <ActiveCol>4</ActiveCol>
     </Pane>
    </Panes>
