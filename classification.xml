@@ -16,8 +16,8 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>2364</WindowHeight>
-  <WindowWidth>6756</WindowWidth>
+  <WindowHeight>3018</WindowHeight>
+  <WindowWidth>8628</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
@@ -57,10 +57,12 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">prod-omf-specification-1-2a</Data></Cell>
     <Cell ss:Index="6"><Data ss:Type="String">Public</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">prod-omf-specification-1-2a</Data></Cell>
     <Cell ss:Index="6"><Data ss:Type="String">Public</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -74,7 +76,7 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>8</ActiveRow>
+     <ActiveRow>15</ActiveRow>
      <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
