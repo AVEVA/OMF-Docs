@@ -16,8 +16,8 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>2214</WindowHeight>
-  <WindowWidth>6900</WindowWidth>
+  <WindowHeight>8562</WindowHeight>
+  <WindowWidth>14364</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
@@ -43,7 +43,7 @@
   <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="4" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="50.4"
    ss:DefaultRowHeight="14.774999999999999">
-   <Column ss:AutoFitWidth="0" ss:Width="474.3"/>
+   <Column ss:AutoFitWidth="0" ss:Width="304.2"/>
    <Column ss:AutoFitWidth="0" ss:Width="182.10000000000002"/>
    <Column ss:Width="80.100000000000009" ss:Span="4"/>
    <Row ss:AutoFitHeight="0">
@@ -57,10 +57,12 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">prod-omf-specification-1-0a</Data></Cell>
     <Cell ss:Index="6"><Data ss:Type="String">Public</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">prod-omf-specification-1-0a</Data></Cell>
     <Cell ss:Index="6"><Data ss:Type="String">Public</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -74,8 +76,8 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>14</ActiveRow>
-     <ActiveCol>1</ActiveCol>
+     <ActiveRow>23</ActiveRow>
+     <ActiveCol>4</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -107,7 +109,7 @@
   </DataValidation>
  </Worksheet>
  <Worksheet ss:Name="SubSchVals">
-  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="11" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="10" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="50.4"
    ss:DefaultRowHeight="14.774999999999999">
    <Column ss:AutoFitWidth="0" ss:Width="112.5"/>
@@ -173,17 +175,13 @@
     <Cell ss:Index="3"><Data ss:Type="String">task-upgrading</Data><NamedCell
       ss:Name="TaskType"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">prod-pi-adapters-opc-ua</Data></Cell>
-    <Cell ss:Index="3"><Data ss:Type="String">task-troubleshooting</Data></Cell>
-   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <Unsynced/>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>10</ActiveRow>
+     <ActiveRow>13</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
