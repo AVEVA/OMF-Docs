@@ -39,12 +39,9 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "default",
-      "_exported_templates/last-modified"
+      "default"
     ],
-    "postProcessors": [
-      "LastModifiedPostProcessor"
-    ],
+    "postProcessors": [],
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,
