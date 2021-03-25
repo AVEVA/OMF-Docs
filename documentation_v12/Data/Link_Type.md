@@ -20,7 +20,7 @@ Each `source` and `target` object has the following keywords:
 | --- | --- |
 | `typeid` | Optional id of the type. If omitted, containerid is expected. |
 | `containerid` | Optional id of the container. If omitted, typeid is expected. |
-| `index` | Value of the isindex [Type Properties and Formats](xref:typePropertiesAndFormats) property defined when creating the instance of a Type. If typeid is specified, index is required. If containerid is specified index is not supported. |
+| `index` | Value of the isindex [Type Properties and Formats](xref:typePropertiesAndFormats) property defined when creating the instance of a Type. If typeid is specified, index is required. If containerid is specified, index is not supported. |
 | `property` | Optional name of a property defined in the Type definition to be used by the link relationship. |
 
 To relate instances of data specify the following options. For an instance of a Type, specify the `typeid` and `index` of the instance. 
