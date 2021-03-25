@@ -76,7 +76,7 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>23</ActiveRow>
+     <ActiveRow>9</ActiveRow>
      <ActiveCol>4</ActiveCol>
     </Pane>
    </Panes>
@@ -109,7 +109,7 @@
   </DataValidation>
  </Worksheet>
  <Worksheet ss:Name="SubSchVals">
-  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="10" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="14" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="50.4"
    ss:DefaultRowHeight="14.774999999999999">
    <Column ss:AutoFitWidth="0" ss:Width="112.5"/>
@@ -175,13 +175,30 @@
     <Cell ss:Index="3"><Data ss:Type="String">task-upgrading</Data><NamedCell
       ss:Name="TaskType"/></Cell>
    </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-omf-specification</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">task-admin</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-omf-specification-1-0a</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">task-monitoring</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-omf-specification-1-1a</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">task-monitoring</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-omf-specification-1-2a</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">task-monitoring</Data></Cell>
+   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <Unsynced/>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>13</ActiveRow>
+     <ActiveRow>17</ActiveRow>
+     <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
