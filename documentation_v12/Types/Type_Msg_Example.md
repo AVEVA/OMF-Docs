@@ -20,8 +20,8 @@ Their values will be referenced later when defining instance data and creating r
     [{
         "id": "Plant",
         "version": "1.0.0.0",
-	"type": "object",
-      	"classification": "static",
+        "type": "object",
+        "classification": "static",
         "properties": {
             "PlantId": {
                 "type": "string",
