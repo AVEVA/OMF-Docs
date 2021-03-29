@@ -10,7 +10,7 @@ An `enum` is a type message defined by an array of name/value pairs used to crea
 An `enum` can also be used to define a set of Data Quality values. When defining data quality include the `quality` property in the enum definition, and denote the quality of every state as `good`, `bad`, or `questionable`.
 
 ### Enum Type Properties
-The following keywords are used to define `enum` type definition. If a keyword is not specified the default is going to be used.
+The following keywords are used to define `enum` type definition. If a keyword is not specified the default will be used.
 
 | Name | Value |
 | --- | --- |
@@ -19,7 +19,7 @@ The following keywords are used to define `enum` type definition. If a keyword i
 | `values` | Required array of name/value pairs used to create a limited set of allowed values. When enum is used to define a set of Data Quality values, `quality` property can be included to denote the quality as good, bad, or questionable. |
 
 ### Enum values collection keywords
-To define possible values of an `enum` type, include the following keywords. If a keyword is not specified the default is going to be used.
+To define possible values of an `enum` type, include the following keywords. If a keyword is not specified the default will be used.
 
 | Name | Value |
 | --- | --- |
@@ -81,7 +81,7 @@ A `flag` is a type message defined using an array of name/value pairs used to cr
 
 ### Flags Type Properties
 
-The following keywords are used to define `flags` type. If a keyword is not specified the default is going to be used.
+The following keywords are used to define `flags` type. If a keyword is not specified the default will be used.
 
 | Name | Value |
 | --- | --- |
@@ -90,7 +90,7 @@ The following keywords are used to define `flags` type. If a keyword is not spec
 | `values` | Array of name/value pairs used to create a limited set of allowed values where multiple states (bits) can be active at the same time. Defined values must be a power of two. When flags type is used to define a set of Data Quality values, `quality` property can be included to denote the quality as good, bad, or questionable. |
 
 ### Flags values collection keywords
-To define possible values of a `flags` type, include the following keywords. If a keyword is not specified the default is going to be used.
+To define possible values of a `flags` type, include the following keywords. If a keyword is not specified the default will be used.
 
 | Name | Value |
 | --- | --- |
@@ -174,7 +174,7 @@ When referencing the `flags` enum from the property that holds quality, include 
     { "DeviceStatus": { "reftypeid": "ConfigurationQualityFlags", "isquality": true } }
 
 ## Remarks
- - Properties referencing `flags` or `enum` type must send integer values in a data message, since use of strings is unsupported.
+ - Properties referencing `flags` or `enum` type must send integer values in a data message; the use of strings is unsupported.
  - Both `flags` and `enum` can be defined as non-continuous sets.
 
 ## Examples
