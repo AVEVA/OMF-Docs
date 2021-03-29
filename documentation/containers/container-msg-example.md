@@ -11,7 +11,6 @@ uid: containerExample
 	action = create
 	messageformat = json
 
-
 ### Body
 
     [{
