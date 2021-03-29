@@ -2,7 +2,7 @@
 uid: OMFMsgSample
 ---
 
-# OMF v1.2 Example 
+# OMF Example 
 
 Example for creating Types, Containers and Data for `static` and `dynamic` data. 
 

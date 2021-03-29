@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>joe.gelb</Author>
+  <LastAuthor>Annika Rodriguez</LastAuthor>
+  <Created>2020-11-01T16:00:47Z</Created>
+  <LastSaved>2021-03-01T18:20:29Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>8562</WindowHeight>
+  <WindowWidth>14364</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <ActiveSheet>1</ActiveSheet>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+ </Styles>
+ <Names>
+  <NamedRange ss:Name="Access" ss:RefersTo="=SubSchVals!R2C4:R4C4"/>
+  <NamedRange ss:Name="Product" ss:RefersTo="=SubSchVals!R2C1:R9C1"/>
+  <NamedRange ss:Name="Role" ss:RefersTo="=SubSchVals!R2C2:R6C2"/>
+  <NamedRange ss:Name="TaskType" ss:RefersTo="=SubSchVals!R2C3:R10C3"/>
+ </Names>
+ <Worksheet ss:Name="classification">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="4" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="50.4"
+   ss:DefaultRowHeight="14.774999999999999">
+   <Column ss:AutoFitWidth="0" ss:Width="474.3"/>
+   <Column ss:AutoFitWidth="0" ss:Width="182.10000000000002"/>
+   <Column ss:Width="80.100000000000009" ss:Span="4"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Filename</Data></Cell>
+    <Cell><Data ss:Type="String">Title</Data></Cell>
+    <Cell><Data ss:Type="String">Product</Data></Cell>
+    <Cell><Data ss:Type="String">Role</Data></Cell>
+    <Cell><Data ss:Type="String">Task Type</Data></Cell>
+    <Cell><Data ss:Type="String">Access</Data></Cell>
+    <Cell><Data ss:Type="String">Keywords</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">MAP</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">prod-omf-specification-1-2a</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">Public</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">prod-omf-specification-1-2a</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">Public</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">default</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <Zoom>76</Zoom>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>20</ActiveRow>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+  <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R2C3:R701C3</Range>
+   <Type>List</Type>
+   <Value>Product</Value>
+   <ErrorHide/>
+  </DataValidation>
+  <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R2C4:R701C4</Range>
+   <Type>List</Type>
+   <Value>Role</Value>
+   <ErrorHide/>
+  </DataValidation>
+  <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R2C6:R701C6</Range>
+   <Type>List</Type>
+   <Value>Access</Value>
+   <ErrorHide/>
+  </DataValidation>
+  <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R3C5:R701C5</Range>
+   <Type>List</Type>
+   <Value>TaskType</Value>
+   <ErrorHide/>
+  </DataValidation>
+ </Worksheet>
+ <Worksheet ss:Name="SubSchVals">
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="14" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="50.4"
+   ss:DefaultRowHeight="14.774999999999999">
+   <Column ss:AutoFitWidth="0" ss:Width="112.5"/>
+   <Column ss:Width="80.100000000000009" ss:Span="2"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Product</Data></Cell>
+    <Cell><Data ss:Type="String">Role</Data></Cell>
+    <Cell><Data ss:Type="String">Task Type</Data></Cell>
+    <Cell><Data ss:Type="String">Access</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-pi-cloud-connect</Data><NamedCell
+      ss:Name="Product"/></Cell>
+    <Cell><Data ss:Type="String">role-integrator</Data><NamedCell ss:Name="Role"/></Cell>
+    <Cell><Data ss:Type="String">description</Data><NamedCell ss:Name="TaskType"/></Cell>
+    <Cell><Data ss:Type="String">access-internal</Data><NamedCell ss:Name="Access"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-edgecmd</Data><NamedCell ss:Name="Product"/></Cell>
+    <Cell><Data ss:Type="String">role-networkadmin</Data><NamedCell ss:Name="Role"/></Cell>
+    <Cell><Data ss:Type="String">task-installation</Data><NamedCell
+      ss:Name="TaskType"/></Cell>
+    <Cell><Data ss:Type="String">access-customer</Data><NamedCell ss:Name="Access"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-edgecmd-utility</Data><NamedCell
+      ss:Name="Product"/></Cell>
+    <Cell><Data ss:Type="String">role-sysadmin</Data><NamedCell ss:Name="Role"/></Cell>
+    <Cell><Data ss:Type="String">task-configuration</Data><NamedCell
+      ss:Name="TaskType"/></Cell>
+    <Cell><Data ss:Type="String">Public</Data><NamedCell ss:Name="Access"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-pi-server</Data><NamedCell ss:Name="Product"/></Cell>
+    <Cell><Data ss:Type="String">role-enduser</Data><NamedCell ss:Name="Role"/></Cell>
+    <Cell><Data ss:Type="String">task-deployment</Data><NamedCell
+      ss:Name="TaskType"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-pi-vision</Data><NamedCell ss:Name="Product"/></Cell>
+    <Cell><Data ss:Type="String">role-support</Data><NamedCell ss:Name="Role"/></Cell>
+    <Cell><Data ss:Type="String">task-admin</Data><NamedCell ss:Name="TaskType"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-pi-vision-2020</Data><NamedCell
+      ss:Name="Product"/></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">task-monitoring</Data><NamedCell
+      ss:Name="TaskType"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-pi-vision-2019</Data><NamedCell
+      ss:Name="Product"/></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">task-maintenance</Data><NamedCell
+      ss:Name="TaskType"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-pi-webparts</Data><NamedCell
+      ss:Name="Product"/></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">task-troubleshooting</Data><NamedCell
+      ss:Name="TaskType"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3"><Data ss:Type="String">task-upgrading</Data><NamedCell
+      ss:Name="TaskType"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-omf-specification</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">task-admin</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-omf-specification-1-0a</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">task-monitoring</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-omf-specification-1-1a</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">task-monitoring</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">prod-omf-specification-1-2a</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">task-monitoring</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>22</ActiveRow>
+     <ActiveCol>2</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

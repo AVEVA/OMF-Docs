@@ -30,4 +30,3 @@ Refer to the [Type Properties and Formats](xref:typePropertiesAndFormats) for a 
 ### Container Example 
 
    - [Container Example](xref:containerExample)
-
