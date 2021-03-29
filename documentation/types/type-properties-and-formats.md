@@ -63,11 +63,8 @@ The datatype and `null` may appear in any order in the array. The default value 
 
 	"MeasurementValue": {"type": ["null", "integer"], "format": "int64"}
 	
-<<<<<<< HEAD:documentation_v12/Types/Type_Properties_and_Formats.md
-=======
 Values of type "string" are treated as inherently nullable thus the additional null type specification is not needed.
 	
->>>>>>> v1.2a:documentation/types/type-properties-and-formats.md
 ### Type reuse and Inheritance
 
 Type reuse and Type inheritance are supported for Types of the same `classification` or Types with no `classification`, using either `basetypeid` on a Type Message, or
@@ -133,9 +130,5 @@ The `isquality` keyword is used to designate a particular property as the data q
 The quality of each `enum` or `flags` value is indicated in the enum type definition. Refer to the [Enum and Flags Type](xref:enumFlagsType) for additional information about defining enums and flags. The following format is supported:
 
 	"DeviceStatus": { "reftypeid":"DeviceStatusEnum", "isquality": true }	
-<<<<<<< HEAD:documentation_v12/Types/Type_Properties_and_Formats.md
 
 A type can have at most one property designated to hold data quality information. Data quality property value represents quality of the entire event. If Bad, the entire event is considered bad.
-=======
-   
->>>>>>> v1.2a:documentation/types/type-properties-and-formats.md
