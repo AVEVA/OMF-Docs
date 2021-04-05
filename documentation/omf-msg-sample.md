@@ -17,7 +17,6 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 	action = create
 	messageformat = json
 
-
 ### Type Message Body
 
 	[{
@@ -116,7 +115,6 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 			}	
 		}
 	}]
-	
 
 Create containers for the `dynamic` types.
 
@@ -313,5 +311,3 @@ Send data messages to create assets, relate instances, and send data values, for
 			"Temperature": 97.1
 		}]
 	}]
-
-	

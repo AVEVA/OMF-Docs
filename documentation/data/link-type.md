@@ -54,7 +54,7 @@ For example, to relate an instance of a Plant, specified by its indexed property
 			} 
 		}]
     }]
-	
+
 
 To associate the container, Tank1Measurements, with the instance of a Tank whose index is \'Tank1\', use the following `__Link`:
 
@@ -69,22 +69,22 @@ To associate the container, Tank1Measurements, with the instance of a Tank whose
 				"containerid": "Tank1Measurements" 
 			}
 		}]
-    }]  
+	}] 
 
 ### Link Examples for Instance Data for Properties
 
 To associate instances of Types and Containers at the Property level, define the property in the Link relationship. 
 This expands the static Type \'Pump\' to include the properties InletFlow and OutletFlow, and creates a link between the instance data for Pump1 and Pump1InletFlowMeasurements.
  
-
 	[{ 
 		"typeid": "__Link", 
 		"values": [{ 
 			"source": { 
 				"typeid": "Pump", 
 				"index": "Pump1",  
-				"property": "InletFlow" 
-			}, { 
+				"property": "InletFlow"
+			}
+		}, { 
 			"target": { 
 				"containerid": "Pump1InletFlowMeasurements" 
 			} 
@@ -93,17 +93,17 @@ This expands the static Type \'Pump\' to include the properties InletFlow and Ou
 				"typeid": "Pump",
 				"index": "Pump1",  
 				"property": "OutletFlow" 
-			}, { 
+			}
+		}, { 
 			"target": { 
 				"containerid": "Pump1OutletFlowMeasurements" 
 			} 
+		}]
 	}]
-
-
 
 To associate instances of Types and Containers at the Property level, and include only specific properties within the Types, define the property in the Link relationship. 
 This expands the static Type \'Pump\' to include the property InletFlowTemperature, and creates a link between the instance data for Pump1 and the Temperature property from the Pump1InletFlowMeasurements container.
-Similarly, the InletFlowPressue property is created on the Pump, and Pump1 InletFlowPressue property is linked withe Pressure property in the Pump1InletFlowMeasurements container.
+Similarly, the InletFlowPressure property is created on the Pump, and Pump1 InletFlowPressure property is linked withe Pressure property in the Pump1InletFlowMeasurements container.
 
 	 [{ 
 		"typeid": "__Link", 
@@ -111,8 +111,9 @@ Similarly, the InletFlowPressue property is created on the Pump, and Pump1 Inlet
 			"source": { 
 				"typeid": "Pump", 
 				"index": "Pump1",  
-				"property": "InletFlowTemperature" 
-			}, { 
+				"property": "InletFlowTemperature"
+			}
+		}, { 
 			"target": { 
 				"containerid": "Pump1InletFlowMeasurements",
 				"property": "Temperature"  
@@ -121,30 +122,29 @@ Similarly, the InletFlowPressue property is created on the Pump, and Pump1 Inlet
 			"source": { 
 				"typeid": "Pump",
 				"index": "Pump1",  
-				"property": "InletFlowPressure" 
-			}, { 
+				"property": "InletFlowPressure"
+			}
+		}, { 
 			"target": { 
 				"containerid": " Pump1InletFlowMeasurements",
 				"property": "Pressure"  
 			} 
 		}]
 	}] 
-
-
 	
 ### Link Examples for Types and Properties
 
 To associate Types and Containers at the Property level, define the property in the Link relationship. 
 This expands the static Type \'Pump\' to include the properties InletFlow and OutletFlow, and applies the definition of FlowMeasurements for the properties.
  
-
 	[{ 
 		"typeid": "__Link", 
 		"values": [{ 
 			"source": { 
 				"typeid": "Pump", 
-				"property": "InletFlow" 
-			}, { 
+				"property": "InletFlow"
+			}
+		}, { 
 			"target": { 
 				"typeid": "FlowMeasurements" 
 			} 
@@ -152,6 +152,7 @@ This expands the static Type \'Pump\' to include the properties InletFlow and Ou
 			"source": { 
 				"typeid": "Pump", 
 				"property": "OutletFlow" 
+			}
 		}, { 
 			"target": { 
 				"typeid": "FlowMeasurements" 
@@ -159,10 +160,8 @@ This expands the static Type \'Pump\' to include the properties InletFlow and Ou
 		}]
 	}] 
 
-
-
 To associate Types and Containers at the Property level, and include only specific properties within the Types, define the property in the Link relationship. 
-This expands the static Type \'Pump\' to include the property InletFlowTemperature and InletFlowPressue, and applies the definition of the Pressure property in FlowMeasurements to the InletFlowPressure,
+This expands the static Type \'Pump\' to include the property InletFlowTemperature and InletFlowPressure, and applies the definition of the Pressure property in FlowMeasurements to the InletFlowPressure,
 and the Temperature property as the type for the InletFlowTemperature.
 
 	[{ 
@@ -170,8 +169,9 @@ and the Temperature property as the type for the InletFlowTemperature.
 		"values": [{ 
 			"source": { 
 				"typeid": "Pump", 
-				"property": "InletFlowTemperature" 
-			}, { 
+				"property": "InletFlowTemperature"
+			}
+		}, { 
 			"target": { 
 				"typeid": "FlowMeasurements",
 				"property": "Temperature" 
@@ -179,11 +179,12 @@ and the Temperature property as the type for the InletFlowTemperature.
 		}, {
 			"source": { 
 				"typeid": "Pump", 
-				"property": "InletFlowPressure" 
-			}, { 
+				"property": "InletFlowPressure"
+			}
+		}, { 
 			"target": { 
 				"typeid": "FlowMeasurements", 
 				"property": "Pressure" 
 			} 
 		}]
-	}] 
+	}]
