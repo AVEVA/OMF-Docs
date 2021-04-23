@@ -13,7 +13,7 @@ The following keywords are used to the define the `properties` in the Type defin
 | `reftypeid` | `id` to a previously defined Type. Either `type` or `reftypeid` is required for each property. |
 | `isindex` | At least one Type Property must be designated as the index, or the Type cannot be used to create instance data. The designated isindex boolean property is used to uniquely identify discrete Data objects so that they can be updated or deleted after their initial creation. For a compound index, the order of index properties within the message determines the order within the index. |
 | `isname` | One Type Property may optionally be designated as the name by specifying a boolean value of true. Because the index must be unique across all Data objects, the isname keyword allows for multiple distinct Data objects to share a common name. |
-| `isquality` | One Type Property may optionally be designated as the quality. This property would then determine the overall quality of each data value, and must be an enumeration Type. Use the enum to define the values as `good`, `bad` or `questionable`. |
+| `isquality` | One or more type Properties may optionally be designated as quality. These properties would then determine the overall quality of each data value. Properties designated as quality can be of any supported type and format or represented by enums or flags. |
 | `name` | Optional friendly name for the Type Property. This property can be overridden using the propertyoverrides keyword on a Container message. |
 | `description` | Optional description for the Type Property. This property can be overridden using the propertyoverrides keyword on a Container message. |
 | `uom` | Optional unit of measure for the Type Property. This property can be overridden using the propertyoverrides keyword on a Container message. |
@@ -59,9 +59,9 @@ If the referenced type is a `static` or `dynamic` Type, then the properties of t
 Nullable type properties are supported by specifying an array that defines the datatype and includes the keyword `null`. 
 The datatype and `null` may appear in any order in the array. The default value for any nullable type is null. For example: 
 
-	"MeasurementValue": {"type": ["integer", "null"], "format": "int64"}
+	"MeasurementValue": { "type": ["integer", "null"], "format": "int64" }
 
-	"MeasurementValue": {"type": ["null", "integer"], "format": "int64"}
+	"MeasurementValue": { "type": ["null", "integer"], "format": "int64" }
 	
 Values of type "string" are treated as inherently nullable thus the additional null type specification is not needed.
 	
@@ -80,7 +80,7 @@ plus adds an additional property \'TankDiameter\'.
 		"type": "object",
 		"classification": "static",		
 		"properties": {
-			"TankName": { "type": "string", "isname": true,  "isindex":true },
+			"TankName": { "type": "string", "isname": true,  "isindex": true },
 			"Serial": { "type": "string" },
 			"Model": { "type": "string" }
 		}
@@ -90,7 +90,7 @@ plus adds an additional property \'TankDiameter\'.
 		"classification": "static",
 		"basetypeid": "Tank",
 		"properties": {					
-			"TankDiameter": { "type": "number", "format":"float32" }
+			"TankDiameter": { "type": "number", "format": "float32" }
 		}	
 	}
 
@@ -103,15 +103,15 @@ The referenced type \'LocationProperties\' does not define a classification, and
 		"id":"LocationProperties",
 		"type":"object",		
 		"properties": { 
-			"Latitude":{ "type":"number", "format":"float32" },
-			"Longitude":{ "type":"number", "format":"float32" }
+			"Latitude":{ "type": "number", "format": "float32" },
+			"Longitude":{ "type": "number", "format": "float32" }
 		}
 	}, {
 		"id":"TankV2",
 		"type":"object",
 		"classification":"static",
 		"properties": { 
-			"TankName": { "type": "string", "isname": true,  "isindex":true },
+			"TankName": { "type": "string", "isname": true,  "isindex": true },
 			"Serial": { "type": "string" },
 			"Model": { "type": "string" },
 			"Location": { "reftypeid":"LocationProperties" }	
@@ -126,9 +126,9 @@ Types without an index property cannot be used to create instance data.
 
 ### Data Quality
 
-The `isquality` keyword is used to designate a particular property as the data quality for the Type. Properties marked with the quality flag should have a reference  a reference to an `enum` or `flags` type.
-The quality of each `enum` or `flags` value is indicated in the enum type definition. Refer to the [Enum and Flags Type](xref:enumFlagsType) for additional information about defining enums and flags. The following format is supported:
+The `isquality` keyword is used to designate particular property or properties as data quality for the Type. Properties marked with the quality flag should have a reference to an `enum` or `flags` type or be of any supported Types and Formats. In the example below, `isquality` keyword is used in case of property referencing an enumeration set and int16 property. This allows for capturing data quality information in its raw form.
 
-	"DeviceStatus": { "reftypeid":"DeviceStatusEnum", "isquality": true }	
+	"DeviceStatus": { "reftypeid": "DeviceStatusEnum", "isquality": true }
 
-A type can have at most one property designated to hold data quality information. Data quality property value represents quality of the entire event. If Bad, the entire event is considered bad.
+	"DeviceStatus": { "type": "Integer", "format": "int16", "isquality": true }
+
