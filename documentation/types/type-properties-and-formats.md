@@ -13,7 +13,7 @@ The following keywords are used to the define the `properties` in the Type defin
 | `reftypeid` | `id` to a previously defined Type. Either `type` or `reftypeid` is required for each property. |
 | `isindex` | At least one Type Property must be designated as the index, or the Type cannot be used to create instance data. The designated isindex boolean property is used to uniquely identify discrete Data objects so that they can be updated or deleted after their initial creation. For a compound index, the order of index properties within the message determines the order within the index. |
 | `isname` | One Type Property may optionally be designated as the name by specifying a boolean value of true. Because the index must be unique across all Data objects, the isname keyword allows for multiple distinct Data objects to share a common name. |
-| `isquality` | One or more type Properties may optionally be designated as quality. These properties would then determine the overall quality of each data value. Properties designated as quality can be of any supported type and format or represented by enums or flags. |
+| `isquality` | One or more type Properties may optionally be designated as quality. These properties would then determine the overall quality of each data value. Properties designated as quality can be of any supported type and format or represented by enums or flags type. |
 | `name` | Optional friendly name for the Type Property. This property can be overridden using the propertyoverrides keyword on a Container message. |
 | `description` | Optional description for the Type Property. This property can be overridden using the propertyoverrides keyword on a Container message. |
 | `uom` | Optional unit of measure for the Type Property. This property can be overridden using the propertyoverrides keyword on a Container message. |
@@ -126,7 +126,7 @@ Types without an index property cannot be used to create instance data.
 
 ### Data Quality
 
-The `isquality` keyword is used to designate particular property or properties as data quality for the Type. Properties marked with the quality flag should have a reference to an `enum` or `flags` type or be of any supported Types and Formats. In the example below, `isquality` keyword is used in case of property referencing an enumeration set and int16 property. This allows for capturing data quality information in its raw form.
+The `isquality` keyword is used to designate particular property or properties as data quality for the Type. Properties marked with the quality keyword can have a reference to an `enum` or `flags` type or be of any supported Type and Format from the \'Supported Formats\' table above. In the example below, `isquality` keyword is used in case of property referencing an enumeration set and int16 property. This allows for capturing data quality information in its raw form.
 
 	"DeviceStatus": { "reftypeid": "DeviceStatusEnum", "isquality": true }
 
