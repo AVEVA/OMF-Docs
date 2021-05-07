@@ -5,7 +5,7 @@ uid: typeExample
 # Type Example
 
 
-In the following example we create 2 `static` types and a `dynamic` type. The Type definitions define properties for the `isindex` and `isname` qualifiers. 
+In the following example we create two `static` types and a `dynamic` type. The Type definitions define properties for the `isindex` and `isname` qualifiers. 
 Their values will be referenced later when defining instance data and creating relationships.
 
 ### Headers
@@ -149,9 +149,9 @@ In this example we define data quality on the 'TankPressureV2' object to be of t
 		"id": "DeviceStatusEnum", 
 		"enum": {
 			"values": [
-				{"name": "Device Connected", "value": 0, "quality": "good"},
-				{"name": "Device Failure", "value": 1, "quality": "bad"},
-				{"name": "Uncertain - Out Limits", "value": 3, "quality": "questionable"} ]
+				{ "name": "Device Connected", "value": 0 },
+				{ "name": "Device Failure", "value": 1 },
+				{ "name": "Uncertain - Out Limits", "value": 3 } ]
 			}
 	}, {
 		"id": "TankPressureV2",
