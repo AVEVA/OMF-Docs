@@ -4,8 +4,7 @@
       "_enableSearch": true,
       "_appLogoPath": "./images/atlas_icon_small.png",
       "_appFooter": "<a href=\"https://www.osisoft.com/copyright/\"> © 2018 - 2020 OSIsoft, LLC. All rights reserved.</a>",
-      "_appFaviconPath": "./images/favicon.png",
-      "_appTitle": "OSIsoft Message Format"
+      "_appFaviconPath": "./images/favicon.png"
     },
     "content": [
       {
