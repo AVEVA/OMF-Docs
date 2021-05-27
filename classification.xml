@@ -962,7 +962,7 @@
     <Cell ss:Index="2" ss:StyleID="s88"><Data ss:Type="String">OSIsoft-Message-Format</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="14.4375">
-    <Cell ss:Index="2" ss:StyleID="s89"><Data ss:Type="String">OSIsoft-Message-Format-1.2</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s89"><Data ss:Type="String">OSIsoft-Message-Format-Preview</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="14.4375">
     <Cell ss:Index="2" ss:StyleID="s90"><Data ss:Type="String">OSIsoft-Message-Format-1.1</Data></Cell>
