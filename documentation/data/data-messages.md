@@ -18,7 +18,7 @@ If `typeid` is specified, the values must conform to that Type.
 
 If a Type Property is defined but no property value is provided in the Data message, a default value will be assumed. Default values are specified in [Type Properties and Formats](xref:typePropertiesAndFormats).
 
-### Example of Data Message 
+## Example of Data Message 
    
    - [Data Example](xref:dataExample)
 
