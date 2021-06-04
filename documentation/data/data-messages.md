@@ -28,13 +28,13 @@ If a property is defined on the Type definition, and that property is not includ
 in the [Supported Formats](xref:typePropertiesAndFormats) Table.
 
 	
-### Link Data Messages
+## Link Data Messages
 
 [__Link](xref:linkType) Data messages are used to create relationships between static Types, static and dynamic Types, and instance Data.
 To define a link relationship, set the `typeid` of the data message to `__Link`, and in the values array specify the `source` and `target` of the link relationship. 
 Refer to [Link Type](xref:linkType) for detailed information on defining links in data messages to relate data. 
 
-### Examples of Data Messages 
+## Examples of Data Messages 
 
    - [Link Type](xref:linkType)
    - [Data Example](xref:dataExample)
