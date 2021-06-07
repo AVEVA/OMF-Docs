@@ -24,7 +24,7 @@ To define possible values of an `enum` type, include the following keywords. If 
 | Name | Value |
 | --- | --- |
 | `name` | Required unique string that describes the condition or state being represented. This string is used as the displayed value when an enum is selected as the Type for a property. |
-| `value` | Required integer value associated with the enum. The integer value must used also when sending data of for container property of this type. |
+| `value` | Required integer value associated with the enum. The integer value must be used when sending data for container properties of this type. |
 
 In this example we have a Valve with 2 states, CLOSED or OPEN and accept the defaults, or explicitly define the values. The following Type messages are valid syntax:
 
