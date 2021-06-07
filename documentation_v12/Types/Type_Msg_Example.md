@@ -160,11 +160,12 @@ In this example we define data quality on the 'TankPressureV2' object to be of t
         "id": "TankPressureV2",
         "version": "1.0.0.0",
         "type": "object",
-		"basetypeid": "TankPressure",
+	"basetypeid": "TankPressure",
         "classification": "dynamic",        
         "properties": {
-			"DeviceStatus": {
-                "reftypeid": "DeviceStatusEnum",
-				"isquality": true
-            }          
+		"DeviceStatus": {
+                	"reftypeid": "DeviceStatusEnum",
+			"isquality": true
+            	}          
+	 }
     }]
