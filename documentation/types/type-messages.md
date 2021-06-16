@@ -22,8 +22,7 @@ The body of a Type message consists of an array of objects. The following keywor
 | `tags` | Optional array of strings to tag the Type. |
 | `metadata` | Optional key-value pairs associated with the Type. |
 | `enum` | Optional object containing name/value pairs used to define an allowed set of values and optional type and format properties. Classification should not be set when defining an enum Type. |
-| `flags` | Optional object containing name/value pairs used to define an allowed set of values which could be combined to represent distinct value and optional type and format properties. Classification should not be set when defining a flags Type. |
-| `properties` | Key-value pairs defining the properties of a static or dynamic Type. Required unless the Type defines enum or flags. |
+| `properties` | Key-value pairs defining the properties of a static or dynamic Type. Required unless the Type defines enum. |
 
 The `id` cannot begin with the character sequence __. This has been reserved for predefined Types. Currently the only supported predefined Type 
 is [__Link](xref:linkType). The `id` property is referenced when creating instances of Types in Container and Data messages, or when 
@@ -38,13 +37,13 @@ The `basetypeid` is used to support Type inheritance and is an `id` of previousl
 If a Type is created for the sole purpose of being referenced by another Type, then `classification` is not required. If classification is not set, then instance data of that Type cannot be created.
 If the classification is set to `static` or `dynamic` then the classification of each Type must match when using `basetypeid` to define an inheritance relationship.
 
-Type messages defined as `enum` or `flags` defines a set of name/value pairs and is used for properties that have a predefined set of allowed values that could be combined in case of `flags` type. 
-The `enum` and `flags` Types are created separately so that it can be referenced by multiple properties. Refer to [Enum and flags Type](xref:enumFlagsType) for detailed information on defining an enum, and using the `reftypeid` to relate the enum property with the enum definition.
+Type message defined as `enum` defines a set of name/value pairs and is used for properties that have a predefined set of allowed values. 
+The `enum` type is created separately so that it can be referenced by multiple properties. Refer to [Enum Type](xref:enumType) for detailed information on defining an enum, and using the `reftypeid` to relate the enum property with the enum definition.
 
 The supported data types and data formats for `properties` are documented in the [Type Properties and Formats](xref:typePropertiesAndFormats) Topic. 
 
 ### Examples of Type Messages and Property Formats
 
    - [Type Properties and Formats](xref:typePropertiesAndFormats)
-   - [Enum and flags Type](xref:enumFlagsType)
+   - [Enum Type](xref:enumType)
    - [Type Message Example](xref:typeExample)

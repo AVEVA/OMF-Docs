@@ -125,22 +125,21 @@ In this example, the Data message contains values Latitude and Longitude which w
 		}]
 	}
 	
-### Enum or Flags Data Message Example
+### Enum Data Message Example
 
-In this example, the Data message contains values for the ConfigurationState and DeviceStatus. These properties were defined as `flags` and `enum` types using `reftypeid`. 
+In this example, the Data message contains a value for the DeviceStatus property where the property was defined as `enum` type using `reftypeid`. 
 
 	{
 		"containerid":"TankMeasurementsV1_Tank3",		
 		"values": [{ 			
 			"Time": "2019-09-11T22:23:23.430Z",
 			"DeviceStatus": 2,
-			"ConfigurationState": 5,
 			"Pressure": 16.0,
 			"Temperature": 90.1
 		}]
 	}
 
-Numeric values must be used for properties defined as `enum` or `flags` types.
+Numeric values must be used for properties defined as `enum` type using `reftypeid`.
 	
 ### Type-less Static Data Message
 
