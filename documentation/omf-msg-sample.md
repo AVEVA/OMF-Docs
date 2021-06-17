@@ -40,7 +40,7 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 				"type": "string"
 			}			
 		}
-	}{
+	},{
 		"id": "TankMeasurement",
 		"version": "1.0.0.0",
 		"type": "object",
