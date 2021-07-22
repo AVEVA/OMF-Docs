@@ -24,7 +24,7 @@ The body of a Container message consists of an array of objects with the followi
 
 
 Certain keywords defined on Type `properties` may be overridden at the container level using the optional `propertyoverrides` keyword. 
-Currently supported overrides include `name`, `description`, `uom`, `minimum`, and `maximum`. 
+Currently supported overrides include `name`, `description`, `uom`, `minimum`, `maximum` and `interpolation`. 
 Refer to the [Type Properties and Formats](xref:typePropertiesAndFormats) for a complete list of Type `properties`. 
 
 ### Container Example 
