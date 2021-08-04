@@ -83,30 +83,36 @@ When referencing the `enum` type from the property that holds quality, include t
 		"version": "1.0.0.0",
 		"type": "object",
 		"classification": "dynamic",
+		"extrapolation": "forward",
 		"properties": {
 			"Timestamp": {
 				"type": "string",
 				"format":"date-time",
-				"isindex": true
+				"isindex": true,
+				"interpolation": "continuous"
 			},
 			"DeviceStatus": {
 				"reftypeid": "DeviceStatusEnum", 
-				"isquality": true
+				"isquality": true,
+				"interpolation": "stepwisecontinuousleading"
 			},
 			"ValvePosition": {
-				"reftypeid": "ValveState"
+				"reftypeid": "ValveState",
+				"interpolation": "stepwisecontinuousleading",		
 			},
 			"Pressure": {
 				"type": "number",
 				"name": "Tank Pressure",
 				"description": "Tank Pressure in Pa",
-				"uom": "pascal"
+				"uom": "pascal",
+				"interpolation": "continuous"
 			},
 			"Temperature": {
 				"type": "number",
 				"name": "Tank Temperature",
 				"description": "Tank Temperature in K",
-				"uom": "K"
+				"uom": "K",
+				"interpolation": "continuous"		
 			}
 		}
 	}]
