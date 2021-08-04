@@ -24,7 +24,7 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 		"version": "1.0.0.0",
 		"type": "object",
 		"classification": "static",
-	        "extrapolation": "all",
+		"extrapolation": "all",
 		"properties": {
 			"PlantId": {
 				"type": "string",
@@ -46,7 +46,7 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 		"version": "1.0.0.0",
 		"type": "object",
 		"classification": "dynamic",	
-	        "extrapolation": "forward",
+		"extrapolation": "forward",
 		"properties": {			
 			"Pressure": {
 				"type": "number",
@@ -136,7 +136,8 @@ Create containers for the `dynamic` types.
 		"id": "Tank1Measurements",
 		"typeid": "TankMeasurement",
 		"indexes": ["Pressure"], 
-		"datasource":"Modbus"
+		"datasource":"Modbus",
+		"extrapolation": "forward"
 	}, {
 		"id": "Tank2Measurements",
 		"typeid": "TankMeasurement",
