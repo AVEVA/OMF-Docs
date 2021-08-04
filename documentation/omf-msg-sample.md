@@ -83,7 +83,7 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 		"version": "1.0.0.0",
 		"type": "object",
 		"classification": "static",
-	        "extrapolation": "all",
+		"extrapolation": "all",
 		"properties": {
 			"TankName": {
 				"type": "string",				
@@ -105,7 +105,7 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 		"version": "1.0.0.0",
 		"type": "object",
 		"classification": "static",
-	        "extrapolation": "all",
+		"extrapolation": "all",
 		"basetypeid": "TankV2",
 		"properties": {					
 			"TankHeight": {
