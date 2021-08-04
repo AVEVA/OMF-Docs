@@ -61,7 +61,7 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 				"type": "number",
 				"name": "Tank Temperature",
 				"description": "Tank Temperature in K",
-				"uom",
+				"uom": "K",
 				"interpolation": "continuous"
 			},
 			"Timestamp": {                        
