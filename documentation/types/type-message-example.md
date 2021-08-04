@@ -63,7 +63,7 @@ Their values will be referenced later when defining instance data and creating r
         "version": "1.0.0.0",
         "type": "object",
         "classification": "dynamic", 
-        "extrapolation": "Forward",
+        "extrapolation": "forward",
         "properties": { 
             "Timestamp": {                        
                 "type": "string", 
