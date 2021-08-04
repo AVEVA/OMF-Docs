@@ -22,7 +22,7 @@ Their values will be referenced later when defining instance data and creating r
         "version": "1.0.0.0",
         "type": "object",
         "classification": "static",
-	"extrapolation": "Forward",
+        "extrapolation": "Forward",
         "properties": {
             "PlantId": {
                 "type": "string",
@@ -158,7 +158,7 @@ In this example we define data quality on the 'TankPressureV2' object to be of t
 		"type": "object",
 		"basetypeid": "TankPressure",
 		"classification": "dynamic",     
-		"extrapolation": "Forward",
+                "extrapolation": "Forward",
 		"properties": {
 			"DeviceStatus": {
 				"reftypeid": "DeviceStatusEnum",
