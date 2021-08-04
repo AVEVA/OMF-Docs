@@ -24,6 +24,7 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 		"version": "1.0.0.0",
 		"type": "object",
 		"classification": "static",
+	        "extrapolation": "all",
 		"properties": {
 			"PlantId": {
 				"type": "string",
@@ -44,15 +45,15 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 		"id": "TankMeasurement",
 		"version": "1.0.0.0",
 		"type": "object",
-		"classification": "dynamic",		
+		"classification": "dynamic",	
+	        "extrapolation": "forward",
 		"properties": {			
 			"Pressure": {
 				"type": "number",
 				"name": "Tank Pressure",
 				"description": "Tank Pressure in Pa",
 				"uom": "pascal",
-				"interpolation": "Continuous",
-				"extrapolation": "Forward",
+				"interpolation": "continuous",
 				"max": "20",
 				"min": "10"
 			},
@@ -60,12 +61,14 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 				"type": "number",
 				"name": "Tank Temperature",
 				"description": "Tank Temperature in K",
-				"uom": "K" 				
+				"uom",
+				"interpolation": "continuous"
 			},
 			"Timestamp": {                        
 				"type": "string", 
 				"format":"date-time",
-				"isindex": true		
+				"isindex": true,
+				"interpolation": "continuous"
 			}
 		}
 	},{ 	
@@ -79,7 +82,8 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 		"id": "TankV2",
 		"version": "1.0.0.0",
 		"type": "object",
-		"classification": "static",		
+		"classification": "static",
+	        "extrapolation": "all",
 		"properties": {
 			"TankName": {
 				"type": "string",				
@@ -101,6 +105,7 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 		"version": "1.0.0.0",
 		"type": "object",
 		"classification": "static",
+	        "extrapolation": "all",
 		"basetypeid": "TankV2",
 		"properties": {					
 			"TankHeight": {
