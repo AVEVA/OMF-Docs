@@ -18,7 +18,7 @@ uid: containerExample
 		"typeid": "TankPressure",
 		"datasource":"Modbus",
 		"indexes": ["Pressure"],
-	        "extrapolation": "forward"
+		"extrapolation": "forward"
 	}, {
 		"id": "Tank2_PressureMeasurements",
 		"typeid": "TankPressure",
