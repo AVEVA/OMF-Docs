@@ -13,13 +13,16 @@ Version 1.2 introduces the following incremental changes from version 1.1:
 - Addition of the `enum` keyword defined on a [Type Message](xref:typeMessages), used to create a reusable set of allowed values, and reference it as the datatype for a [Property](xref:typePropertiesAndFormats) using `reftypeid`.
 - Ability to designate a property as holding data quality using `isquality` defined on a [Property](xref:typePropertiesAndFormats).
 - Support for `minimum` and `maximum` type qualifiers defined on a [Property](xref:typePropertiesAndFormats), used to restrict data values.
-- Support for `interpolation` and `extrapolation` modes defined on a [Property](xref:typePropertiesAndFormats), used to categorize the behavior of data being stored.
+- Support for `interpolation` mode defined on a [Property](xref:typePropertiesAndFormats), used to categorize the behavior of data being stored in properties
+- Support for `extrapolation` mode on the type, used to categorize the behavior of data being stored in instances.
 
 ## Enhancements for Container messages:
 
 - Ability to override values of `properties` defined by a dynamic Type using the `propertyoverrides` keyword in the [Container Message](xref:containerMessages). Currently supported property overrides include `name`, `description`, `uom`, `minimum`, and `maximum`.
 - Ability to set the source of a stream of data using the `datasource` keyword defined on a [Container Message](xref:containerMessages). 
-
+- Support for `interpolation` mode defined on a [Property](xref:typePropertiesAndFormats), used to categorize the behavior of data being stored in properties
+- Support for `extrapolation` mode on the container, used to categorize the behavior of data being stored..
+- 
 ## Enhancements for Data messages:
 
 - Addition of the `property` keyword in the [__Link](xref:linkType) Data Message used to link Types and Instances of Types to a particular property. 
