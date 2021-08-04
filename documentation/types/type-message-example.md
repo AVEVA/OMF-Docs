@@ -22,6 +22,7 @@ Their values will be referenced later when defining instance data and creating r
         "version": "1.0.0.0",
         "type": "object",
         "classification": "static",
+	"extrapolation": "Forward",
         "properties": {
             "PlantId": {
                 "type": "string",
@@ -73,7 +74,6 @@ Their values will be referenced later when defining instance data and creating r
                 "description": "Tank Pressure in Pa",
                 "uom": "pascal",
                 "interpolation": "Continuous",
-                "extrapolation": "Forward",
                 "maximum": 20,
                 "minimum": 10
             }                    
@@ -157,7 +157,8 @@ In this example we define data quality on the 'TankPressureV2' object to be of t
 		"id": "TankPressureV2",
 		"type": "object",
 		"basetypeid": "TankPressure",
-		"classification": "dynamic",        
+		"classification": "dynamic",     
+		"extrapolation": "Forward",
 		"properties": {
 			"DeviceStatus": {
 				"reftypeid": "DeviceStatusEnum",
