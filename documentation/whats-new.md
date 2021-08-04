@@ -11,17 +11,16 @@ Version 1.2 introduces the following incremental changes from version 1.1:
 
 - Ability to support Type Inheritance using `basetypeid` defined on a [Type Message](xref:typeMessages), and Type Reuse using `reftypeid` defined on a [Property](xref:typePropertiesAndFormats) within a Type message.
 - Addition of the `enum` keyword defined on a [Type Message](xref:typeMessages), used to create a reusable set of allowed values, and reference it as the datatype for a [Property](xref:typePropertiesAndFormats) using `reftypeid`.
+- Support for `extrapolation` mode on the type, used to categorize the behavior of data being stored in instances.
 - Ability to designate a property as holding data quality using `isquality` defined on a [Property](xref:typePropertiesAndFormats).
 - Support for `minimum` and `maximum` type qualifiers defined on a [Property](xref:typePropertiesAndFormats), used to restrict data values.
-- Support for `extrapolation` mode on the type, used to categorize the behavior of data being stored in instances.
 - Support for `interpolation` mode defined on a [Property](xref:typePropertiesAndFormats), used to categorize the behavior of data being stored in properties.
 
 ## Enhancements for Container messages:
 
-- Ability to override values of `properties` defined by a dynamic Type using the `propertyoverrides` keyword in the [Container Message](xref:containerMessages). Currently supported property overrides include `name`, `description`, `uom`, `minimum`, and `maximum`.
+- Ability to override values of `properties` defined by a dynamic Type using the `propertyoverrides` keyword in the [Container Message](xref:containerMessages). Currently supported property overrides include `name`, `description`, `uom`, `minimum`, `maximum`, and `interpolation`.
 - Ability to set the source of a stream of data using the `datasource` keyword defined on a [Container Message](xref:containerMessages). 
-- Support for `extrapolation` mode on the container, used to categorize the behavior of data being stored. This overrides the type property
-- Support for `interpolation` mode defined on a [Property](xref:typePropertiesAndFormats), overrides the type properties setting to categorize the behavior of data being stored in a property.
+- Support for `extrapolation` mode on the container, used to categorize the behavior of data being stored and override the type 'extrapolation' setting.
 
 ## Enhancements for Data messages:
 
