@@ -158,7 +158,6 @@ In this example we define data quality on the 'TankPressureV2' object to be of t
 		"type": "object",
 		"basetypeid": "TankPressure",
 		"classification": "dynamic",     
-                "extrapolation": "Forward",
 		"properties": {
 			"DeviceStatus": {
 				"reftypeid": "DeviceStatusEnum",
