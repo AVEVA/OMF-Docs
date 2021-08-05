@@ -135,12 +135,12 @@ Create containers for the `dynamic` types.
 		"id": "Tank1Measurements",
 		"typeid": "TankMeasurement",
 		"indexes": ["Pressure"], 
-		"datasource":"Modbus",
+		"datasource": "Modbus",
 		"extrapolation": "forward"
 	}, {
 		"id": "Tank2Measurements",
 		"typeid": "TankMeasurement",
-		"datasource":"Modbus",	
+		"datasource": "Modbus",	
 		"propertyoverrides": {
 			"Temperature": {				
 				"description": "Tank Temperature in degree Fahrenheit",
@@ -150,7 +150,7 @@ Create containers for the `dynamic` types.
 	}, {
 		"id": "Tank_R1_Measurements",
 		"typeid": "TankMeasurement",
-		"datasource":"Modbus"
+		"datasource": "Modbus"
 	}]
 
 
