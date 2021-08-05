@@ -88,8 +88,7 @@ When referencing the `enum` type from the property that holds quality, include t
 			"Timestamp": {
 				"type": "string",
 				"format":"date-time",
-				"isindex": true,
-				"interpolation": "continuous"
+				"isindex": true
 			},
 			"DeviceStatus": {
 				"reftypeid": "DeviceStatusEnum", 
