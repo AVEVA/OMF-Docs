@@ -68,8 +68,7 @@ Their values will be referenced later when defining instance data and creating r
             "Timestamp": {                        
                 "type": "string", 
                 "format":"date-time",
-                "isindex": true,
-                "interpolation": "continuous"
+                "isindex": true
             },
             "Pressure": {
                 "type": "number",
