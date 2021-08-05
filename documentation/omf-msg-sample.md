@@ -67,8 +67,7 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 			"Timestamp": {                        
 				"type": "string", 
 				"format":"date-time",
-				"isindex": true,
-				"interpolation": "continuous"
+				"isindex": true
 			}
 		}
 	},{ 	
