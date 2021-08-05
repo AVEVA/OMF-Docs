@@ -17,12 +17,14 @@ uid: containerExample
 		"id": "Tank1_PressureMeasurements",
 		"typeid": "TankPressure",
 		"datasource":"Modbus",
-		"indexes": ["Pressure"]			
+		"indexes": ["Pressure"],
+		"extrapolation": "forward"
 	}, {
 		"id": "Tank2_PressureMeasurements",
 		"typeid": "TankPressure",
 		"datasource":"Modbus",
-		"indexes": ["Pressure"],		
+		"indexes": ["Pressure"],	
+		"extrapolation": "forward",
 		"propertyoverrides": {
 			"Pressure": {	
 				"minimum": 15, 

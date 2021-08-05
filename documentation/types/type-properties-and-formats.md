@@ -20,7 +20,6 @@ The following keywords are used to the define the `properties` in the Type defin
 | `minimum` | Optional type qualifier that defines minimum allowed value. This property can be overridden using the propertyoverrides keyword on a Container message. This property is only valid on numbers and integers. |
 | `maximum` | Optional type qualifier that defines maximum allowed value. This property can be overridden using the propertyoverrides keyword on a Container message. This property is only valid on numbers and integers. |
 | `interpolation` | Optional data mode used to provide consistency when reading data. Supported values include `continuous`, `discrete`, `stepwisecontinuousleading`, and `stepwisecontinuousfollowing`. |
-| `extrapolation` | Optional data mode used to provide consistency when reading values. Supported values include `all`, `none`, `forward`, and `backward`. |
 
 For each property, `type` or `reftypeid` must be defined. When using `type` refer to the \'Supported Formats\' table below for the list of allowed values.
 When using `reftypeid`, the value must be set to the `id` of a previously defined Type. Circular inheritance or self-referencing is not supported when using `reftypeid`. 

@@ -22,6 +22,7 @@ The body of a Type message consists of an array of objects. The following keywor
 | `tags` | Optional array of strings to tag the Type. |
 | `metadata` | Optional key-value pairs associated with the Type. |
 | `enum` | Optional object containing name/value pairs used to define an allowed set of values and optional type and format properties. Classification should not be set when defining an enum Type. |
+| `extrapolation` | Optional data mode used to provide consistency when reading values. Supported values include `all`, `none`, `forward`, and `backward`. |
 | `properties` | Key-value pairs defining the properties of a static or dynamic Type. Required unless the Type defines enum. |
 
 The `id` cannot begin with the character sequence __. This has been reserved for predefined Types. Currently the only supported predefined Type 

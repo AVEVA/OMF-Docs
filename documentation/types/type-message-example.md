@@ -22,6 +22,7 @@ Their values will be referenced later when defining instance data and creating r
         "version": "1.0.0.0",
         "type": "object",
         "classification": "static",
+        "extrapolation": "all",
         "properties": {
             "PlantId": {
                 "type": "string",
@@ -42,7 +43,8 @@ Their values will be referenced later when defining instance data and creating r
         "id": "Tank",
         "version": "1.0.0.0",
         "type": "object",
-        "classification": "static",     
+        "classification": "static",
+        "extrapolation": "all",
         "properties": {
             "TankName": {
                 "type": "string",
@@ -60,20 +62,20 @@ Their values will be referenced later when defining instance data and creating r
         "id": "TankPressure",
         "version": "1.0.0.0",
         "type": "object",
-        "classification": "dynamic",        
+        "classification": "dynamic", 
+        "extrapolation": "forward",
         "properties": { 
             "Timestamp": {                        
                 "type": "string", 
                 "format":"date-time",
-                "isindex": true     
+                "isindex": true
             },
             "Pressure": {
                 "type": "number",
                 "name": "Tank Pressure",
                 "description": "Tank Pressure in Pa",
                 "uom": "pascal",
-                "interpolation": "Continuous",
-                "extrapolation": "Forward",
+                "interpolation": "continuous",
                 "maximum": 20,
                 "minimum": 10
             }                    
@@ -157,10 +159,11 @@ In this example we define data quality on the 'TankPressureV2' object to be of t
 		"id": "TankPressureV2",
 		"type": "object",
 		"basetypeid": "TankPressure",
-		"classification": "dynamic",        
+		"classification": "dynamic",     
 		"properties": {
 			"DeviceStatus": {
 				"reftypeid": "DeviceStatusEnum",
+		                "interpolation": "stepwisecontinuousleading",
 				"isquality": true
 			}
 		}
