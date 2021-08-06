@@ -4,9 +4,7 @@ uid: typeMessages
 
 # Type Messages
 
-
-Types do not support deletes via OMF. The version field is supplied as meta data only. 
-Once a Type is deleted, any operations on Containers or Data using that Type will fail.
+Types are used within OMF to define the structure of data. Dynamic Types are used by containers to create streams of sequentially indexed Data. Static types are used by the endpoint to define non-streamed data, such as assets. The type messages are used to create, updated and delete types. While types contain a version field, that field is supplied as metadata only - multiple types are not supported in the destination endpoints. Once a Type is deleted, any operations on Containers or Data using that Type will fail.
 
 The body of a Type message consists of an array of objects. The following keywords are used to define a Type.
 
