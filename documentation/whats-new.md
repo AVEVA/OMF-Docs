@@ -13,7 +13,7 @@ Version 1.2 introduces the following incremental changes from version 1.1:
 - Addition of the `enum` keyword defined on a [Type Message](xref:typeMessages), used to create a reusable set of allowed values, and reference it as the datatype for a [Property](xref:typePropertiesAndFormats) using `reftypeid`.
 - Support for `extrapolation` mode on the type, used to categorize the behavior of data being stored in instances.
 - Ability to designate a property as holding data quality using `isquality` defined on a [Property](xref:typePropertiesAndFormats).
-- Support for `minimum` and `maximum` type qualifiers defined on a [Property](xref:typePropertiesAndFormats), used to restrict data values.
+- Support for `minimum` and `maximum` type qualifiers defined on a [Property](xref:typePropertiesAndFormats).
 - Support for `interpolation` mode defined on a [Property](xref:typePropertiesAndFormats), used to categorize the behavior of data being stored in properties.
 
 ## Enhancements for Container messages:
