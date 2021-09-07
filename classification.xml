@@ -21,8 +21,8 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>6054</WindowHeight>
-  <WindowWidth>18018</WindowWidth>
+  <WindowHeight>2778</WindowHeight>
+  <WindowWidth>8628</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
   <TabRatio>500</TabRatio>
@@ -223,12 +223,12 @@
    <Row ss:AutoFitHeight="0" ss:Height="14.475000000000001">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
     <Cell ss:Index="3"><Data ss:Type="String">developer</Data></Cell>
-    <Cell ss:StyleID="s63"><Data ss:Type="String">OSIsoft-Message-Format-1.1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">OSIsoft-Message-Format_1.1</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="14.475000000000001">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
     <Cell ss:Index="3"><Data ss:Type="String">developer</Data></Cell>
-    <Cell ss:StyleID="s63"><Data ss:Type="String">OSIsoft-Message-Format-1.1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">OSIsoft-Message-Format_1.1</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">default</Data></Cell>
@@ -256,7 +256,7 @@
     <Pane>
      <Number>3</Number>
      <ActiveRow>7</ActiveRow>
-     <ActiveCol>3</ActiveCol>
+     <ActiveCol>6</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
