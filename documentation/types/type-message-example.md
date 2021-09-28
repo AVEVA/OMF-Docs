@@ -24,20 +24,10 @@ Their values will be referenced later when defining instance data and creating r
         "classification": "static",
         "extrapolation": "all",
         "properties": {
-            "PlantId": {
-                "type": "string",
-                "isindex": true
-            },
-            "PlantName": {
-                "type": "string",
-                "isname": true
-            },
-            "Address": {
-                "type": "string"
-            },
-            "Contact": {
-                "type": "string"
-            }
+            "PlantId": { "type": "string", "isindex": true },
+            "PlantName": { "type": "string", "isname": true },
+            "Address": { "type": "string" },
+            "Contact": { "type": "string" }
         }
     }, {
         "id": "Tank",
@@ -46,17 +36,9 @@ Their values will be referenced later when defining instance data and creating r
         "classification": "static",
         "extrapolation": "all",
         "properties": {
-            "TankName": {
-                "type": "string",
-                "isindex": true,
-                "isname": true              
-            },
-            "Serial": {
-                "type": "string"
-            },
-            "Model": {
-                "type": "string"
-            }
+            "TankName": { "type": "string", "isindex": true, "isname": true },
+            "Serial": { "type": "string" }, 
+            "Model": { "type": "string" }
         }
     }, {
         "id": "TankPressure",
@@ -65,58 +47,12 @@ Their values will be referenced later when defining instance data and creating r
         "classification": "dynamic", 
         "extrapolation": "forward",
         "properties": { 
-            "Timestamp": {                        
-                "type": "string", 
-                "format":"date-time",
-                "isindex": true
-            },
-            "Pressure": {
-                "type": "number",
-                "name": "Tank Pressure",
-                "description": "Tank Pressure in Pa",
-                "uom": "pascal",
-                "interpolation": "continuous",
-                "maximum": 20,
-                "minimum": 10
-            }                    
+            "Timestamp": { "type": "string", "format":"date-time", "isindex": true },
+            "Pressure": { "type": "number", "name": "Tank Pressure", "description": "Tank Pressure in Pa", 
+                "uom": "pascal", "interpolation": "continuous", "maximum": 20, "minimum": 10 }                    
         }
     }]
 
-### Inheritance Example
-
-Properties of a Type definition can reference a previously defined Type using the `basetypeid` keyword, inheriting `static` data from another
-`static` Type. In this example we reference the previously defined Type \'Tank\'. The resulting 'RectangularTank' contains the properties TankName, 
-Serial, Model, TankHeight, and Tank Width, similarly the 'CylindricalTank' contains the properties TankName, Serial, Model, and TankDiameter.
-
-    [{
-        "id":"RectangularTank",
-        "type": "object",
-        "classification": "static",
-        "basetypeid": "Tank",
-        "properties": {                     
-            "TankHeight": {
-                "type": "integer",
-                "format":"int32",
-                "uom":"ft"              
-            },
-            "TankWidth": {
-                "type": "integer",
-                "format":"int32",
-                "uom":"ft"
-            }           
-        }
-    }, {
-        "id":"CylindricalTank",
-        "type": "object",
-        "classification": "static",
-        "basetypeid": "Tank",
-        "properties": {                             
-            "TankDiameter": {
-                "type": "number",
-                "format":"float32"      
-            }
-        }
-    }]
 
 ### Reference Example
 
@@ -158,13 +94,11 @@ In this example we define data quality on the 'TankPressureV2' object to be of t
 	}, {
 		"id": "TankPressureV2",
 		"type": "object",
-		"basetypeid": "TankPressure",
 		"classification": "dynamic",     
 		"properties": {
-			"DeviceStatus": {
-				"reftypeid": "DeviceStatusEnum",
-		                "interpolation": "stepwisecontinuousleading",
-				"isquality": true
-			}
+		         "Timestamp": { "type": "string", "format":"date-time", "isindex": true },            
+			 "Pressure": { "type": "number", "name": "Tank Pressure", "description": "Tank Pressure in Pa", 
+			        "uom": "pascal", "interpolation": "continuous", "maximum": 20, "minimum": 10 },
+			"DeviceStatus": { "reftypeid": "DeviceStatusEnum", "interpolation": "stepwisecontinuousleading", "isquality": true }
 		}
 	}]
