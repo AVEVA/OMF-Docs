@@ -39,15 +39,15 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 			},
 			"Contact": {
 				"type": "string"
-			}			
+			}
 		}
 	},{
 		"id": "TankMeasurement",
 		"version": "1.0.0.0",
 		"type": "object",
-		"classification": "dynamic",	
+		"classification": "dynamic",
 		"extrapolation": "forward",
-		"properties": {			
+		"properties": {
 			"Pressure": {
 				"type": "number",
 				"name": "Tank Pressure",
@@ -70,7 +70,7 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 				"isindex": true
 			}
 		}
-	},{ 	
+	},{
 		"id":"LocationProperties",
 		"type":"object",
 		"properties": { 
@@ -85,7 +85,7 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 		"extrapolation": "all",
 		"properties": {
 			"TankName": {
-				"type": "string",				
+				"type": "string",
 				"isname": true,
 				"isindex":true
 			},
@@ -98,25 +98,6 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 			"Location": {
 				"reftypeid": "LocationProperties"
 			}
-		}
-	}, {
-		"id":"RectangularTank",
-		"version": "1.0.0.0",
-		"type": "object",
-		"classification": "static",
-		"extrapolation": "all",
-		"basetypeid": "TankV2",
-		"properties": {					
-			"TankHeight": {
-				"type": "integer",
-				"format":"int32",
-				"uom":"ft"				
-			},
-			"TankWidth": {
-				"type": "integer",
-				"format":"int32",
-				"uom":"ft"
-			}	
 		}
 	}]
 
@@ -140,13 +121,13 @@ Create containers for the `dynamic` types.
 	}, {
 		"id": "Tank2Measurements",
 		"typeid": "TankMeasurement",
-		"datasource": "Modbus",	
+		"datasource": "Modbus",
 		"propertyoverrides": {
-			"Temperature": {				
+			"Temperature": {
 				"description": "Tank Temperature in degree Fahrenheit",
 				"uom": "F"
 			}
-		}			
+		}
 	}, {
 		"id": "Tank_R1_Measurements",
 		"typeid": "TankMeasurement",
@@ -182,30 +163,17 @@ Send data messages to create assets, relate instances, and send data values, for
 			"Location": {
 				"Latitude": 36.3134,
 				"Longitude": -82.3535 
-			}	
+			}
 		}, {
 			"TankName": "Tank2",
 			"Serial": "2364-4243-FS12",
-			"Model": "TK-421"	,
+			"Model": "TK-421",
 			"Location": {
 				"Latitude": 45.4046,
 				"Longitude": -122.579 
-			}			
+			}
 		}]
 	}, {
-		"typeid": "RectangularTank",
-		"values": [{
-			"TankName": "Tank_R1",
-			"Serial": "4738-9283-CKD4",
-			"Model": "SD-3947",
-			"Location": {
-				"Latitude": 52.273,
-				"Longitude": -95.2834 
-			},
-			"TankHeight": 100,
-			"TankWidth": 80
-		}]
-	}, { 	   
        "properties": { 
 			"Name": {
 				"type":"string",
@@ -216,7 +184,7 @@ Send data messages to create assets, relate instances, and send data values, for
 			},
 			"Model": {
 				"type":"string"
-			},			
+			},
             "HourlyMaintenanceSchedule": {
 				"type": "integer",
                 "format": "int16"
