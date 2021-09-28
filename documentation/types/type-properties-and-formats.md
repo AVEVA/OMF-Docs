@@ -22,7 +22,7 @@ The following keywords are used to the define the `properties` in the Type defin
 | `interpolation` | Optional data mode used to provide consistency when reading data. Supported values include `continuous`, `discrete`, `stepwisecontinuousleading`, and `stepwisecontinuousfollowing`. |
 
 For each property, `type` or `reftypeid` must be defined. When using `type` refer to the \'Supported Formats\' table below for the list of allowed values.
-When using `reftypeid`, the value must be set to the `id` of a previously defined Type. Circular inheritance or self-referencing is not supported when using `reftypeid`. 
+When using `reftypeid`, the value must be set to the `id` of a previously defined Type. Self-references or circular references are not supported when using `reftypeid`. 
 
 If `type` is used, the format of the type may be set using the `format` keyword, as described in the \'Supported Formats\' table below. 
 This allows for the creation of timestamps, dictionaries, and bit length-specific numeric properties.
@@ -64,34 +64,11 @@ The datatype and `null` may appear in any order in the array. The default value 
 	
 Values of type "array", "object", and "string" are treated as inherently nullable thus the additional null type specification is not needed.
 	
-### Type reuse and Inheritance
+### Type reuse
 
-Type reuse and Type inheritance are supported for Types of the same `classification` or Types with no `classification`, using either `basetypeid` on a Type Message, or
-`reftypeid` at the Property level. When `basetypeid` is used on a Type, then all the properties of the base type are included within the new Type.
+Type reuse is supported for Types of the same `classification` or Types with no `classification`, using `reftypeid` at the Property level. 
 When `reftypeid` is used on a property, then all the properties of the reference type are included under the specified property.
 
-
-In the example below, `basetypeid` is used to create the new \'CylindricalTank\' Type which will have all the properties of the existing \'Tank\' Type, maintain the index and name properties, 
-plus adds an additional property \'TankDiameter\'.
-
-	{
-		"id": "Tank",
-		"type": "object",
-		"classification": "static",		
-		"properties": {
-			"TankName": { "type": "string", "isname": true,  "isindex": true },
-			"Serial": { "type": "string" },
-			"Model": { "type": "string" }
-		}
-	}, {
-		"id":"CylindricalTank",
-		"type": "object",
-		"classification": "static",
-		"basetypeid": "Tank",
-		"properties": {					
-			"TankDiameter": { "type": "number", "format": "float32" }
-		}	
-	}
 
 In the example below, a reusable type \'LocationProperties\' is created then used with the \'TankV2\' definition via the `reftypeid` to define a Location property on a Tank.  
 The TankV2 Location property will contain the sub properties \'Latitude\' and \'Longitude\'.
