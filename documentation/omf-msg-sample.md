@@ -128,10 +128,6 @@ Create containers for the `dynamic` types.
 				"uom": "F"
 			}
 		}
-	}, {
-		"id": "Tank_R1_Measurements",
-		"typeid": "TankMeasurement",
-		"datasource": "Modbus"
 	}]
 
 
@@ -218,15 +214,6 @@ Send data messages to create assets, relate instances, and send data values, for
 			}
 		}, {
 			"source": {
-				"typeid": "Plant",
-				"index": "WTP1"
-			},
-			"target": {
-				"typeid": "RectangularTank",
-				"index": "Tank_R1"
-			}
-		}, {
-			"source": {
 				"typeid": "TankV2",
 				"index": "Tank1"
 			},
@@ -240,14 +227,6 @@ Send data messages to create assets, relate instances, and send data values, for
 			},
 			"target": {
 				"containerid": "Tank2Measurements"
-			}
-		}, {
-			"source": {
-				"typeid": "RectangularTank",
-				"index": "Tank_R1"
-			},
-			"target": {
-				"containerid": "Tank_R1_Measurements"
 			}
 		}]
 	}, {
@@ -271,16 +250,5 @@ Send data messages to create assets, relate instances, and send data values, for
 			"Time": "2019-09-11T22:24:23.430Z",
 			"Pressure": 15.1,
 			"Temperature": 91.2
-		}]
-	}, {
-		"containerid": "Tank_R1_Measurements",
-		"values": [{
-			"Time": "2019-09-11T22:23:23.430Z",
-			"Pressure": 13.0,
-			"Temperature": 93.5
-		}, {
-			"Time": "2019-09-11T22:24:23.430Z",
-			"Pressure": 12.6,
-			"Temperature": 97.1
 		}]
 	}]
