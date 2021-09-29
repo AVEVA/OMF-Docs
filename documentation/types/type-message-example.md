@@ -96,9 +96,9 @@ In this example we define data quality on the 'TankPressureV2' object to be of t
 		"type": "object",
 		"classification": "dynamic",     
 		"properties": {
-		         "Timestamp": { "type": "string", "format": "date-time", "isindex": true },            
-			 "Pressure": { "type": "number", "name": "Tank Pressure", "description": "Tank Pressure in Pa", 
-			        "uom": "pascal", "interpolation": "continuous", "maximum": 20, "minimum": 10 },
+			"Timestamp": { "type": "string", "format": "date-time", "isindex": true },            
+			"Pressure": { "type": "number", "name": "Tank Pressure", "description": "Tank Pressure in Pa", 
+				"uom": "pascal", "interpolation": "continuous", "maximum": 20, "minimum": 10 },
 			"DeviceStatus": { "reftypeid": "DeviceStatusEnum", "interpolation": "stepwisecontinuousleading", "isquality": true }
 		}
 	}]
