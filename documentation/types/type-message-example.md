@@ -47,7 +47,7 @@ Their values will be referenced later when defining instance data and creating r
         "classification": "dynamic", 
         "extrapolation": "forward",
         "properties": { 
-            "Timestamp": { "type": "string", "format":"date-time", "isindex": true },
+            "Timestamp": { "type": "string", "format": "date-time", "isindex": true },
             "Pressure": { "type": "number", "name": "Tank Pressure", "description": "Tank Pressure in Pa", 
                 "uom": "pascal", "interpolation": "continuous", "maximum": 20, "minimum": 10 }                    
         }
@@ -60,21 +60,21 @@ Properties of a Type definition can reference a previously defined Type using th
 In this example we include the \'LocationProperties\' in the 'TankV2' Type, but cannot create instance data of the 'LocationProperties' Type.
 
 	[{  
-		"id":"LocationProperties",
-		"type":"object",
+		"id": "LocationProperties",
+		"type": "object",
 		"properties": { 
-			"Latitude":{ "type":"number", "format":"float32" },
-			"Longitude":{ "type":"number", "format":"float32" }
+			"Latitude":{ "type": "number", "format": "float32" },
+			"Longitude":{ "type": "number", "format": "float32" }
 		}
 	}, {
-		"id":"TankV2",
-		"type":"object",
-		"classification":"static",
+		"id": "TankV2",
+		"type": "object",
+		"classification": "static",
 		"properties": { 
 			"TankName": { "type": "string", "isname": true,  "isindex":true },
 			"Serial": { "type": "string" },
 			"Model": { "type": "string" },
-			"Location": { "reftypeid":"LocationProperties" }	
+			"Location": { "reftypeid": "LocationProperties" }	
 		}
 	}]
 
@@ -96,7 +96,7 @@ In this example we define data quality on the 'TankPressureV2' object to be of t
 		"type": "object",
 		"classification": "dynamic",     
 		"properties": {
-		         "Timestamp": { "type": "string", "format":"date-time", "isindex": true },            
+		         "Timestamp": { "type": "string", "format": "date-time", "isindex": true },            
 			 "Pressure": { "type": "number", "name": "Tank Pressure", "description": "Tank Pressure in Pa", 
 			        "uom": "pascal", "interpolation": "continuous", "maximum": 20, "minimum": 10 },
 			"DeviceStatus": { "reftypeid": "DeviceStatusEnum", "interpolation": "stepwisecontinuousleading", "isquality": true }
