@@ -66,16 +66,16 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 			},
 			"Timestamp": {                        
 				"type": "string", 
-				"format":"date-time",
+				"format": "date-time",
 				"isindex": true
 			}
 		}
 	},{
-		"id":"LocationProperties",
-		"type":"object",
+		"id": "LocationProperties",
+		"type": "object",
 		"properties": { 
-			"Latitude":{ "type":"number", "format":"float32" },
-			"Longitude":{ "type":"number", "format":"float32" }
+			"Latitude":{ "type": "number", "format": "float32" },
+			"Longitude":{ "type": "number", "format": "float32" }
 		}
 	},{
 		"id": "TankV2",
@@ -172,14 +172,14 @@ Send data messages to create assets, relate instances, and send data values, for
 	}, {
        "properties": { 
 			"Name": {
-				"type":"string",
+				"type": "string",
 				"isindex":true
 			},
 			"Description": {
-				"type":"string"
+				"type": "string"
 			},
 			"Model": {
-				"type":"string"
+				"type": "string"
 			},
             "HourlyMaintenanceSchedule": {
 				"type": "integer",
