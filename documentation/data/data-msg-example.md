@@ -93,21 +93,6 @@ In this example, instance data is created for the `static` types \'Plant\' and \
 		}]
 	}]
 
-### Inheritance Data Message Example
-
-In this example, the Data message contains values for the inherited properties TankName, Serial and Model as well as the properties TankHeight and TankWidth.
- 
-	{
-		"typeid":"RectangularTank",		
-		"values": [{ 
-			"TankName": "RectangularTank1",
-			"Serial":"3829-3827-C0EK",
-			"Model":"EL-5839",
-			"TankHeight": 120,
-			"TankWidth": 90
-		}]
-	}
-
 ### Reference Data Message Example
 
 In this example, the Data message contains values Latitude and Longitude which were included using `reftypeid` on the Location property.
