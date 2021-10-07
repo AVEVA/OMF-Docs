@@ -42,8 +42,8 @@ defined by setting the `format` keyword, as described in the Supported Formats t
 
 ### Nullable type properties
 
-Nullable type properties are supported by specifying an array that defines the datatype and includes the keyword `null`. 
-The datatype and `null` may appear in any order in the array. For example: 
+Nullable type properties are supported by specifying an array that defines the datatype and includes the keyword `null`.
+The datatype and `null` may appear in any order in the array. For example:
 
 	"MeasurementValue": {"type": ["integer", "null"], "format": "int64"}
 
