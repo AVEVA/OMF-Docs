@@ -1,4 +1,6 @@
 - name: Overview
   href: data-messages.md
+- name: Link Data Message
+  href: link-type.md
 - name: Data Example
   href: data-msg-example.md

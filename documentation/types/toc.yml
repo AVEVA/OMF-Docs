@@ -1,8 +1,8 @@
 - name: Overview
   href: type-messages.md
-- name: Link Type Messages
-  href: link-type.md
 - name: Type Properties and Formats
   href: type-properties-and-formats.md
+- name: Enum Type Messages
+  href: enum-type.md
 - name: Type Example
   href: type-message-example.md

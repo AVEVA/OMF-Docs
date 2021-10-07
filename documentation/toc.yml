@@ -15,5 +15,7 @@
 - name: Data Messages
   href: data/toc.yml
   topicHref: data/data-messages.md
+- name: OMF Example
+  href: omf-msg-sample.md
 - name: Http Behaviors
   href: http-behaviors.md

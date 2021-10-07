@@ -4,22 +4,34 @@ uid: typePropertiesAndFormats
 
 # Type Properties and Formats
 
-The following keywords are used to define a Type Property:
+The following keywords are used to the define the `properties` in the Type definition:
 
 | Name | Value |							
 | --- | --- |
-| `type` | Required type of the Type Property which must match a type listed in the Supported Formats table below. |
-| `format` | Optional format of the `type` Property that, if specified, must be from the table below. |
-| `isindex` | At least one Type Property must be designated as the index by supplying the isindex keyword with a value of true. The designated isindex property is used to uniquely identify discrete Data objects so that they can be updated or deleted after their initial creation. For a compound index, the order of index properties within the message determines the order within the index. |
-| `isname` | One Type Property may be optionally designated as the name by supplying the isname keyword with a value of true. Because the index must be unique across all Data objects, the isname keyword allows for multiple distinct Data objects to share a common name. |
-| `name` | Optional friendly name for the Type Property. |
-| `description` | Optional description for the Type Property. |
-| `uom` | Optional unit of measure for the Type Property. |
+| `type` | Type of the Property. Must match a type listed in the \'Supported Formats\' table below. Either `type` or `reftypeid` is required for each property. |
+| `format` | Optional format of the `type` Property that, if specified, must be from the \'Supported Formats\' table below. |
+| `reftypeid` | `id` to a previously defined Type. Either `type` or `reftypeid` is required for each property. |
+| `isindex` | At least one Type Property must be designated as the index, or the Type cannot be used to create instance data. The designated isindex boolean property is used to uniquely identify discrete Data objects so that they can be updated or deleted after their initial creation. For a compound index, the order of index properties within the message determines the order within the index. |
+| `isname` | One Type Property may optionally be designated as the name by specifying a boolean value of true. Because the index must be unique across all Data objects, the isname keyword allows for multiple distinct Data objects to share a common name. |
+| `isquality` | One or more Type Properties may optionally be designated as quality. These properties would then determine the overall quality of each data value. Properties designated as quality can be of any supported type and format or represented by enum type. |
+| `name` | Optional friendly name for the Type Property. This property can be overridden using the propertyoverrides keyword on a Container message. |
+| `description` | Optional description for the Type Property. This property can be overridden using the propertyoverrides keyword on a Container message. |
+| `uom` | Optional unit of measure for the Type Property. This property can be overridden using the propertyoverrides keyword on a Container message. |
+| `minimum` | Optional type qualifier that defines minimum allowed value. This property can be overridden using the propertyoverrides keyword on a Container message. This property is only valid on numbers and integers. |
+| `maximum` | Optional type qualifier that defines maximum allowed value. This property can be overridden using the propertyoverrides keyword on a Container message. This property is only valid on numbers and integers. |
+| `interpolation` | Optional data mode used to provide consistency when reading data. Supported values include `continuous`, `discrete`, `stepwisecontinuousleading`, and `stepwisecontinuousfollowing`. |
 
-OMF supports the array, boolean, integer, number, and string data types defined by JSON Schema. Timestamps, dictionaries, and bit length-specific numeric properties may also be 
-defined by setting the `format` keyword, as described in the Supported Formats table below.
+For each property, `type` or `reftypeid` must be defined. When using `type` refer to the \'Supported Formats\' table below for the list of allowed values.
+When using `reftypeid`, the value must be set to the `id` of a previously defined Type. Self-references or circular references are not supported when using `reftypeid`. 
 
-  
+If `type` is used, the format of the type may be set using the `format` keyword, as described in the \'Supported Formats\' table below. 
+This allows for the creation of timestamps, dictionaries, and bit length-specific numeric properties.
+
+If `reftypeid` is used, set the value to the `id` of a previously defined Type. 
+If the referenced type is an `enum` then it defines the allowed set of data values for this property.
+If the referenced type is a `static` or `dynamic` Type, then the properties of that Type are included as child properties of this property. 
+
+
 ### Supported Formats
 
 | Type | Format | Default Value | Description |
@@ -40,13 +52,59 @@ defined by setting the `format` keyword, as described in the Supported Formats t
 | string | date-time | 0001-01-01T00:00:00Z | A string representation of a timestamp, formatted as YYYY-MM-DDThh:mm:ssZ, with optional subsecond precision. |                   
 
 
+
 ### Nullable type properties
 
 Nullable type properties are supported by specifying an array that defines the datatype and includes the keyword `null`. 
-The datatype and `null` may appear in any order in the array. For example: 
+The datatype and `null` may appear in any order in the array. The default value for any nullable type is null. For example: 
 
-	"MeasurementValue": {"type": ["integer", "null"], "format": "int64"}
+	"MeasurementValue": { "type": ["integer", "null"], "format": "int64" }
 
-	"MeasurementValue": {"type": ["null", "integer"], "format": "int64"}
-
+	"MeasurementValue": { "type": ["null", "integer"], "format": "int64" }
+	
 Values of type "array", "object", and "string" are treated as inherently nullable thus the additional null type specification is not needed.
+	
+### Type reuse
+
+Type reuse is supported for Types of the same `classification` or Types with no `classification`, using `reftypeid` at the Property level. 
+When `reftypeid` is used on a property, then all the properties of the reference type are included under the specified property.
+
+
+In the example below, a reusable type \'LocationProperties\' is created then used with the \'TankV2\' definition via the `reftypeid` to define a Location property on a Tank.  
+The TankV2 Location property will contain the sub properties \'Latitude\' and \'Longitude\'.
+
+The referenced type \'LocationProperties\' does not define a classification, and does not define an index property and therefore \'LocationProperties\' cannot be used as the Type for instance data.
+
+	{ 	
+		"id":"LocationProperties",
+		"type":"object",		
+		"properties": { 
+			"Latitude":{ "type": "number", "format": "float32" },
+			"Longitude":{ "type": "number", "format": "float32" }
+		}
+	}, {
+		"id":"TankV2",
+		"type":"object",
+		"classification":"static",
+		"properties": { 
+			"TankName": { "type": "string", "isname": true,  "isindex": true },
+			"Serial": { "type": "string" },
+			"Model": { "type": "string" },
+			"Location": { "reftypeid":"LocationProperties" }	
+		}
+	}
+
+### Type Qualifiers
+
+Properties with `isindex` keyword designate that property as the index and must have unique values. The index value is set when creating instances of the Type, and referenced when creating links.
+Typically, the properties of a `dynamic` type index on time, and use the format `date-time`, and properties of a `static` type index on id or name.
+Types without an index property cannot be used to create instance data.
+
+### Data Quality
+
+The `isquality` keyword is used to designate particular property or properties as data quality for the Type. Properties marked with the quality keyword can have a reference to an `enum` type or be of any supported Type and Format from the \'Supported Formats\' table above. In the example below, `isquality` keyword is used in case of property referencing an enumeration set and int16 property. This allows for capturing data quality information in its raw form.
+
+	"DeviceStatus": { "reftypeid": "DeviceStatusEnum", "isquality": true }
+
+	"DeviceStatus": { "type": "Integer", "format": "int16", "isquality": true }
+

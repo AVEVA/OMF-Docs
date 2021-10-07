@@ -6,22 +6,29 @@ uid: containerExample
 
 ### Headers
 
-    producertoken = b7CNvN36cq
-	omfversion = 1.1
+    omfversion = 1.2
 	messagetype = container
 	action = create
 	messageformat = json
 
-
 ### Body
 
     [{
-		"id": "Tank1Measurements",
-		"typeid": "TankMeasurement",
-		"typeVersion": "1.0.0.0",
-		"indexes": ["Pressure"]			
+		"id": "Tank1_PressureMeasurements",
+		"typeid": "TankPressure",
+		"datasource":"Modbus",
+		"indexes": ["Pressure"],
+		"extrapolation": "forward"
 	}, {
-		"id": "Tank2Measurements",
-		"typeid": "TankMeasurement",
-		"typeVersion": "1.0.0.0"	
+		"id": "Tank2_PressureMeasurements",
+		"typeid": "TankPressure",
+		"datasource":"Modbus",
+		"indexes": ["Pressure"],	
+		"extrapolation": "forward",
+		"propertyoverrides": {
+			"Pressure": {	
+				"minimum": 15, 
+				"maximum": 30				
+			}
+		}			
 	}]
