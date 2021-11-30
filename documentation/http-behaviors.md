@@ -13,11 +13,12 @@ of `413 Payload Too Large`. Compression is highly recommended for optimal perfor
 ## HTTP Status Codes
 
 The following status codes are possible to be returned by OSIsoft products accepting OMF messages over HTTP. 
-Not all end points will respond with the same error codes due to asyncrounous message processing.
+Not all end points will respond with the same error codes due to asynchronous message processing.
 
 | Status code | Description |
 | --- | --- |
 | `200 OK` | The OMF message was successfully processed. Response body contains additional information. |
+| `201 Created` | The OMF message was successfully processed and one or more resources were created. |
 | `202 Accepted` | The OMF message was received and has been successfully queued to be processed. |
 | `204 No Content` | The OMF message was successfully processed, but there is no additional information to return. |
 | `400 Bad Request` | The OMF message was malformed or not understood. The client should not retry sending the message without modifications. |
