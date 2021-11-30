@@ -28,5 +28,5 @@ Not all end points will respond with the same error codes due to asynchronous me
 | `409 Conflict` | The OMF message contains a conflict with an existing destination resource. |
 | `413 Payload Too Large` | Payload size exceeds OMF body size limit. |
 | `500 Internal Server Error` | The server encountered an unexpected condition. |
-| `501 Not Implemented` | A feature requested is not available on the end point. Generally, unsupported OMF features are ignored; however, when an operation type or a specific aspect of an OMF resource cannot be respresented, this error may be returned. |
+| `501 Not Implemented` | A feature requested is not available on the end point. Generally, unsupported OMF features are ignored; however, when an operation type or a specific aspect of an OMF resource cannot be represented, this error may be returned. |
 | `503 Service Unavailable` | The server is currently unavailable, retry later. |
