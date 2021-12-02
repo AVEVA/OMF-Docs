@@ -5,7 +5,16 @@ uid: linkType
 # Link Data Messages
 
 
-A Link is used to create relationships between Types and instances of Types, and is defined using the pre-defined typeid `__Link` in the Data Message.
+A Link is used to create relationships between omf created resources.  Links are defined using the pre-defined typeid `__Link` in the Data Message. 
+For example:
+ - links between static instances, such as a plant to a tank, or a tank to a pump
+ - links from static instances to containers, such as a tank to a measurement
+ - links from a specific property name in a static instances to a measurement, such as a tank inflow property to a measurement
+ - links from a specific property name in a static instance to a specific property of a measurement, such as a tank inflow temperature to a measurement's temperature property.
+
+The specification also includes the ability to define place-holders for links by linking at the type level. For example:
+ - links between static types to indicate relationships between types are expected, such as between all plants and tanks.
+ - links from a static type property to dynamic type, to indicate a measurement reference is expected on instances, such as between a tank and an inflow measurement.
 
 The `values` array in the Data message contains the following properties:
 
