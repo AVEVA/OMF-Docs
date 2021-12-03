@@ -5,7 +5,7 @@ uid: linkType
 # Link Data Messages
 
 
-A Link is used to create relationships between omf created resources.  Links are defined using the pre-defined typeid `__Link` in the Data Message. 
+A Link is used to create relationships between OMF created resources.  Links are defined using the pre-defined typeid `__Link` in the Data Message. 
 For example:
  - links between static instances, such as a plant to a tank, or a tank to a pump
  - links from static instances to containers, such as a tank to a measurement
