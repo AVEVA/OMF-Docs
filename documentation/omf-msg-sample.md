@@ -2,9 +2,9 @@
 uid: OMFMsgSample
 ---
 
-# OMF Example 
+# OMF Example
 
-Example for creating Types, Containers and Data for `static` and `dynamic` data. 
+Example for creating Types, Containers and Data for `static` and `dynamic` data.
 
 The example shows how to setup a `static` Type and define the index and name properties, and shows how to setup a `dynamic` Type for the frequently changing data.
 Next Containers are created for the `dynamic` Types to provide streams for data events. Lastly, data messages are used to create instances of `static` types, relate `static` and `dynamic` data, and send data values.
@@ -64,8 +64,8 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 				"uom": "K",
 				"interpolation": "continuous"
 			},
-			"Timestamp": {                        
-				"type": "string", 
+			"Timestamp": {
+				"type": "string",
 				"format": "date-time",
 				"isindex": true
 			}
@@ -73,7 +73,7 @@ Next Containers are created for the `dynamic` Types to provide streams for data 
 	},{
 		"id": "LocationProperties",
 		"type": "object",
-		"properties": { 
+		"properties": {
 			"Latitude":{ "type": "number", "format": "float32" },
 			"Longitude":{ "type": "number", "format": "float32" }
 		}
@@ -115,7 +115,7 @@ Create containers for the `dynamic` types.
 	[{
 		"id": "Tank1Measurements",
 		"typeid": "TankMeasurement",
-		"indexes": ["Pressure"], 
+		"indexes": ["Pressure"],
 		"datasource": "Modbus",
 		"extrapolation": "forward"
 	}, {
@@ -131,7 +131,7 @@ Create containers for the `dynamic` types.
 	}]
 
 
-Send data messages to create assets, relate instances, and send data values, for static, dynamic and type-less data instances. 
+Send data messages to create assets, relate instances, and send data values, for static, dynamic and type-less data instances.
 
 ### Data Message Headers
 
@@ -158,7 +158,7 @@ Send data messages to create assets, relate instances, and send data values, for
 			"Model": "FN-2187",
 			"Location": {
 				"Latitude": 36.3134,
-				"Longitude": -82.3535 
+				"Longitude": -82.3535
 			}
 		}, {
 			"TankName": "Tank2",
@@ -166,11 +166,11 @@ Send data messages to create assets, relate instances, and send data values, for
 			"Model": "TK-421",
 			"Location": {
 				"Latitude": 45.4046,
-				"Longitude": -122.579 
+				"Longitude": -122.579
 			}
 		}]
 	}, {
-       "properties": { 
+       "properties": {
 			"Name": {
 				"type": "string",
 				"isindex":true
@@ -185,13 +185,13 @@ Send data messages to create assets, relate instances, and send data values, for
 				"type": "integer",
                 "format": "int16"
 			}
-        }, 
-        "values": [{ 
-              "Name": "Tank4", 
-              "Description": "Tank4 in Building C12", 
+        },
+        "values": [{
+              "Name": "Tank4",
+              "Description": "Tank4 in Building C12",
               "Model": "EK-2393",
 			  "HourlyMaintenanceSchedule": 8
-        }] 
+        }]
 	}, {
 		"typeid": "__Link",
 		"values": [{

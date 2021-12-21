@@ -5,8 +5,8 @@ uid: headers
 
 # Message Headers
 
-The following headers are supported in version 1.2 of the message specification. Headers may 
-be added or removed over time. Backwards compatibility is achievable through the `omfversion` header. 
+The following headers are supported in version 1.2 of the message specification. Headers may
+be added or removed over time. Backwards compatibility is achievable through the `omfversion` header.
 
 
 | Name | Value |

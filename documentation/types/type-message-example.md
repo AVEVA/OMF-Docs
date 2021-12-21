@@ -5,7 +5,7 @@ uid: typeExample
 # Type Example
 
 
-In the following example we create two `static` types and a `dynamic` type. The Type definitions define properties for the `isindex` and `isname` qualifiers. 
+In the following example we create two `static` types and a `dynamic` type. The Type definitions define properties for the `isindex` and `isname` qualifiers.
 Their values will be referenced later when defining instance data and creating relationships.
 
 ### Headers
@@ -37,19 +37,19 @@ Their values will be referenced later when defining instance data and creating r
         "extrapolation": "all",
         "properties": {
             "TankName": { "type": "string", "isindex": true, "isname": true },
-            "Serial": { "type": "string" }, 
+            "Serial": { "type": "string" },
             "Model": { "type": "string" }
         }
     }, {
         "id": "TankPressure",
         "version": "1.0.0.0",
         "type": "object",
-        "classification": "dynamic", 
+        "classification": "dynamic",
         "extrapolation": "forward",
-        "properties": { 
+        "properties": {
             "Timestamp": { "type": "string", "format": "date-time", "isindex": true },
-            "Pressure": { "type": "number", "name": "Tank Pressure", "description": "Tank Pressure in Pa", 
-                "uom": "pascal", "interpolation": "continuous", "maximum": 20, "minimum": 10 }                    
+            "Pressure": { "type": "number", "name": "Tank Pressure", "description": "Tank Pressure in Pa",
+                "uom": "pascal", "interpolation": "continuous", "maximum": 20, "minimum": 10 }
         }
     }]
 
@@ -59,10 +59,10 @@ Their values will be referenced later when defining instance data and creating r
 Properties of a Type definition can reference a previously defined Type using the `reftypeid`.
 In this example we include the \'LocationProperties\' in the 'TankV2' Type, but cannot create instance data of the 'LocationProperties' Type.
 
-	[{  
+	[{
 		"id": "LocationProperties",
 		"type": "object",
-		"properties": { 
+		"properties": {
 			"Latitude":{ "type": "number", "format": "float32" },
 			"Longitude":{ "type": "number", "format": "float32" }
 		}
@@ -70,21 +70,21 @@ In this example we include the \'LocationProperties\' in the 'TankV2' Type, but 
 		"id": "TankV2",
 		"type": "object",
 		"classification": "static",
-		"properties": { 
+		"properties": {
 			"TankName": { "type": "string", "isname": true,  "isindex":true },
 			"Serial": { "type": "string" },
 			"Model": { "type": "string" },
-			"Location": { "reftypeid": "LocationProperties" }	
+			"Location": { "reftypeid": "LocationProperties" }
 		}
 	}]
 
 ### Enum Example
 
-Properties of a Type definition can reference a previously defined `enum` using the `reftypeid` keyword. 
+Properties of a Type definition can reference a previously defined `enum` using the `reftypeid` keyword.
 In this example we define data quality on the 'TankPressureV2' object to be of type 'DeviceStatusEnum'.
 
 	[{
-		"id": "DeviceStatusEnum", 
+		"id": "DeviceStatusEnum",
 		"enum": {
 			"values": [
 				{ "name": "Device Connected", "value": 0 },
@@ -94,10 +94,10 @@ In this example we define data quality on the 'TankPressureV2' object to be of t
 	}, {
 		"id": "TankPressureV2",
 		"type": "object",
-		"classification": "dynamic",     
+		"classification": "dynamic",
 		"properties": {
-			"Timestamp": { "type": "string", "format": "date-time", "isindex": true },            
-			"Pressure": { "type": "number", "name": "Tank Pressure", "description": "Tank Pressure in Pa", 
+			"Timestamp": { "type": "string", "format": "date-time", "isindex": true },
+			"Pressure": { "type": "number", "name": "Tank Pressure", "description": "Tank Pressure in Pa",
 				"uom": "pascal", "interpolation": "continuous", "maximum": 20, "minimum": 10 },
 			"DeviceStatus": { "reftypeid": "DeviceStatusEnum", "interpolation": "stepwisecontinuousleading", "isquality": true }
 		}

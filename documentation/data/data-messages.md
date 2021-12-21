@@ -5,8 +5,8 @@ uid: dataMessages
 # Data Messages
 
 Data messages can be used to create instance data for previously defined Types and Containers, relate instances of static and dynamic data, relate Types, or send type-less static data. Data messages support the following set of actions: `create`, `update` and `delete`.
- 
-The body of a Data message is composed of a JSON array with JSON objects defined by the following keywords: 
+
+The body of a Data message is composed of a JSON array with JSON objects defined by the following keywords:
 
 | Name | Value |
 | --- | --- |
@@ -24,15 +24,15 @@ If `containerid` is specified, the values must conform to the Type associated wi
 If `properties` is specified, then the data message can be used to send static data for an instance that has no Type.
 Optionally a `typeid` may be specified along with the `properties` to extend a `static` Type with additional properties.
 
-If a property is defined on the Type definition, and that property is not included in the `values` array, then a default value for that property will be assumed. Default values are specified 
+If a property is defined on the Type definition, and that property is not included in the `values` array, then a default value for that property will be assumed. Default values are specified
 in the [Supported Formats](xref:typePropertiesAndFormats) Table.
 
-	
+
 ## Link Data Messages
 
 [__Link](xref:linkType) Data messages are used to create relationships between static Types, static and dynamic Types, and instance Data.
-To define a link relationship, set the `typeid` of the data message to `__Link`, and in the values array specify the `source` and `target` of the link relationship. 
-Refer to [Link Type](xref:linkType) for detailed information on defining links in data messages to relate data. 
+To define a link relationship, set the `typeid` of the data message to `__Link`, and in the values array specify the `source` and `target` of the link relationship.
+Refer to [Link Type](xref:linkType) for detailed information on defining links in data messages to relate data.
 
 ## Examples of Data Messages
 
