@@ -20,7 +20,7 @@ The body of a Container message consists of an array of objects with the followi
 | `tags` | Optional array of strings to tag the Container. |
 | `metadata` | Optional key-value pairs associated with the Container. |
 | `indexes` | Optional array of Type Property ids to be used as secondary indexes for the Container. |
-| `extrapolation` | Optional data mode used to provide consistency when reading values. Supported values include `all`, `none`, `forward`, and `backward`. |
+| `extrapolation` | Optional data mode used to override the extrapolation of a Type definition. Supported values include `all`, `none`, `forward`, and `backward`. |
 | `propertyoverrides` | Optional key-value pairs used to override properties on a Type definition. |
 
 
