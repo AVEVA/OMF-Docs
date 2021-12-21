@@ -10,6 +10,7 @@ The following keywords are used to the define the `properties` in the Type defin
 | --- | --- |
 | `type` | Type of the Property. Must match a type listed in the \'Supported Formats\' table below. Either `type` or `reftypeid` is required for each property. |
 | `format` | Optional format of the `type` Property that, if specified, must be from the \'Supported Formats\' table below. |
+| `items` | This property is only valid on arrays. A required object used to define the type of objects contained by the property. |
 | `reftypeid` | `id` to a previously defined Type. Either `type` or `reftypeid` is required for each property. |
 | `isindex` | At least one Type Property must be designated as the index, or the Type cannot be used to create instance data. The designated isindex boolean property is used to uniquely identify discrete Data objects so that they can be updated or deleted after their initial creation. For a compound index, the order of index properties within the message determines the order within the index. |
 | `isname` | One Type Property may optionally be designated as the name by specifying a boolean value of true. Because the index must be unique across all Data objects, the isname keyword allows for multiple distinct Data objects to share a common name. |
@@ -26,11 +27,11 @@ When using `reftypeid`, the value must be set to the `id` of a previously define
 
 If `type` is used, the format of the type may be set using the `format` keyword, as described in the \'Supported Formats\' table below.
 This allows for the creation of timestamps, dictionaries, and bit length-specific numeric properties.
+If a `type` of `array` is used, the type of objects in the array is described using the required `items` keyword.
 
 If `reftypeid` is used, set the value to the `id` of a previously defined Type.
 If the referenced type is an `enum` then it defines the allowed set of data values for this property.
 If the referenced type is a `static` or `dynamic` Type, then the properties of that Type are included as child properties of this property.
-
 
 ### Supported Formats
 
@@ -51,9 +52,17 @@ If the referenced type is a `static` or `dynamic` Type, then the properties of t
 | string | | null | A string. |
 | string | date-time | 0001-01-01T00:00:00Z | A string representation of a timestamp, formatted as YYYY-MM-DDThh:mm:ssZ, with optional subsecond precision. |
 
+### Array Content
 
+The `items` keyword is used to define the type of the objects contained by an array property. The following keywords are used to define the `items` on a property:
 
-### Nullable type properties
+| Name | Value |
+| --- | --- |
+| `type` | Type of the array items. Must match a type listed in the \'Supported Formats\' table. |
+| `format` | Optional format of the `type` Property that, if specified, must be from the \'Supported Formats\' table. |
+| `items` | This property is only valid on arrays. A required object used to define the type of objects contained by the array. |
+
+### Nullable Type Properties
 
 Nullable type properties are supported by specifying an array that defines the datatype and includes the keyword `null`.
 The datatype and `null` may appear in any order in the array. The default value for any nullable type is null. For example:
@@ -64,7 +73,7 @@ The datatype and `null` may appear in any order in the array. The default value 
 
 Values of type "array", "object", and "string" are treated as inherently nullable thus the additional null type specification is not needed.
 
-### Type reuse
+### Type Reuse
 
 Type reuse is supported for Types of the same `classification` or Types with no `classification`, using `reftypeid` at the Property level.
 When `reftypeid` is used on a property, then all the properties of the reference type are included under the specified property.
