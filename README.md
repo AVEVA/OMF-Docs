@@ -3,7 +3,7 @@ The OSIsoft Message Format (OMF) defines a set of message headers and bodies tha
 
 This repository contains the documentation for OMF. You can access a readable version of this documentation [here.](https://omf-docs.osisoft.com)
 
-##License
+## License
 
 <a href="https://www.osisoft.com/copyright/">© 2018 - 2021 OSIsoft, LLC. All rights reserved.</a>
 
