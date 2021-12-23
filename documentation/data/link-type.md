@@ -38,41 +38,41 @@ For an instance of a Container, specify the `containerid`.
 
 For example, to relate an instance of a Plant, specified by its indexed property PlantId with value WTP1, to an instance of Tank, specified with by its indexed property TankName with value Tank1, use the following `__Link`:
 
-    [{
-        "typeid": "Plant",
-        "values": [{
+	[{
+		"typeid": "Plant",
+		"values": [{
 			"PlantId": "WTP1",
 			"PlantName": "Water Treatment Plant One"
 		}]
-    }, {
-        "typeid": "Tank",
-        "values": [{
+	}, {
+		"typeid": "Tank",
+		"values": [{
 			"TankName": "Tank1"
 		}]
-    }, {
-        "typeid": "__Link",
-        "values": [ {
+	}, {
+		"typeid": "__Link",
+		"values": [{
 			"source": {
 				"typeid": "Plant",
 				"index": "WTP1"
 			},
-            "target": {
+			"target": {
 				"typeid": "Tank",
 				"index": "Tank1"
 			}
 		}]
-    }]
+	}]
 
 To associate the container, Tank1Measurements, with the instance of a Tank whose index is \'Tank1\', use the following `__Link`:
 
-    [{
+	[{
 		"typeid": "__Link",
-        "values": [{
+		"values": [{
 			"source": {
 				"typeid": "Tank",
 				"index": "Tank1"
 			},
-            "target": {
+			"target": {
 				"containerid": "Tank1Measurements"
 			}
 		}]
