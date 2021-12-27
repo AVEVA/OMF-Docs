@@ -5,14 +5,14 @@ uid: htpBehaviors
 # Http Behaviors
 
 While the OMF specification does not define a particular binary message protocol, OSIsoft systems accepting OMF over HTTP conform to a set of behaviors described in this section.
+
 ## Message Size
 
-The body of an OMF message has a maximum size of 192KB. A request with a body size exceeding the maximum will be rejected with an HTTP response code 
-of `413 Payload Too Large`. Compression is highly recommended for optimal performance.
+The body of an OMF message has a maximum size of 192KB. A request with a body size exceeding the maximum will be rejected with an HTTP response code of `413 Payload Too Large`. Compression is highly recommended for optimal performance.
 
 ## HTTP Status Codes
 
-The following status codes are possible to be returned by OSIsoft products accepting OMF messages over HTTP. 
+The following status codes are possible to be returned by OSIsoft products accepting OMF messages over HTTP.
 Not all end points will respond with the same error codes due to asynchronous message processing.
 
 | Status code | Description |

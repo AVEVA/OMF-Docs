@@ -26,26 +26,26 @@ To define possible values of an `enum` type, include the following keywords. If 
 
 In this example we have a Valve with 2 states, CLOSED or OPEN and accept the defaults, or explicitly define the values. The following Type messages are valid syntax:
 
-	{ 
-		"id": "ValveState", 
+	{
+		"id": "ValveState",
 		"enum": {
-			"values": [ { "name":"CLOSED", "value":0 }, { "name":"OPEN", "value":1 } ] 
-		}
-	}
-	
-	{ 
-		"id": "ValveState", 
-		"enum": {
-			"values":[ { "value":0, "name":"CLOSED" }, { "value":1, "name":"OPEN" } ] 
+			"values": [ { "name":"CLOSED", "value":0 }, { "name":"OPEN", "value":1 } ]
 		}
 	}
 
-	{ 
-		"id": "ValveState", 
+	{
+		"id": "ValveState",
+		"enum": {
+			"values":[ { "value":0, "name":"CLOSED" }, { "value":1, "name":"OPEN" } ]
+		}
+	}
+
+	{
+		"id": "ValveState",
 		"enum": {
 			"type": "integer",
         		"format": "int16",
-			"values":[ { "value":0, "name":"CLOSED" }, { "value":1, "name":"OPEN" } ] 
+			"values":[ { "value":0, "name":"CLOSED" }, { "value":1, "name":"OPEN" } ]
 		}
 	}
 
@@ -69,10 +69,10 @@ When referencing the `enum` type from the property that holds quality, include t
 		"enum": {
 			"values": [ { "name":"CLOSED", "value":0 }, { "name":"OPEN", "value":1 } ]
 		}
-	}, { 
-		"id": "DeviceStatusEnum", 
+	}, {
+		"id": "DeviceStatusEnum",
 		"enum": {
-			"values": [ 
+			"values": [
 				{ "name": "Device Connected", "value": 0 },
 				{ "name": "Device Failure", "value": 1 },
 				{ "name": "Device Comm Failure", "value": 2 },
@@ -91,13 +91,13 @@ When referencing the `enum` type from the property that holds quality, include t
 				"isindex": true
 			},
 			"DeviceStatus": {
-				"reftypeid": "DeviceStatusEnum", 
+				"reftypeid": "DeviceStatusEnum",
 				"isquality": true,
 				"interpolation": "stepwisecontinuousleading"
 			},
 			"ValvePosition": {
 				"reftypeid": "ValveState",
-				"interpolation": "stepwisecontinuousleading",		
+				"interpolation": "stepwisecontinuousleading",
 			},
 			"Pressure": {
 				"type": "number",
@@ -111,7 +111,7 @@ When referencing the `enum` type from the property that holds quality, include t
 				"name": "Tank Temperature",
 				"description": "Tank Temperature in K",
 				"uom": "K",
-				"interpolation": "continuous"		
+				"interpolation": "continuous"
 			}
 		}
 	}]
