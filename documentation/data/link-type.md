@@ -83,8 +83,7 @@ This expands the static Type \'Pump\' to include the properties InletFlow and Ou
 				"typeid": "Pump",
 				"index": "Pump1",
 				"property": "InletFlow"
-			}
-		}, {
+			},
 			"target": {
 				"containerid": "Pump1InletFlowMeasurements"
 			}
@@ -93,8 +92,7 @@ This expands the static Type \'Pump\' to include the properties InletFlow and Ou
 				"typeid": "Pump",
 				"index": "Pump1",
 				"property": "OutletFlow"
-			}
-		}, {
+			},
 			"target": {
 				"containerid": "Pump1OutletFlowMeasurements"
 			}
@@ -112,8 +110,7 @@ Similarly, the InletFlowPressure property is created on the Pump, and Pump1 Inle
 				"typeid": "Pump",
 				"index": "Pump1",
 				"property": "InletFlowTemperature"
-			}
-		}, {
+			},
 			"target": {
 				"containerid": "Pump1InletFlowMeasurements",
 				"property": "Temperature"
@@ -123,8 +120,7 @@ Similarly, the InletFlowPressure property is created on the Pump, and Pump1 Inle
 				"typeid": "Pump",
 				"index": "Pump1",
 				"property": "InletFlowPressure"
-			}
-		}, {
+			},
 			"target": {
 				"containerid": " Pump1InletFlowMeasurements",
 				"property": "Pressure"
@@ -143,8 +139,7 @@ This expands the static Type \'Pump\' to include the properties InletFlow and Ou
 			"source": {
 				"typeid": "Pump",
 				"property": "InletFlow"
-			}
-		}, {
+			},
 			"target": {
 				"typeid": "FlowMeasurements"
 			}
@@ -152,8 +147,7 @@ This expands the static Type \'Pump\' to include the properties InletFlow and Ou
 			"source": {
 				"typeid": "Pump",
 				"property": "OutletFlow"
-			}
-		}, {
+			},
 			"target": {
 				"typeid": "FlowMeasurements"
 			}
@@ -170,8 +164,7 @@ and the Temperature property as the type for the InletFlowTemperature.
 			"source": {
 				"typeid": "Pump",
 				"property": "InletFlowTemperature"
-			}
-		}, {
+			},
 			"target": {
 				"typeid": "FlowMeasurements",
 				"property": "Temperature"
@@ -180,8 +173,7 @@ and the Temperature property as the type for the InletFlowTemperature.
 			"source": {
 				"typeid": "Pump",
 				"property": "InletFlowPressure"
-			}
-		}, {
+			},
 			"target": {
 				"typeid": "FlowMeasurements",
 				"property": "Pressure"
