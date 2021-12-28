@@ -23,12 +23,12 @@ uid: containerExample
 		"id": "Tank2_PressureMeasurements",
 		"typeid": "TankPressure",
 		"datasource":"Modbus",
-		"indexes": ["Pressure"],	
+		"indexes": ["Pressure"],
 		"extrapolation": "forward",
 		"propertyoverrides": {
-			"Pressure": {	
-				"minimum": 15, 
-				"maximum": 30				
+			"Pressure": {
+				"minimum": 15,
+				"maximum": 30
 			}
-		}			
+		}
 	}]

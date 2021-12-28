@@ -20,14 +20,14 @@ The body of a Container message consists of an array of objects with the followi
 | `tags` | Optional array of strings to tag the Container. |
 | `metadata` | Optional key-value pairs associated with the Container. |
 | `indexes` | Optional array of Type Property ids to be used as secondary indexes for the Container. |
-| `extrapolation` | Optional data mode used to provide consistency when reading values. Supported values include `all`, `none`, `forward`, and `backward`. |
+| `extrapolation` | Optional data mode used to override the extrapolation of a Type definition. Supported values include `all`, `none`, `forward`, and `backward`. |
 | `propertyoverrides` | Optional key-value pairs used to override properties on a Type definition. |
 
 
-Certain keywords defined on Type `properties` may be overridden at the container level using the optional `propertyoverrides` keyword. 
-Currently supported overrides include `name`, `description`, `uom`, `minimum`, `maximum` and `interpolation`. 
-Refer to the [Type Properties and Formats](xref:typePropertiesAndFormats) for a complete list of Type `properties`. 
+Certain keywords defined on Type `properties` may be overridden at the container level using the optional `propertyoverrides` keyword.
+Currently supported overrides include `name`, `description`, `uom`, `minimum`, `maximum` and `interpolation`.
+Refer to the [Type Properties and Formats](xref:typePropertiesAndFormats) for a complete list of Type `properties`.
 
-### Container Example 
+### Container Example
 
    - [Container Example](xref:containerExample)
