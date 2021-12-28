@@ -22,9 +22,7 @@ The body of a Type message consists of an array of objects. The following keywor
 | `extrapolation` | Optional data mode used to provide consistency when reading values. Supported values include `all`, `none`, `forward`, and `backward`. |
 | `properties` | Key-value pairs defining the properties of a static or dynamic Type. Required unless the Type defines enum. |
 
-The `id` cannot begin with the character sequence __. This has been reserved for predefined Types. Currently the only supported predefined Type
-is [__Link](xref:linkType). The `id` property is referenced when creating instances of Types in Container and Data messages, or when
-creating other Types that include this Type as a referenced Type.
+The `id` cannot begin with the character sequence __. This has been reserved for predefined Types. Currently the only supported predefined Type is [__Link](xref:linkType). The `id` property is referenced when creating instances of Types in Container and Data messages, or when creating other Types that include this Type as a referenced Type.
 
 The `version` is used to supply information about the Type definition and is stored as meta data.
 
