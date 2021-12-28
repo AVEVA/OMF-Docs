@@ -117,3 +117,28 @@ uid: typeExample
                 }
         }
 	}]
+
+
+### Array Property Example
+
+In this example we define a property of type `array`. The type of items contained by the array is specified via the
+`items` keyword.
+
+	[{
+		"id": "MaintenanceSchedule",
+		"type": "object",
+		"classification": "static",
+		"properties": {
+			"Name": { "type": "string", "isindex": true, "isname": true },
+			"Maintenance Schedule": {
+				"type": "array",
+				"items": {
+					"type": "string",
+					"format": "date-time"
+				}
+			},
+			"Maintenance Performed By": {
+				"type": "string"
+			}
+		}
+	]
