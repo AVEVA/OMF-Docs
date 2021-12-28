@@ -127,24 +127,21 @@ Numeric values must be used for properties defined as `enum` type using `reftype
 
 ### Type-less Static Data Message
 
-In this example, the Data message extends the 'Tank' type to include a 'Maintenance Schedule' for this instance. The 'Tank' Type itself is not extended.
+In this example, the Data message extends the 'Tank' type to include 'Description' and 'ModelRevision' properties.
+These additional properties for are only for this instance; the 'Tank' Type itself is not extended.
 
 	[{
 		"typeid": "Tank",
 		"properties": {
-			"Maintenance Schedule": {
-				"type": "array",
-				"items": {
-					"type": "string",
-					"format": "date-time"
-				}
-			}
+			"Description": { "type": "string" },
+			"ModelRevision": { "type": "integer", "format": "uint16" }
 		},
 		"values": [{
 			"TankName": "Tank1",
 			"Serial": "5236-3523-KKF4",
 			"Model": "FN-2187",
-			"Maintenance Schedule": [ "2019-09-01T00:00:00Z", "2019-09-01T08:00:00Z", "2019-09-01T16:00:00Z" ]
+			"Description": "Tank in Building C11",
+			"ModelRevision": 3
 		}]
 	}]
 
