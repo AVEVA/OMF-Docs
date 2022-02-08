@@ -232,22 +232,22 @@ Send data messages to create assets, relate instances, and send data values, for
 	}, {
 		"containerid": "Tank1Measurements",
 		"values": [{
-			"Time": "2019-09-11T22:23:23.430Z",
+			"Timestamp": "2019-09-11T22:23:23.430Z",
 			"Pressure": 12.0,
 			"Temperature": 100.1
 		}, {
-			"Time": "2019-09-11T22:24:23.430Z",
+			"Timestamp": "2019-09-11T22:24:23.430Z",
 			"Pressure": 11.5,
 			"Temperature": 101.2
 		}]
 	}, {
 		"containerid": "Tank2Measurements",
 		"values": [{
-			"Time": "2019-09-11T22:23:23.430Z",
+			"Timestamp": "2019-09-11T22:23:23.430Z",
 			"Pressure": 14.0,
 			"Temperature": 90.1
 		}, {
-			"Time": "2019-09-11T22:24:23.430Z",
+			"Timestamp": "2019-09-11T22:24:23.430Z",
 			"Pressure": 15.1,
 			"Temperature": 91.2
 		}]
