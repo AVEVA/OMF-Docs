@@ -76,19 +76,19 @@ In this example, instance data is created for the `static` types \'Plant\' and \
 	}, {
 		"containerid": "Tank1_PressureMeasurements",
 		"values": [{
-			"Time": "2019-09-11T22:23:23.430Z",
+			"Timestamp": "2019-09-11T22:23:23.430Z",
 			"Pressure": 12.0
 		}, {
-			"Time": "2019-09-11T22:24:23.430Z",
+			"Timestamp": "2019-09-11T22:24:23.430Z",
 			"Pressure": 11.5
 		}]
 	}, {
 		"containerid": "Tank2_PressureMeasurements",
 		"values": [{
-			"Time": "2019-09-11T22:23:23.430Z",
+			"Timestamp": "2019-09-11T22:23:23.430Z",
 			"Pressure": 14.0
 		}, {
-			"Time": "2019-09-11T22:24:23.430Z",
+			"Timestamp": "2019-09-11T22:24:23.430Z",
 			"Pressure": 15.1
 		}]
 	}]
@@ -117,7 +117,7 @@ In this example, the Data message contains a value for the DeviceStatus property
 	{
 		"containerid":"TankMeasurementsV1_Tank3",
 		"values": [{
-			"Time": "2019-09-11T22:23:23.430Z",
+			"Timestamp": "2019-09-11T22:23:23.430Z",
 			"DeviceStatus": 2,
 			"Pressure": 16.0,
 			"Temperature": 90.1
