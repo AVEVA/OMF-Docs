@@ -22,6 +22,8 @@ The body of a Type message consists of an array of objects. The following keywor
 | `extrapolation` | Optional data mode used to provide consistency when reading values. Supported values include `all`, `none`, `forward`, and `backward`. |
 | `properties` | Key-value pairs defining the properties of a static or dynamic Type. Required unless the Type defines enum. |
 
+If the `action` header value is `delete` then only `id` is required. All other keywords are ignored.
+
 The `id` cannot begin with the character sequence __. This has been reserved for predefined Types. Currently the only supported predefined Type is [__Link](xref:linkType). The `id` property is referenced when creating instances of Types in Container and Data messages, or when creating other Types that include this Type as a referenced Type.
 
 The `version` is used to supply information about the Type definition and is stored as meta data.
@@ -40,3 +42,4 @@ The supported data types and data formats for `properties` are documented in the
    - [Type Properties and Formats](xref:typePropertiesAndFormats)
    - [Enum Type](xref:enumType)
    - [Type Message Example](xref:typeExample)
+   - [Type Delete Example](xref:typeDeleteExample)
