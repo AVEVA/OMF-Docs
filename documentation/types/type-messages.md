@@ -4,7 +4,7 @@ uid: typeMessages
 
 # Type Messages
 
-Types are used within OMF to define the structure of data. Dynamic types are used by containers to create streams of sequentially indexed data. Static types are used by the endpoint to define non-streamed data, such as assets. Enum types are used to create an array name/value pairs to create a limited set of values for a property in a dynamic or static type. The Type messages are used to create, update and delete types. While types conntain a version, it is informational only. Multiple versions of the same type are not supported.
+Types are used within OMF to define the structure of data. Dynamic types are used by containers to create streams of sequentially indexed data. Static types are used by the endpoint to define non-streamed data, such as assets. Enum types are used to create an array name/value pairs to create a limited set of values for a property in a dynamic or static type. The Type messages are used to create, update and delete types. While types contain a version, it is informational only. Multiple versions of the same type are not supported.
 
 The body of a Type message consists of an array of objects. The following keywords are used to define a Type.
 
