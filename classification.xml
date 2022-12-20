@@ -284,6 +284,11 @@
     <Cell><Data ss:Type="String">Active Versions?</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s72"><Data ss:Type="String">AVEVA Data Hub</Data></Cell>
+    <Cell><Data ss:Type="String">AVEVA Data Hub</Data></Cell>
+    <Cell><Data ss:Type="String">AVEVA Data Hub</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
     <Cell ss:Index="3" ss:StyleID="s72"><Data ss:Type="String">OSIsoft Cloud Services (OCS)</Data></Cell>
     <Cell><Data ss:Type="String">OSIsoft-Cloud-Services</Data></Cell>
     <Cell><Data ss:Type="String">OSIsoft Cloud Services</Data></Cell>
@@ -394,9 +399,9 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">Developer</Data></Cell>
     <Cell ss:StyleID="s73"><Data ss:Type="String">developer</Data></Cell>
-    <Cell><Data ss:Type="String">OSIsoft Message Format (OMF)</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="String">OSIsoft-Message-Format</Data></Cell>
-    <Cell><Data ss:Type="String">OSIsoft Message Format (OMF)</Data></Cell>
+    <Cell><Data ss:Type="String">Open Message Format (OMF)</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">Open-Message-Format</Data></Cell>
+    <Cell><Data ss:Type="String">Open Message Format (OMF)</Data></Cell>
     <Cell ss:Index="7" ss:StyleID="s75"><Data ss:Type="String">Yes</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -853,6 +858,11 @@
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="14.475000000000001">
     <Cell><Data ss:Type="String">adapter</Data><NamedCell ss:Name="Product"/></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">AVEVA Data Hub</Data><NamedCell
+      ss:Name="Role"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.475000000000001">
+    <Cell><Data ss:Type="String">adapter</Data><NamedCell ss:Name="Product"/></Cell>
     <Cell ss:StyleID="s86"><Data ss:Type="String">OSIsoft-Cloud-Services</Data><NamedCell
       ss:Name="Role"/></Cell>
    </Row>
@@ -961,7 +971,7 @@
     <Cell ss:Index="2" ss:StyleID="s89"><Data ss:Type="String">PI-OPC-DA-Server_2018-Patch-1</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="14.475000000000001">
-    <Cell ss:Index="2" ss:StyleID="s88"><Data ss:Type="String">OSIsoft-Message-Format</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s88"><Data ss:Type="String">Open-Message-Format</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="14.475000000000001">
     <Cell ss:Index="2" ss:StyleID="s89"><Data ss:Type="String">OSIsoft-Message-Format-Preview</Data></Cell>
