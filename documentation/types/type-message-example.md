@@ -71,7 +71,7 @@ In this example we include the \'LocationProperties\' in the 'TankV2' Type, but 
 		"type": "object",
 		"classification": "static",
 		"properties": {
-			"TankName": { "type": "string", "isname": true, "isindex":true },
+			"TankName": { "type": "string", "isname": true, "isindex": true },
 			"Serial": { "type": "string" },
 			"Model": { "type": "string" },
 			"Location": { "reftypeid": "LocationProperties" }

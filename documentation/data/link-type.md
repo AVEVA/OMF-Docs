@@ -4,8 +4,16 @@ uid: linkType
 
 # Link Data Messages
 
+A Link is used to create relationships between OMF created resources. Links are defined using the pre-defined typeid `__Link` in the Data Message.
+Example usage of Links:
+ - create a link between static instances, such as a plant to a tank, or a tank to a pump
+ - create a link from a static instance to a container, such as a tank to a measurement
+ - create a link from a specific property name in a static instance to a measurement, such as a tank inflow property to a measurement
+ - create a link from a specific property name in a static instance to a specific property of a measurement, such as a tank inflow temperature to a measurement's temperature property.
 
-A Link is used to create relationships between Types and instances of Types, and is defined using the pre-defined typeid `__Link` in the Data Message.
+The specification also includes the ability to define place-holders for links by linking at the type level. Example usage of Links with Types:
+ - create a link between static types to indicate relationships between types are expected, such as between plants and tanks.
+ - create a link from a static type property to dynamic type to indicate a measurement reference is expected on static instances, such as between a tank and an inflow measurement.
 
 The `values` array in the Data message contains the following properties:
 
@@ -30,7 +38,8 @@ For an instance of a Container, specify the `containerid`.
 
 For example, to relate an instance of a Plant, specified by its indexed property PlantId with value WTP1, to an instance of Tank, specified with by its indexed property TankName with value Tank1, use the following `__Link`:
 
-	{
+	[{
+
 		"typeid": "Plant",
 		"values": [{
 			"PlantId": "WTP1",
@@ -43,7 +52,7 @@ For example, to relate an instance of a Plant, specified by its indexed property
 		}]
 	}, {
 		"typeid": "__Link",
-		"values": [ {
+		"values": [{
 			"source": {
 				"typeid": "Plant",
 				"index": "WTP1"
@@ -54,7 +63,6 @@ For example, to relate an instance of a Plant, specified by its indexed property
 			}
 		}]
 	}]
-
 
 To associate the container, Tank1Measurements, with the instance of a Tank whose index is \'Tank1\', use the following `__Link`:
 

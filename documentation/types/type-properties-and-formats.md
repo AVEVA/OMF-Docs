@@ -33,7 +33,6 @@ If `reftypeid` is used, set the value to the `id` of a previously defined Type.
 If the referenced type is an `enum` then it defines the allowed set of data values for this property.
 If the referenced type is a `static` or `dynamic` Type, then the properties of that Type are included as child properties of this property.
 
-
 ### Supported Formats
 
 | Type | Format | Default Value | Description |

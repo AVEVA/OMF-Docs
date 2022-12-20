@@ -150,20 +150,20 @@ In this example, the Data message defines properties for a Tank, and sends the i
 	[{
 		"properties": {
 			"Name": {
-				"type":"string",
+				"type": "string",
 				"isindex":true
 			},
 			"Description": {
-				"type":"string"
+				"type": "string"
 			},
 			"Model": {
-				"type":"string"
+				"type": "string"
 			},
 			"HourlyMaintenanceSchedule": {
 				"type": "integer",
 				"format": "int16"
 			}
-		},
+	},
 		"values": [{
 			"Name": "Tank4",
 			"Description": "Tank4 in Building C12",

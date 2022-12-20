@@ -39,4 +39,3 @@ Refer to [Link Type](xref:linkType) for detailed information on defining links i
    - [Link Type](xref:linkType)
    - [Data Example](xref:dataExample)
 
-

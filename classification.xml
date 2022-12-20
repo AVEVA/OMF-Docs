@@ -223,12 +223,12 @@
    <Row ss:AutoFitHeight="0" ss:Height="14.475000000000001">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
     <Cell ss:Index="3"><Data ss:Type="String">developer</Data></Cell>
-    <Cell><Data ss:Type="String">OSIsoft-Message-Format_Preview</Data></Cell>
+    <Cell><Data ss:Type="String">OSIsoft-Message-Format_1.2</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="14.475000000000001">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
     <Cell ss:Index="3"><Data ss:Type="String">developer</Data></Cell>
-    <Cell><Data ss:Type="String">OSIsoft-Message-Format_Preview</Data></Cell>
+    <Cell><Data ss:Type="String">OSIsoft-Message-Format_1.2</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">default</Data></Cell>
@@ -255,6 +255,7 @@
    <Panes>
     <Pane>
      <Number>3</Number>
+
      <ActiveRow>2</ActiveRow>
      <ActiveCol>3</ActiveCol>
     </Pane>
