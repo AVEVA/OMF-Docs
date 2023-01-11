@@ -4,7 +4,6 @@ uid: dataExample
 
 # Data Example
 
-
 In this example, instance data is created for the `static` types \'Plant\' and \'Tank\', and the `dynamic` type, \'TankPressure\', for Containers
 \'Tank1_PressureMeasurements\' and \'Tank2_PressureMeasurements\'. The link data messages are used to relate the instance data as well as combine static and dynamic Types.
 

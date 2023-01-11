@@ -96,7 +96,7 @@ The referenced type \'LocationProperties\' does not define a classification, and
 		"type":"object",
 		"classification":"static",
 		"properties": {
-			"TankName": { "type": "string", "isname": true,  "isindex": true },
+			"TankName": { "type": "string", "isname": true, "isindex": true },
 			"Serial": { "type": "string" },
 			"Model": { "type": "string" },
 			"Location": { "reftypeid":"LocationProperties" }

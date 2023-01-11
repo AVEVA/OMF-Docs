@@ -170,7 +170,7 @@ Send data messages to create assets, relate instances, and send data values, for
 			}
 		}]
 	}, {
-       "properties": {
+		"properties": {
 			"Name": {
 				"type": "string",
 				"isindex":true
@@ -181,17 +181,17 @@ Send data messages to create assets, relate instances, and send data values, for
 			"Model": {
 				"type": "string"
 			},
-            "HourlyMaintenanceSchedule": {
+			"HourlyMaintenanceSchedule": {
 				"type": "integer",
-                "format": "int16"
+				"format": "int16"
 			}
-        },
-        "values": [{
-              "Name": "Tank4",
-              "Description": "Tank4 in Building C12",
-              "Model": "EK-2393",
-			  "HourlyMaintenanceSchedule": 8
-        }]
+		},
+		"values": [{
+			"Name": "Tank4",
+			"Description": "Tank4 in Building C12",
+			"Model": "EK-2393",
+			"HourlyMaintenanceSchedule": 8
+		}]
 	}, {
 		"typeid": "__Link",
 		"values": [{

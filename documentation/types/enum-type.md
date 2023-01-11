@@ -44,7 +44,7 @@ In this example we have a Valve with 2 states, CLOSED or OPEN and accept the def
 		"id": "ValveState",
 		"enum": {
 			"type": "integer",
-        		"format": "int16",
+			"format": "int16",
 			"values":[ { "value":0, "name":"CLOSED" }, { "value":1, "name":"OPEN" } ]
 		}
 	}
