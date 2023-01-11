@@ -33,3 +33,8 @@ Version 1.2 introduces the following incremental changes from version 1.1:
 
 - Specifying the version of a type when it is referenced is no longer supported. Types are considered immutable and can be referenced by their `typeid` alone.
 - The `producertoken` field in the message header has been obsoleted, and is no longer supported.
+
+## Rename
+
+- "OMF" was renamed to "Open Message Format" from "OSIsoft Message Format".
+
