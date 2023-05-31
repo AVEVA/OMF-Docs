@@ -117,3 +117,12 @@ The `isquality` keyword is used to designate particular property or properties a
 
 	"DeviceStatus": { "type": "Integer", "format": "int16", "isquality": true }
 
+### Interpolation
+
+The `interpolation` keyword designates to the destination system the nature of the data and whether and how interpolation of data between events should behave. Not all destinations support all values.
+| Value | Description |
+| --- | --- |
+| `continuous` | Data is continuous. Values between events are linearly interpolated. |
+| `discrete` | Data is discrete. No values between events can be inferred. |
+| `stepwisecontinuousleading` | Data is continuous. Values between events take the value from the previous event. Commonly referred to as 'stepped'. |
+| `stepwisecontinuousfollowing` | Data is continous. Values between events take the value from the following event. |
