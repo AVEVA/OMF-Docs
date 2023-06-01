@@ -125,4 +125,4 @@ The `interpolation` keyword designates to the destination system the nature of t
 | `continuous` | Data is continuous. Values between events are linearly interpolated. |
 | `discrete` | Data is discrete. No values between events can be inferred. |
 | `stepwisecontinuousleading` | Data is continuous. Values between events take the value from the previous event. Commonly referred to as 'stepped'. |
-| `stepwisecontinuousfollowing` | Data is continous. Values between events take the value from the following event. |
+| `stepwisecontinuousfollowing` | Data is continuous. Values between events take the value from the following event. |
