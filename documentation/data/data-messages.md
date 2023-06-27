@@ -27,6 +27,7 @@ Optionally a `typeid` may be specified along with the `properties` to extend a `
 If a property is defined on the Type definition, and that property is not included in the `values` array, then a default value for that property will be assumed. Default values are specified
 in the [Supported Formats](xref:typePropertiesAndFormats) Table.
 
+If the `action` header value is `delete` then indexed `properties` must be provided. An property is indexed if the `isindexed` keyword is `true` on the Data message Type. Secondary indexes specified on a Container are not required.
 
 ## Link Data Messages
 

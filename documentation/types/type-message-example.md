@@ -115,15 +115,26 @@ In this example we define a property of type `array`. The type of items containe
 		"classification": "static",
 		"properties": {
 			"Name": { "type": "string", "isindex": true, "isname": true },
-			"Maintenance Schedule": {
-				"type": "array",
+			"Maintenance Schedule": { "type": "array",
 				"items": {
 					"type": "string",
 					"format": "date-time"
-				}
-			},
-			"Maintenance Performed By": {
-				"type": "string"
-			}
+					}
+				},
+			"Maintenance Performed By": { "type": "string" }
 		}
-	]
+	}]
+
+### Delete Example
+
+When the `action` header value is `delete` only `id` is required. Any other values provided are ignored.
+
+	[{
+		"id": "Plant"
+	},
+	{
+		"id": "Tank"
+	},
+	{
+		"id": "TankPressure"
+	}]

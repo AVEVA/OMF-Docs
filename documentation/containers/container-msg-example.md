@@ -32,3 +32,15 @@ uid: containerExample
 			}
 		}
 	}]
+
+## Delete Example
+
+If the `action` header value is `delete` then only `id` and `typeid` are required. All other keywords are ignored.
+
+    [{
+		"id": "Tank1_PressureMeasurements",
+		"typeid": "TankPressure"
+	}, {
+		"id": "Tank2_PressureMeasurements",
+		"typeid": "TankPressure"
+	}]

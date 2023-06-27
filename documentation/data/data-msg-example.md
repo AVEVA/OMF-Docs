@@ -171,3 +171,22 @@ In this example, the Data message defines properties for a Tank, and sends the i
 			"HourlyMaintenanceSchedule": 8
 		}]
 	}]
+
+### Delete Message Example
+
+This example assumes `PlantId` is an indexed property on the `Plant` Type. In addition, the `Timestamp` is an indexed property associated with the `typeid` of the `Tank1_PressureMeasurements` Container.
+
+	[{
+		"typeid": "Plant",
+		"values": [{
+			"PlantId": "WTP1"
+		}]
+	}, 
+	{
+		"containerid": "Tank1_PressureMeasurements",
+		"values": [{
+			"Timestamp": "2019-09-11T22:23:23.430Z",			
+		}, {
+			"Timestamp": "2019-09-11T22:24:23.430Z",
+		}]
+	}]

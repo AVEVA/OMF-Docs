@@ -36,6 +36,8 @@ The `enum` type is created separately so that it can be referenced by multiple p
 
 The supported data types and data formats for `properties` are documented in the [Type Properties and Formats](xref:typePropertiesAndFormats) topic.
 
+If the `action` header value is `delete` then only `id` is required. All other keywords are ignored.
+
 ### Examples of Type Messages and Property Formats
 
    - [Type Properties and Formats](xref:typePropertiesAndFormats)
